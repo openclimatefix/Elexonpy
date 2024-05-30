@@ -72,7 +72,7 @@ def generate_function_from_openapi(openapi_json):
 
             # For each endpoint, generate a list of matching paths
             print("")
-            matching_paths = get_matching_paths("/generation/availability/summary/14D", path_items)
+            matching_paths = get_matching_paths(path, path_items)
             # Print the result
             for matching_path in matching_paths:
                 print(f'# Path: {matching_path}')
