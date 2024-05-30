@@ -11,19 +11,6 @@ with open(
 ) as f:
     data = json.load(f)
 
-def get_matching_paths(target_path, path_items):
-    # Get list of all paths
-    all_paths = [path for path in path_items.keys()]
-    # Split the target path and get the first two elements
-    elements = target_path.strip("/").split("/")
-    if len(elements) < 2:
-        return []
-    # Create the key for the first two elements
-    key = f"/{elements[0]}/{elements[1]}/"
-    # Filter paths that match the first two elements
-    matching_paths = [path for path in all_paths if path.startswith(key)]
-    return matching_paths
-
 def json_to_df(data):
   print('def json_to_df(data):')
   print('    # Normalize the JSON data into a flat table')
@@ -68,14 +55,7 @@ def generate_function_from_openapi(openapi_json):
             parameters = details.get("parameters", [])
             param_name_list = [param["name"] for param in parameters if param["name"]]
             param_str = ', '.join(param_name_list)
-            param_str = param_str.replace("format", "json").replace("from", "date_from").replace("to", "date_to")
-
-            # For each endpoint, generate a list of matching paths
-            print("")
-            matching_paths = get_matching_paths(path, path_items)
-            # Print the result
-            for matching_path in matching_paths:
-                print(f'# Path: {matching_path}')
+            param_str = param_str.replace("format", "'json'").replace("from", "date_from").replace("to", "date_to")
             print("")
 
             # Print the function signature
