@@ -11,34 +11,7 @@ with open(
 ) as f:
     data = json.load(f)
 
-def json_to_df(data):
-  print('def json_to_df(data):')
-  print('    # Normalize the JSON data into a flat table')
-  print('    df = pd.json_normalize(data)')
-  print('')
-  print('    # Identify columns with lists of dictionaries')
-  print('    columns_with_list = [col for col in df.columns if isinstance(df[col].iloc[0], list)]')
-  print('')
-  print('    # Explode columns containing lists')
-  print('    for column in columns_with_list:')
-  print('        df = df.explode(column)')
-  print('')
-  print('        # Extract keys from dictionaries and use them as new column names')
-  print('        dicts = df[column].dropna()')
-  print('')
-  print('        if not dicts.empty:')
-  print('            keys = set(k for d in dicts for k in (d.keys() if isinstance(d, dict) else []))')
-  print('')
-  print('            for key in keys:')
-  print('                df[key] = df[column].apply(lambda x: x.get(key) if isinstance(x, dict) else None)')
-  print('')
-  print('        # Drop the original column containing dictionaries')
-  print('        df.drop(columns=[column], inplace=True)')
-  print('')
-  print('    return df')
-
 # Note on date availability
-note_on_date_availability = 'Note: as of 2024-05-26, data only available from 2024-01-31 onwards'
 base_url = 'https://data.elexon.co.uk/bmrs/api/v1'
 
 # Function to automatically generate functions to retrieve data from API
@@ -68,9 +41,7 @@ def generate_function_from_openapi(openapi_json):
             print(f"    This function requests data from the '{path}' endpoint")
             path_lookup = path.replace('/', '-')
             print(f"    See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api&operation=get{path_lookup} for more information")
-            print(f"    {note_on_date_availability}")
             print("")
-
             print(f"    Args:")
             # Format the parameter descriptions to appear in the docstring
             for param in parameters:
@@ -132,7 +103,6 @@ with open("openapi_functions.py", "w") as f:
 
     try:
         # Call the function to capture the print messages
-        json_to_df(data)
         generate_function_from_openapi(data)
     finally:
         sys.stdout = original_stdout  # Restore stdout to its original state
