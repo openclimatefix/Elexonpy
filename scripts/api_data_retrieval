@@ -88,7 +88,7 @@ def generate_function_from_openapi(openapi_json):
             print("    if response.status_code == 200:")
             print("        data = response.json()")
             print("        # Convert JSON output to DataFrame")
-            print("        df = json_to_df(data)")
+            print("        df = json_to_dataframe_with_metadata(data)")
             print("    else:")
             print("        raise Exception(f'Error: {response.status_code}')")
             print("")
