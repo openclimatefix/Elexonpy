@@ -1,4 +1,4 @@
-def json_to_df(data):
+def json_to_dataframe_with_metadata(data):
     # Extract metadata
     if isinstance(data, dict):
         metadata = data.get('metadata', [])
