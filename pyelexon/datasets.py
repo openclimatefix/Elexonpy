@@ -43,9 +43,11 @@ class Datasets:
         - dict: JSON response from the ABUC dataset endpoint.
         """
         endpoint = '/datasets/ABUC'
+        publish_date_time_from = '2024-06-25T00:00:00Z'
+        publish_date_time_to = '2024-06-26T00:00:00Z'
         params = {
-            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
-            'publishDateTimeTo': '2024-06-26T00:00:00Z',
+            'publishDateTimeFrom': publish_date_time_from,
+            'publishDateTimeTo': publish_date_time_to,
             'format': 'json'  # Optional
         }
         return self.fetch_data(endpoint, params)
@@ -58,9 +60,11 @@ class Datasets:
         - dict: JSON response from the ABUC stream dataset endpoint.
         """
         endpoint = '/datasets/ABUC/stream'
+        publish_date_time_from = '2024-06-25T00:00:00Z'
+        publish_date_time_to = '2024-06-26T00:00:00Z'
         params = {
-            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
-            'publishDateTimeTo': '2024-06-26T00:00:00Z',
+            'publishDateTimeFrom': publish_date_time_from,
+            'publishDateTimeTo': publish_date_time_to,
             'format': 'json'  # Optional
         }
         return self.fetch_data(endpoint, params)
