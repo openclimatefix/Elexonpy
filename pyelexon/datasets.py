@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from pyelexon.constants import BASE_URL
+from constants import BASE_URL
 
 class Datasets:
     """
