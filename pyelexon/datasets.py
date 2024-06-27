@@ -1,7 +1,7 @@
 """ Functions for /datasets """
 
-""" 
- See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information 
+"""
+ See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information
 This file should contain the following routes:
 """
 
@@ -159,3 +159,83 @@ This file should contain the following routes:
 # Path: /datasets/YATL
 # Path: /datasets/YATL/stream
 # Path: /datasets/metadata/latest
+
+import requests
+
+class Datasets:
+    """
+    A class to interact with Elexon API datasets.
+    """
+
+    def fetch_data(self, endpoint, params=None):
+        """
+        Fetches data from the specified Elexon API endpoint.
+
+        Parameters:
+        - endpoint (str): The endpoint path to fetch data from.
+        - params (dict): Optional query parameters.
+
+        Returns:
+        - dict: JSON response from the API.
+        """
+        base_url = "https://data.elexon.co.uk/bmrs/api/v1"
+        url = f"{base_url}{endpoint}"
+
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()  # Raise an exception for HTTP errors
+            return response.json()
+        except requests.exceptions.HTTPError as http_err:
+            print(f"HTTP error occurred: {http_err}")
+        except Exception as err:
+            print(f"Other error occurred: {err}")
+
+        return None
+
+    def fetch_abuc(self):
+        """
+        Fetches data from the ABUC dataset endpoint.
+
+        Returns:
+        - dict: JSON response from the ABUC dataset endpoint.
+        """
+        endpoint = '/datasets/ABUC'
+        params = {
+            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
+            'publishDateTimeTo': '2024-06-26T00:00:00Z',
+            'format': 'json'  # Optional: Example format parameter
+        }
+        return self.fetch_data(endpoint, params)
+
+    def fetch_abuc_stream(self):
+        """
+        Fetches data from the ABUC stream dataset endpoint.
+
+        Returns:
+        - dict: JSON response from the ABUC stream dataset endpoint.
+        """
+        endpoint = '/datasets/ABUC/stream'
+        params = {
+            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
+            'publishDateTimeTo': '2024-06-26T00:00:00Z',
+            'format': 'json'  # Optional: Example format parameter
+        }
+        return self.fetch_data(endpoint, params)
+
+# Example usage
+if __name__ == "__main__":
+    datasets_instance = Datasets()
+
+    # Fetch ABUC dataset
+    abuc_data = datasets_instance.fetch_abuc()
+    if abuc_data:
+        print("ABUC dataset fetched successfully:", abuc_data)
+
+    # Fetch ABUC stream dataset
+    abuc_stream_data = datasets_instance.fetch_abuc_stream()
+    if abuc_stream_data:
+        print("ABUC stream dataset fetched successfully:", abuc_stream_data)
+
+
+
+
