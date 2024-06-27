@@ -1,10 +1,5 @@
 """ Functions for /datasets """
 
-"""
- See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information
-This file should contain the following routes:
-"""
-
 import requests
 from constants import BASE_URL
 
@@ -69,6 +64,10 @@ class Datasets:
         }
         return self.fetch_data(endpoint, params)
 
+"""
+See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information
+This file should contain the following routes:
+"""
 
 # Path: /datasets/ABUC
 # Path: /datasets/ABUC/stream
