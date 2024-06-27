@@ -5,6 +5,67 @@
 This file should contain the following routes:
 """
 
+import requests
+from constants import BASE_URL
+
+class Datasets:
+    """
+    A class to interact with Elexon API datasets.
+    """
+
+    def fetch_data(self, endpoint, params=None):
+        """
+        Parameters:
+        - endpoint (str): The endpoint path to fetch data from.
+        - params (dict): Optional query parameters.
+
+        Returns:
+        - dict: JSON response from the API.
+        """
+        url = f"{BASE_URL}{endpoint}"
+
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()  # Raise an exception for errors
+            return response.json()
+        except requests.exceptions.HTTPError as http_err:
+            print(f"HTTP error: {http_err}")
+        except Exception as err:
+            print(f"Other error: {err}")
+
+        return None
+
+    def fetch_abuc(self):
+        """
+        Fetches data from the ABUC dataset endpoint.
+
+        Returns:
+        - dict: JSON response from the ABUC dataset endpoint.
+        """
+        endpoint = '/datasets/ABUC'
+        params = {
+            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
+            'publishDateTimeTo': '2024-06-26T00:00:00Z',
+            'format': 'json'  # Optional
+        }
+        return self.fetch_data(endpoint, params)
+
+    def fetch_abuc_stream(self):
+        """
+        Fetches data from the ABUC stream dataset endpoint.
+
+        Returns:
+        - dict: JSON response from the ABUC stream dataset endpoint.
+        """
+        endpoint = '/datasets/ABUC/stream'
+        params = {
+            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
+            'publishDateTimeTo': '2024-06-26T00:00:00Z',
+            'format': 'json'  # Optional
+        }
+        return self.fetch_data(endpoint, params)
+
+
 # Path: /datasets/ABUC
 # Path: /datasets/ABUC/stream
 # Path: /datasets/AGPT
@@ -159,69 +220,3 @@ This file should contain the following routes:
 # Path: /datasets/YATL
 # Path: /datasets/YATL/stream
 # Path: /datasets/metadata/latest
-
-import requests
-
-class Datasets:
-    """
-    A class to interact with Elexon API datasets.
-    """
-
-    def fetch_data(self, endpoint, params=None):
-        """
-        Fetches data from the specified Elexon API endpoint.
-
-        Parameters:
-        - endpoint (str): The endpoint path to fetch data from.
-        - params (dict): Optional query parameters.
-
-        Returns:
-        - dict: JSON response from the API.
-        """
-        base_url = "https://data.elexon.co.uk/bmrs/api/v1"
-        url = f"{base_url}{endpoint}"
-
-        try:
-            response = requests.get(url, params=params)
-            response.raise_for_status()  # Raise an exception for HTTP errors
-            return response.json()
-        except requests.exceptions.HTTPError as http_err:
-            print(f"HTTP error occurred: {http_err}")
-        except Exception as err:
-            print(f"Other error occurred: {err}")
-
-        return None
-
-    def fetch_abuc(self):
-        """
-        Fetches data from the ABUC dataset endpoint.
-
-        Returns:
-        - dict: JSON response from the ABUC dataset endpoint.
-        """
-        endpoint = '/datasets/ABUC'
-        params = {
-            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
-            'publishDateTimeTo': '2024-06-26T00:00:00Z',
-            'format': 'json'  # Optional: Example format parameter
-        }
-        return self.fetch_data(endpoint, params)
-
-    def fetch_abuc_stream(self):
-        """
-        Fetches data from the ABUC stream dataset endpoint.
-
-        Returns:
-        - dict: JSON response from the ABUC stream dataset endpoint.
-        """
-        endpoint = '/datasets/ABUC/stream'
-        params = {
-            'publishDateTimeFrom': '2024-06-25T00:00:00Z',
-            'publishDateTimeTo': '2024-06-26T00:00:00Z',
-            'format': 'json'  # Optional: Example format parameter
-        }
-        return self.fetch_data(endpoint, params)
-
-
-
-
