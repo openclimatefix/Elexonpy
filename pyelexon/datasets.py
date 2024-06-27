@@ -222,20 +222,6 @@ class Datasets:
         }
         return self.fetch_data(endpoint, params)
 
-# Example usage
-if __name__ == "__main__":
-    datasets_instance = Datasets()
-
-    # Fetch ABUC dataset
-    abuc_data = datasets_instance.fetch_abuc()
-    if abuc_data:
-        print("ABUC dataset fetched successfully:", abuc_data)
-
-    # Fetch ABUC stream dataset
-    abuc_stream_data = datasets_instance.fetch_abuc_stream()
-    if abuc_stream_data:
-        print("ABUC stream dataset fetched successfully:", abuc_stream_data)
-
 
 
 
