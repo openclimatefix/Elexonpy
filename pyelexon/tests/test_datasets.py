@@ -2,6 +2,7 @@ import pytest
 import pandas as pd
 from unittest.mock import patch, MagicMock
 from pyelexon.datasets import Datasets
+import requests
 
 @pytest.fixture
 def mock_requests_get(mocker):
@@ -99,7 +100,7 @@ def test_fetch_abuc_dataframe(mock_requests_get):
     mock_requests_get.return_value.status_code = 200
 
     datasets = Datasets()
-    abuc_data_df = datasets.fetch_abuc(convert_to_dataframe=True)
+    abuc_data_df = datasets.fetch_abuc('2024-06-25T00:00:00Z', '2024-06-26T00:00:00Z', convert_to_dataframe=True)
 
     assert isinstance(abuc_data_df, pd.DataFrame)
     assert abuc_data_df.equals(pd.DataFrame(mock_response))
@@ -136,7 +137,7 @@ def test_fetch_abuc_stream_dataframe(mock_requests_get):
     mock_requests_get.return_value.status_code = 200
 
     datasets = Datasets()
-    abuc_stream_data_df = datasets.fetch_abuc_stream(convert_to_dataframe=True)
+    abuc_stream_data_df = datasets.fetch_abuc_stream('2024-06-25T00:00:00Z', '2024-06-26T00:00:00Z', convert_to_dataframe=True)
 
     assert isinstance(abuc_stream_data_df, pd.DataFrame)
     assert abuc_stream_data_df.equals(pd.DataFrame(mock_response))
