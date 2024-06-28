@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from pyelexon.constants import BASE_URL
+from constants import BASE_URL
 
 class Datasets:
     """
@@ -40,16 +40,17 @@ class Datasets:
 
         return None
 
-    def fetch_abuc(self, convert_to_dataframe=True):
+    def fetch_abuc(self, publish_date_time_from, publish_date_time_to, convert_to_dataframe=True):
         """
-        Fetches data from the ABUC dataset endpoint.
+        Parameters:
+        - publish_date_time_from (str): The start datetime for fetching data.
+        - publish_date_time_to (str): The end datetime for fetching data.
+        - convert_to_dataframe (bool): Convert the response to a DataFrame (default: True).
 
         Returns:
         - dict or DataFrame: JSON response from the ABUC dataset endpoint or DataFrame if convert_to_dataframe is True.
         """
         endpoint = '/datasets/ABUC'
-        publish_date_time_from = '2024-06-25T00:00:00Z'
-        publish_date_time_to = '2024-06-26T00:00:00Z'
         params = {
             'publishDateTimeFrom': publish_date_time_from,
             'publishDateTimeTo': publish_date_time_to,
@@ -58,16 +59,17 @@ class Datasets:
 
         return self.fetch_data(endpoint, params, convert_to_dataframe)
 
-    def fetch_abuc_stream(self, convert_to_dataframe=True):
+    def fetch_abuc_stream(self, publish_date_time_from, publish_date_time_to, convert_to_dataframe=True):
         """
-        Fetches data from the ABUC stream dataset endpoint.
+        Parameters:
+        - publish_date_time_from (str): The start datetime for fetching data.
+        - publish_date_time_to (str): The end datetime for fetching data.
+        - convert_to_dataframe (bool): Convert the response to a DataFrame (default: True).
 
         Returns:
         - dict or DataFrame: JSON response from the ABUC stream dataset endpoint or DataFrame if convert_to_dataframe is True.
         """
         endpoint = '/datasets/ABUC/stream'
-        publish_date_time_from = '2024-06-25T00:00:00Z'
-        publish_date_time_to = '2024-06-26T00:00:00Z'
         params = {
             'publishDateTimeFrom': publish_date_time_from,
             'publishDateTimeTo': publish_date_time_to,
@@ -76,6 +78,23 @@ class Datasets:
 
         return self.fetch_data(endpoint, params, convert_to_dataframe)
 
+
+if __name__ == "__main__":
+    datasets = Datasets()
+
+    # Example: Fetch ABUC dataset for a specific date range
+    start_date = '2024-06-25T00:00:00Z'
+    end_date = '2024-06-26T00:00:00Z'
+    abuc_data = datasets.fetch_abuc(start_date, end_date, convert_to_dataframe=True)
+
+    print("ABUC Dataset:")
+    print(abuc_data.head())  # Assuming the data is converted to DataFrame and we want to display the first few rows
+
+    # Example: Fetch ABUC stream dataset for a specific date range
+    stream_data = datasets.fetch_abuc_stream(start_date, end_date, convert_to_dataframe=True)
+
+    print("\nABUC Stream Dataset:")
+    print(stream_data.head())
 
 """
 See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information
