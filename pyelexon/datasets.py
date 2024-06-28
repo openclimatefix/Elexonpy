@@ -1,7 +1,89 @@
-""" Functions for /datasets """
+import requests
+import pandas as pd
+from pyelexon.constants import BASE_URL
 
-""" 
- See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information 
+class Datasets:
+
+    def fetch_data(self, endpoint, params=None, convert_to_dataframe=False):
+        """
+        Parameters:
+        - endpoint (str): The endpoint path to fetch data from.
+        - params (dict): Optional query parameters.
+        - convert_to_dataframe (bool): Flag to convert response to DataFrame (default: False).
+
+        Returns:
+        - dict or DataFrame: JSON response from the API or DataFrame if convert_to_dataframe is True.
+        """
+        url = f"{BASE_URL}{endpoint}"
+
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()  # Raise an exception for errors
+
+            if convert_to_dataframe:
+                # Check if response is a list of dictionaries
+                if isinstance(response.json(), list):
+                    df = pd.DataFrame(response.json())
+                else:
+                    df = pd.DataFrame(response.json()['data'])
+                return df
+            else:
+                return response.json()
+
+        except requests.exceptions.HTTPError as http_err:
+            print(f"HTTP error: {http_err}")
+        except Exception as err:
+            print(f"Other error: {err}")
+
+        return None
+
+    def fetch_abuc(self, publish_date_time_from, publish_date_time_to, convert_to_dataframe=True):
+        """
+        Parameters:
+        - publish_date_time_from (str): The start datetime for fetching data.
+        - publish_date_time_to (str): The end datetime for fetching data.
+        - convert_to_dataframe (bool): Convert the response to a DataFrame (default: True).
+
+        Returns:
+        - dict or DataFrame: JSON response from the ABUC dataset endpoint or DataFrame if convert_to_dataframe is True.
+
+        API Documentation:
+        For more details on this API endpoint, refer to the [ABUC Dataset API Documentation](https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api&operation=get-datasets-abuc-publishdatetimefrom-publishdatetimefrom-publishdatetimeto).
+        """
+        endpoint = '/datasets/ABUC'
+        params = {
+            'publishDateTimeFrom': publish_date_time_from,
+            'publishDateTimeTo': publish_date_time_to,
+            'format': 'json'  # Optional
+        }
+
+        return self.fetch_data(endpoint, params, convert_to_dataframe)
+
+    def fetch_abuc_stream(self, publish_date_time_from, publish_date_time_to, convert_to_dataframe=True):
+        """
+        Parameters:
+        - publish_date_time_from (str): The start datetime for fetching data.
+        - publish_date_time_to (str): The end datetime for fetching data.
+        - convert_to_dataframe (bool): Convert the response to a DataFrame (default: True).
+
+        Returns:
+        - dict or DataFrame: JSON response from the ABUC stream dataset endpoint or DataFrame if convert_to_dataframe is True.
+
+        API Documentation:
+        For more details on this API endpoint, refer to the [ABUC stream Dataset API Documentation](https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api&operation=get-datasets-abuc-stream-publishdatetimefrom-publishdatetimefrom-publishdate)
+        """
+        endpoint = '/datasets/ABUC/stream'
+        params = {
+            'publishDateTimeFrom': publish_date_time_from,
+            'publishDateTimeTo': publish_date_time_to,
+            'format': 'json'  # Optional
+        }
+
+        return self.fetch_data(endpoint, params, convert_to_dataframe)
+
+
+"""
+See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information
 This file should contain the following routes:
 """
 
