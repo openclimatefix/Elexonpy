@@ -3,9 +3,6 @@ import pandas as pd
 from pyelexon.constants import BASE_URL
 
 class Datasets:
-    """
-    A class to interact with Elexon API datasets.
-    """
 
     def fetch_data(self, endpoint, params=None, convert_to_dataframe=False):
         """
