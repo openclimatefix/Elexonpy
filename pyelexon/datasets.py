@@ -79,23 +79,6 @@ class Datasets:
         return self.fetch_data(endpoint, params, convert_to_dataframe)
 
 
-if __name__ == "__main__":
-    datasets = Datasets()
-
-    # Example: Fetch ABUC dataset for a specific date range
-    start_date = '2024-06-25T00:00:00Z'
-    end_date = '2024-06-26T00:00:00Z'
-    abuc_data = datasets.fetch_abuc(start_date, end_date, convert_to_dataframe=True)
-
-    print("ABUC Dataset:")
-    print(abuc_data.head())  # Assuming the data is converted to DataFrame and we want to display the first few rows
-
-    # Example: Fetch ABUC stream dataset for a specific date range
-    stream_data = datasets.fetch_abuc_stream(start_date, end_date, convert_to_dataframe=True)
-
-    print("\nABUC Stream Dataset:")
-    print(stream_data.head())
-
 """
 See https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api for more information
 This file should contain the following routes:
