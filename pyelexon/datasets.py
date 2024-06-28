@@ -46,6 +46,9 @@ class Datasets:
 
         Returns:
         - dict or DataFrame: JSON response from the ABUC dataset endpoint or DataFrame if convert_to_dataframe is True.
+
+        API Documentation:
+        For more details on this API endpoint, refer to the [ABUC Dataset API Documentation](https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api&operation=get-datasets-abuc-publishdatetimefrom-publishdatetimefrom-publishdatetimeto).
         """
         endpoint = '/datasets/ABUC'
         params = {
@@ -65,6 +68,9 @@ class Datasets:
 
         Returns:
         - dict or DataFrame: JSON response from the ABUC stream dataset endpoint or DataFrame if convert_to_dataframe is True.
+
+        API Documentation:
+        For more details on this API endpoint, refer to the [ABUC stream Dataset API Documentation](https://developer.data.elexon.co.uk/api-details#api=prod-insol-insights-api&operation=get-datasets-abuc-stream-publishdatetimefrom-publishdatetimefrom-publishdate)
         """
         endpoint = '/datasets/ABUC/stream'
         params = {
