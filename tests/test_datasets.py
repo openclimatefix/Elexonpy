@@ -2,15 +2,16 @@ import os
 import sys
 import pytest
 import pandas as pd
-from unittest.mock import patch, MagicMock
+from unittest import mock
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from pyelexon.datasets import Datasets
 import requests
 
 @pytest.fixture
-def mock_requests_get(mocker):
-    return mocker.patch('requests.get')
+def mock_requests_get():
+    with mock.patch('requests.get') as mock_get:
+        yield mock_get
 
 def test_fetch_data_dict_response(mock_requests_get):
     # Mock response data for dict response
