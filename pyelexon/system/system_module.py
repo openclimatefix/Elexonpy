@@ -32,9 +32,7 @@ class SystemPricesFetcher:
             data = response.json()
             df = pd.DataFrame(data["data"])
 
-            # Filter to include only the 'systemBuyPrice' column
-            buy_prices_df = df[['settlementDate', 'settlementPeriod', 'systemBuyPrice']]
-            return buy_prices_df
+            return df  # Return entire DataFrame
 
         except requests.exceptions.HTTPError as http_err:
             print(f"HTTP error occurred: {http_err}")
