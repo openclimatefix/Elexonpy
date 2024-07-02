@@ -5,9 +5,6 @@ import requests
 import requests_mock
 from datetime import datetime
 import pandas as pd
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from pyelexon.constants import BASE_URL
 from pyelexon.system.system_module import SystemPricesFetcher
 
