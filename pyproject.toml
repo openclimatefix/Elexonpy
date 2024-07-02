@@ -8,6 +8,7 @@ license={file="LICENCE"}
 dependencies = [
     "pandas",
     "requests<2.32.0",
+    "requests-mock"
 ]
 
 [tool.setuptools.dynamic]
@@ -25,6 +26,7 @@ dev=[
     "pre-commit",
     "pytest",
     "pytest-cov",
+    "pytest-mock"
 ]
 
 all=["pyelexon[dev]"]
