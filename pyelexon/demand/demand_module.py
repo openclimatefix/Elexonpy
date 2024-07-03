@@ -343,30 +343,3 @@ class Demand:
         except Exception as e:
             print(f"Error fetching Triad demand peaks: {e}")
             return None
-
-# Example usage
-
-demand_client = Demand()
-
-# Example 1: Fetch actual total demand data for one day
-from_date = '2024-01-01'
-to_date = '2024-01-01'
-actual_demand_data = demand_client.fetch_actual_total_demand(from_date, to_date, convert_to_dataframe=True)
-
-if actual_demand_data is not None:
-    print("Actual Total Demand Data:")
-    print(actual_demand_data.head())
-else:
-    print("Failed to fetch actual total demand data.")
-
-
-#Example 2 : indicative_peak_demand
-
-data_type = 'operational'
-indicative_peak_data = demand_client.fetch_indicative_peak_demand(data_type, triad_season_start_year=2023, format='json', convert_to_dataframe=True)
-
-if indicative_peak_data is not None and not indicative_peak_data.empty:
-    print("Indicative Peak Demand Data:")
-    print(indicative_peak_data.head())
-else:
-    print("Failed to fetch indicative peak demand data.")
