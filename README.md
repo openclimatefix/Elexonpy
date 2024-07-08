@@ -1,4 +1,4 @@
-# pyElexon
+# Elexonpy
 Python package wrapper around Elexon api
 
 In Progress
