@@ -19,17 +19,18 @@ Evolution daily margin forecast (OCNMFD2)
 This endpoint provides the daily evolution Generating Plant Operating Margin covering 2 days ahead to 14 days ahead in MW values.  The Daily API outputs the latest published data for daily margin forecast for D+2 to D+14.                Date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
-forecast_date = '2013-10-20' # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.MarginForecastApi()
+forecast_date = '2013-10-20'  # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution daily margin forecast (OCNMFD2)
@@ -69,16 +70,17 @@ Daily margin forecast (OCNMFD2)
 This endpoint provides the Generating Plant Operating Margin covering 2 days ahead to 14 days ahead  in MW values. The Daily API outputs the latest published data for daily margin forecast for D+2 t D+14
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.MarginForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Daily margin forecast (OCNMFD2)
@@ -117,17 +119,18 @@ Historical daily margin forecast (OCNMFD2)
 This endpoint provides the historic Generating Plant Operating Margin covering 2 days ahead to 14 days ahead in MW values.  The historic API outputs the latest published data for historic daily margin forecast for D+2 to D+14
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.MarginForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historical daily margin forecast (OCNMFD2)
@@ -167,19 +170,20 @@ Evolution daily margin forecast (OCNMFW2, OCNMF3Y2)
 This endpoint provides the daily evolution Generating Plant Operating Margin covering 2 days ahead to 14 days ahead in MW values.  The Daily API outputs the latest published data for daily margin forecast for D+2 t D+14
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
-year = 56 # int | 
-week = 56 # int | 
-range = 'range_example' # str |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.MarginForecastApi()
+year = 56  # int | 
+week = 56  # int | 
+range = 'range_example'  # str |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution daily margin forecast (OCNMFW2, OCNMF3Y2)
@@ -221,17 +225,18 @@ Weekly margin forecast (OCNMFW2, OCNMF3Y2)
 This endpoint provides the Generating Plant Operating Margin covering 2 weeks ahead to 156 weeks ahead in MW values.  The weekly API outputs the latest published data for weekly margin forecast for W+2 to W+156
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
-range = 'range_example' # str |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.MarginForecastApi()
+range = 'range_example'  # str |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Weekly margin forecast (OCNMFW2, OCNMF3Y2)
@@ -271,18 +276,19 @@ Historical weekly margin forecast (OCNMFW2, OCNMF3Y2)
 This endpoint provides the weekly historic  Generating Plant Operating Margin.  This historic API output 2 weeks ahead to 156 weeks ahead in MW values
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-range = 'range_example' # str |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.MarginForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+range = 'range_example'  # str |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historical weekly margin forecast (OCNMFW2, OCNMF3Y2)

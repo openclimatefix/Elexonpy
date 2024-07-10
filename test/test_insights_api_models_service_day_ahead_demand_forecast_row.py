@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_service_day_ahead_demand_forecast_row import InsightsApiModelsServiceDayAheadDemandForecastRow  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_service_day_ahead_demand_forecast_row import InsightsApiModelsServiceDayAheadDemandForecastRow  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsServiceDayAheadDemandForecastRow(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsServiceDayAheadDemandForecastRow(unittest.TestCase):
     def testInsightsApiModelsServiceDayAheadDemandForecastRow(self):
         """Test InsightsApiModelsServiceDayAheadDemandForecastRow"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_service_day_ahead_demand_forecast_row.InsightsApiModelsServiceDayAheadDemandForecastRow()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_service_day_ahead_demand_forecast_row.InsightsApiModelsServiceDayAheadDemandForecastRow()  # noqa: E501
         pass
 
 

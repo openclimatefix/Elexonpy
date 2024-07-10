@@ -29,26 +29,30 @@ Acceptance volumes by settlement date (BOAV)
 Returns the settlement acceptance volumes for the requested settlement date.    For each settlement period within the range, only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_date = '2013-10-20' # date | This must be in the format yyyy-MM-dd.
-bid_offer = 'bid_offer_example' # str | 
-bm_unit = ['bm_unit_example'] # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_date = '2013-10-20'  # date | This must be in the format yyyy-MM-dd.
+bid_offer = 'bid_offer_example'  # str | 
+bm_unit = [
+    'bm_unit_example']  # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Acceptance volumes by settlement date (BOAV)
-    api_response = api_instance.balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_get(settlement_date, bid_offer, bm_unit=bm_unit, format=format)
+    api_response = api_instance.balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_get(
+        settlement_date, bid_offer, bm_unit=bm_unit, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -83,27 +87,31 @@ Acceptance volumes by settlement period (BOAV)
 Returns the settlement acceptance volumes for the requested settlement period.    Only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_period = 56 # int | This should be an integer from 1-50 inclusive.
-settlement_date = '2013-10-20' # date | This must be in the format yyyy-MM-dd.
-bid_offer = 'bid_offer_example' # str | 
-bm_unit = ['bm_unit_example'] # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_period = 56  # int | This should be an integer from 1-50 inclusive.
+settlement_date = '2013-10-20'  # date | This must be in the format yyyy-MM-dd.
+bid_offer = 'bid_offer_example'  # str | 
+bm_unit = [
+    'bm_unit_example']  # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Acceptance volumes by settlement period (BOAV)
-    api_response = api_instance.balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_settlement_period_get(settlement_period, settlement_date, bid_offer, bm_unit=bm_unit, format=format)
+    api_response = api_instance.balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_settlement_period_get(
+        settlement_period, settlement_date, bid_offer, bm_unit=bm_unit, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_acceptance_volumes_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -139,25 +147,28 @@ Historic acceptances by settlement period (ISPSTACK, BOALF, BOD)
 Returns the bid and offer prices for acceptances, with the acceptance number and acceptance time. Results are sorted by descending acceptance time.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-settlement_period = 56 # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+settlement_period = 56  # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic acceptances by settlement period (ISPSTACK, BOALF, BOD)
-    api_response = api_instance.balancing_settlement_acceptances_all_settlement_date_settlement_period_get(settlement_date, settlement_period, format=format)
+    api_response = api_instance.balancing_settlement_acceptances_all_settlement_date_settlement_period_get(
+        settlement_date, settlement_period, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_acceptances_all_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_acceptances_all_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -191,16 +202,17 @@ Default notices (CDN)
 This endpoint provides a subset of CDN data received from EC. It returns the defaults that are in force and defaults that have closed within the last 7 days.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Default notices (CDN)
@@ -239,26 +251,32 @@ Indicative period BMU cashflows by settlement date (EBOCF)
 Returns derived indicative cashflow data generated by the latest calculation run for a given settlement date.                For each settlement period within the range, only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-bid_offer = 'bid_offer_example' # str | Filter if bid or offer data is to be returned.
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-bm_unit = ['bm_unit_example'] # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+bid_offer = 'bid_offer_example'  # str | Filter if bid or offer data is to be returned.
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+bm_unit = [
+    'bm_unit_example']  # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Indicative period BMU cashflows by settlement date (EBOCF)
-    api_response = api_instance.balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_get(bid_offer, settlement_date, bm_unit=bm_unit, format=format)
+    api_response = api_instance.balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_get(bid_offer,
+                                                                                                            settlement_date,
+                                                                                                            bm_unit=bm_unit,
+                                                                                                            format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -293,27 +311,31 @@ Indicative period BMU cashflows by settlement period (EBOCF)
 Returns derived indicative cashflow data generated by the latest calculation run for a given settlement period.                Only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_period = 56 # int | The settlement period for the filter.
-bid_offer = 'bid_offer_example' # str | Filter if bid or offer data is to be returned.
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-bm_unit = ['bm_unit_example'] # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_period = 56  # int | The settlement period for the filter.
+bid_offer = 'bid_offer_example'  # str | Filter if bid or offer data is to be returned.
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+bm_unit = [
+    'bm_unit_example']  # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Indicative period BMU cashflows by settlement period (EBOCF)
-    api_response = api_instance.balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_settlement_period_get(settlement_period, bid_offer, settlement_date, bm_unit=bm_unit, format=format)
+    api_response = api_instance.balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_settlement_period_get(
+        settlement_period, bid_offer, settlement_date, bm_unit=bm_unit, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_cashflows_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -349,26 +371,30 @@ Indicative volumes by settlement date (DISPTAV)
 Returns the settlement indicative volumes for the requested settlement date.    For each settlement period within the range, only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_date = '2013-10-20' # date | This must be in the format yyyy-MM-dd.
-bid_offer = 'bid_offer_example' # str | 
-bm_unit = ['bm_unit_example'] # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_date = '2013-10-20'  # date | This must be in the format yyyy-MM-dd.
+bid_offer = 'bid_offer_example'  # str | 
+bm_unit = [
+    'bm_unit_example']  # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Indicative volumes by settlement date (DISPTAV)
-    api_response = api_instance.balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_get(settlement_date, bid_offer, bm_unit=bm_unit, format=format)
+    api_response = api_instance.balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_get(
+        settlement_date, bid_offer, bm_unit=bm_unit, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -403,27 +429,31 @@ Indicative volumes by settlement period (DISPTAV)
 Returns the settlement indicative volumes for the requested settlement period.    Only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_period = 56 # int | This should be an integer from 1-50 inclusive.
-settlement_date = '2013-10-20' # date | This must be in the format yyyy-MM-dd.
-bid_offer = 'bid_offer_example' # str | 
-bm_unit = ['bm_unit_example'] # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_period = 56  # int | This should be an integer from 1-50 inclusive.
+settlement_date = '2013-10-20'  # date | This must be in the format yyyy-MM-dd.
+bid_offer = 'bid_offer_example'  # str | 
+bm_unit = [
+    'bm_unit_example']  # list[str] | Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Indicative volumes by settlement period (DISPTAV)
-    api_response = api_instance.balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_settlement_period_get(settlement_period, settlement_date, bid_offer, bm_unit=bm_unit, format=format)
+    api_response = api_instance.balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_settlement_period_get(
+        settlement_period, settlement_date, bid_offer, bm_unit=bm_unit, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_indicative_volumes_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -459,24 +489,26 @@ Market depth by settlement date (IMBALNGC, BOD, DISEBSP, DISPTAV)
 Returns market depth data for a given day.  Imbalance (MW) is retrieved from IMBALNGC.  Bid/offer volumes (MWh) are calculated by summing bid/offer volumes from BOD.  Total acceptance volumes (MWh) are retrieved from DISEBSP.  Priced acceptance volumes (MWh) are calculated by summing bid/offer accepted volumes with data type Original from DISPTAV.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Market depth by settlement date (IMBALNGC, BOD, DISEBSP, DISPTAV)
     api_response = api_instance.balancing_settlement_market_depth_settlement_date_get(settlement_date, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_market_depth_settlement_date_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_market_depth_settlement_date_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -509,25 +541,28 @@ Market depth by settlement period (IMBALNGC, BOD, DISEBSP, DISPTAV)
 Returns market depth data for a given settlement period.  Imbalance (MW) is retrieved from IMBALNGC.  Bid/offer volumes (MWh) are calculated by summing bid/offer volumes from BOD.  Total acceptance volumes (MWh) are retrieved from DISEBSP.  Priced acceptance volumes (MWh) are calculated by summing bid/offer accepted volumes with data type Original from DISPTAV.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_period = 56 # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_period = 56  # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Market depth by settlement period (IMBALNGC, BOD, DISEBSP, DISPTAV)
-    api_response = api_instance.balancing_settlement_market_depth_settlement_date_settlement_period_get(settlement_period, settlement_date, format=format)
+    api_response = api_instance.balancing_settlement_market_depth_settlement_date_settlement_period_get(
+        settlement_period, settlement_date, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_market_depth_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_market_depth_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -561,24 +596,26 @@ Settlement messages by settlement date (SMSG)
 Returns settlement messages generated by the SAA for a given settlement day, relating to the data  for a settlement run.                For each settlement period within the range, only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_date = '2013-10-20' # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_date = '2013-10-20'  # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Settlement messages by settlement date (SMSG)
     api_response = api_instance.balancing_settlement_messages_settlement_date_get(settlement_date, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_messages_settlement_date_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_messages_settlement_date_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -611,25 +648,29 @@ Settlement messages by settlement date and period (SMSG)
 Returns settlement messages generated by the SAA for a given settlement period, relating to the data  for a settlement run.                Only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_period = 56 # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
-settlement_date = '2013-10-20' # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_period = 56  # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
+settlement_date = '2013-10-20'  # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Settlement messages by settlement date and period (SMSG)
-    api_response = api_instance.balancing_settlement_messages_settlement_date_settlement_period_get(settlement_period, settlement_date, format=format)
+    api_response = api_instance.balancing_settlement_messages_settlement_date_settlement_period_get(settlement_period,
+                                                                                                    settlement_date,
+                                                                                                    format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_messages_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_messages_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -663,26 +704,29 @@ Settlement bid-offer stacks by settlement period (ISPSTACK)
 Returns detailed system prices generated by the latest calculation run for a given settlement period.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-bid_offer = 'bid_offer_example' # str | Filter if bid or offer data is to be returned.
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-settlement_period = 56 # int | The settlement period for the filter.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+bid_offer = 'bid_offer_example'  # str | Filter if bid or offer data is to be returned.
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+settlement_period = 56  # int | The settlement period for the filter.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Settlement bid-offer stacks by settlement period (ISPSTACK)
-    api_response = api_instance.balancing_settlement_stack_all_bid_offer_settlement_date_settlement_period_get(bid_offer, settlement_date, settlement_period, format=format)
+    api_response = api_instance.balancing_settlement_stack_all_bid_offer_settlement_date_settlement_period_get(
+        bid_offer, settlement_date, settlement_period, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_stack_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_stack_all_bid_offer_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -717,25 +761,29 @@ Settlement calculation summary (ISPSTACK, DISEBSP, MID, NETBSAD)
 Returns the settlement calculation summary for the requested settlement period.  Data is derived from the following datasets: ISPSTACK, DISEBSP, MID, NETBSAD                In JSON format, decimal values are returned as strings to avoid loss of precision.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_date = '2013-10-20' # date | This must be in the format yyyy-MM-dd.
-settlement_period = 56 # int | This should be an integer from 1-50 inclusive.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_date = '2013-10-20'  # date | This must be in the format yyyy-MM-dd.
+settlement_period = 56  # int | This should be an integer from 1-50 inclusive.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Settlement calculation summary (ISPSTACK, DISEBSP, MID, NETBSAD)
-    api_response = api_instance.balancing_settlement_summary_settlement_date_settlement_period_get(settlement_date, settlement_period, format=format)
+    api_response = api_instance.balancing_settlement_summary_settlement_date_settlement_period_get(settlement_date,
+                                                                                                   settlement_period,
+                                                                                                   format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_summary_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_summary_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -769,24 +817,26 @@ Settlement system prices by settlement date (DISEBSP)
 Returns settlement system buy and sell prices generated by the SAA for a given settlement day, relating to  the data for a settlement run.                For each settlement period within the range, only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_date = '2013-10-20' # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_date = '2013-10-20'  # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Settlement system prices by settlement date (DISEBSP)
     api_response = api_instance.balancing_settlement_system_prices_settlement_date_get(settlement_date, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_system_prices_settlement_date_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_system_prices_settlement_date_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -819,25 +869,28 @@ Settlement system prices by settlement date and period (DISEBSP)
 Returns settlement system buy and sell prices generated by the SAA for a given settlement period, relating to  the data for a settlement run.                Only messages generated for the latest settlement run are returned.                Settlement date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicativeImbalanceSettlementApi()
-settlement_period = 56 # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
-settlement_date = '2013-10-20' # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicativeImbalanceSettlementApi()
+settlement_period = 56  # int | The settlement period to filter. This should be an integer from 1-50 inclusive.
+settlement_date = '2013-10-20'  # date | The settlement date to filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Settlement system prices by settlement date and period (DISEBSP)
-    api_response = api_instance.balancing_settlement_system_prices_settlement_date_settlement_period_get(settlement_period, settlement_date, format=format)
+    api_response = api_instance.balancing_settlement_system_prices_settlement_date_settlement_period_get(
+        settlement_period, settlement_date, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_system_prices_settlement_date_settlement_period_get: %s\n" % e)
+    print(
+        "Exception when calling IndicativeImbalanceSettlementApi->balancing_settlement_system_prices_settlement_date_settlement_period_get: %s\n" % e)
 ```
 
 ### Parameters

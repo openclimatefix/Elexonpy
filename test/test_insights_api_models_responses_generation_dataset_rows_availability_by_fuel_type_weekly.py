@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_generation_dataset_rows_availability_by_fuel_type_weekly import InsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeWeekly  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_generation_dataset_rows_availability_by_fuel_type_weekly import InsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeWeekly  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeWeekly(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeW
     def testInsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeWeekly(self):
         """Test InsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeWeekly"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_generation_dataset_rows_availability_by_fuel_type_weekly.InsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeWeekly()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_generation_dataset_rows_availability_by_fuel_type_weekly.InsightsApiModelsResponsesGenerationDatasetRowsAvailabilityByFuelTypeWeekly()  # noqa: E501
         pass
 
 

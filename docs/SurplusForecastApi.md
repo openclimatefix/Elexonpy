@@ -19,17 +19,18 @@ Evolution daily surplus forecast (OCNMFD)
 This endpoint provides the daily evolution Generating Plant Operating Surplus covering 2 days ahead to 14 days ahead in MW values.  The Daily API outputs the latest published data for daily surplus forecast for D+2 to D+14.                Date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurplusForecastApi()
-forecast_date = '2013-10-20' # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SurplusForecastApi()
+forecast_date = '2013-10-20'  # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution daily surplus forecast (OCNMFD)
@@ -69,16 +70,17 @@ Daily surplus forecast (OCNMFD)
 This endpoint provides the Generating Plant Operating Surplus covering 2 days ahead to 14 days ahead in MW values.  The Daily API outputs the latest published data for daily surplus forecast for D+2 t D+14
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurplusForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SurplusForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Daily surplus forecast (OCNMFD)
@@ -117,17 +119,18 @@ Historical daily surplus forecast (OCNMFD)
 This endpoint provides the historic Generating Plant Operating Surplus covering 2 days ahead to 14 days ahead in MW values.  The historic API outputs the latest published data for historic daily surplus forecast for D+2 to D+14
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurplusForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SurplusForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historical daily surplus forecast (OCNMFD)
@@ -167,19 +170,20 @@ Evolution weekly surplus forecast (OCNMFW, OCNMF3Y)
 This endpoint provides the evolution Generating Plant Operating Surplus  covering 2 weeks ahead to 156 weeks ahead in MW values.  The weekly API outputs the latest published data for weekly surplus forecast for W+2 to W+156
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurplusForecastApi()
-year = 56 # int | 
-week = 56 # int | 
-range = 'range_example' # str |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SurplusForecastApi()
+year = 56  # int | 
+week = 56  # int | 
+range = 'range_example'  # str |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution weekly surplus forecast (OCNMFW, OCNMF3Y)
@@ -221,17 +225,18 @@ Weekly surplus forecast (OCNMFW, OCNMF3Y)
 This endpoint provides the Generating Plant Operating Surplus covering 2 weeks ahead to 156 weeks ahead in MW values.  The weekly API outputs the latest published data for weekly surplus forecast for W+2 to W+156
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurplusForecastApi()
-range = 'range_example' # str |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SurplusForecastApi()
+range = 'range_example'  # str |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Weekly surplus forecast (OCNMFW, OCNMF3Y)
@@ -271,18 +276,19 @@ Historical weekly surplus forecast (OCNMFW, OCNMF3Y)
 This endpoint provides the historic Generating Plant Operating Surplus covering 2 weeks ahead to 156 weeks ahead in MW values.  The weekly API outputs the latest published data for weekly surplus forecast for W+2 to W+156.  Historical published data of weekly surplus forecasts for a given publish date in the 2-156 week dataset.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurplusForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-range = 'range_example' # str |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SurplusForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+range = 'range_example'  # str |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historical weekly surplus forecast (OCNMFW, OCNMF3Y)

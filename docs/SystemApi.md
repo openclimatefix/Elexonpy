@@ -17,18 +17,19 @@ Demand control instructions (DCI)
 This endpoint provides demand control instruction data, filtered by the time range of the instruction.  There is no date range limit on parameters.  If no query parameters are supplied all data is returned.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SystemApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+to = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Demand control instructions (DCI)
@@ -69,18 +70,19 @@ System frequency (FREQ)
 This endpoint allows for retrieving a collection of recent system frequency data from National Grid ESO. Results  can be filtered by a range of DateTime parameters. This endpoint is useful for ad-hoc querying frequency data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SystemApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+to = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # System frequency (FREQ)
@@ -121,17 +123,18 @@ System frequency (FREQ) stream
 This endpoint allows for retrieving a stream of recent system frequency data from National Grid ESO. Results can  be filtered by a range of DateTime parameters. This endpoint has an optimised JSON payload and aimed at frequent  request for the frequency data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
+api_instance = elexonpy.SystemApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+to = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
 
 try:
     # System frequency (FREQ) stream
@@ -171,23 +174,26 @@ System warnings (SYSWARN)
 This endpoint provides system warnings data. Results can be filtered by warning type and a range of DateTime parameters.  - If no parameters are specified then the latest message is returned  - If just a warning type is specified then the latest message of that type is returned  - If just publish times are specified then all messages within that range are returned
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
-warning_type = 'warning_type_example' # str |  (optional)
-publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.SystemApi()
+warning_type = 'warning_type_example'  # str |  (optional)
+publish_date_time_from = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+publish_date_time_to = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # System warnings (SYSWARN)
-    api_response = api_instance.system_warnings_get(warning_type=warning_type, publish_date_time_from=publish_date_time_from, publish_date_time_to=publish_date_time_to, format=format)
+    api_response = api_instance.system_warnings_get(warning_type=warning_type,
+                                                    publish_date_time_from=publish_date_time_from,
+                                                    publish_date_time_to=publish_date_time_to, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SystemApi->system_warnings_get: %s\n" % e)

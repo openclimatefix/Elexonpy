@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.surplus_forecast_api import SurplusForecastApi  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.api.surplus_forecast_api import SurplusForecastApi  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestSurplusForecastApi(unittest.TestCase):

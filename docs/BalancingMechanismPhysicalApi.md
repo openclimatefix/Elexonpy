@@ -15,24 +15,27 @@ Market-wide physical data (PN, QPN, MILS, MELS)
 This endpoint provides the physical data for multiple requested BMUs or all BMUs.  It returns the data valid for a single settlement period.                Only one dataset can be queried at a time: PN, QPN, MILS, or MELS.  The results from each dataset are transformed to a common response model, with fields not present in all 4 datasets dropped.                The settlement period to query must be specified as a date and settlement period. The date must be given in the format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BalancingMechanismPhysicalApi()
-dataset = 'dataset_example' # str | Dataset to query.
-settlement_date = '2013-10-20' # date | The settlement date for the filter.
-settlement_period = 56 # int | The settlement period for the filter. This should be an integer from 1-50 inclusive.
-bm_unit = ['bm_unit_example'] # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.BalancingMechanismPhysicalApi()
+dataset = 'dataset_example'  # str | Dataset to query.
+settlement_date = '2013-10-20'  # date | The settlement date for the filter.
+settlement_period = 56  # int | The settlement period for the filter. This should be an integer from 1-50 inclusive.
+bm_unit = [
+    'bm_unit_example']  # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Market-wide physical data (PN, QPN, MILS, MELS)
-    api_response = api_instance.balancing_physical_all_get(dataset, settlement_date, settlement_period, bm_unit=bm_unit, format=format)
+    api_response = api_instance.balancing_physical_all_get(dataset, settlement_date, settlement_period, bm_unit=bm_unit,
+                                                           format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BalancingMechanismPhysicalApi->balancing_physical_all_get: %s\n" % e)
@@ -71,26 +74,30 @@ Physical data per BMU (PN, QPN, MILS, MELS)
 This endpoint provides the physical data for a requested BMU.  It returns the data valid over a given time range.                By default, all of the relevant datasets are returned: PN, QPN, MILS, & MELS.  The results from each dataset are transformed to a common response model, with fields not present in all 4 datasets dropped.                By default, the from and to parameters filter the data by start time inclusively. If the settlementPeriodFrom or  settlementPeriodTo parameters are provided, the corresponding from or to parameter instead filters on settlement  date, allowing for searching by a combination of start time and/or settlement date & settlement period.  Note: When filtering via settlement date, from/to are treated as Dates only, with the time being ignored. For  example, 2022-06-01T00:00Z and 2022-06-01T11:11Z are both treated as the settlement date 2022-06-01.                All Dates and DateTimes should be expressed as defined within  <a href=\"https://datatracker.ietf.org/doc/html/rfc3339#section-5.6\" target=\"_blank\">RFC 3339</a>.                Some examples of date parameter combinations are shown below.                Filtering from start time to start time:                    /balancing/physical?from=2022-06-01T00:00Z&to=2022-07-01T00:00Z                Filtering from start time to settlement date and period:                    /balancing/physical?from=2022-06-01T00:00Z&to=2022-07-01T00:00Z&settlementPeriodTo=1                Filtering from settlement date and period to start time:                    /balancing/physical?from=2022-06-01T00:00Z&to=2022-07-01T00:00Z&settlementPeriodFrom=1                Filtering from settlement date and period to settlement date and period:                    /balancing/physical?from=2022-06-01T00:00Z&to=2022-07-01T00:00Z&settlementPeriodFrom=1&settlementPeriodTo=1
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BalancingMechanismPhysicalApi()
-bm_unit = 'bm_unit_example' # str | The BM Unit to query.
-_from = '2013-10-20T19:20:30+01:00' # datetime | The \"from\" start time or settlement date for the filter.
-to = '2013-10-20T19:20:30+01:00' # datetime | The \"to\" start time or settlement date for the filter.
-settlement_period_from = 56 # int | The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
-settlement_period_to = 56 # int | The \"to\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
-dataset = ['dataset_example'] # list[str] | Datasets to filter. If empty, all datasets will be returned. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.BalancingMechanismPhysicalApi()
+bm_unit = 'bm_unit_example'  # str | The BM Unit to query.
+_from = '2013-10-20T19:20:30+01:00'  # datetime | The \"from\" start time or settlement date for the filter.
+to = '2013-10-20T19:20:30+01:00'  # datetime | The \"to\" start time or settlement date for the filter.
+settlement_period_from = 56  # int | The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
+settlement_period_to = 56  # int | The \"to\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
+dataset = ['dataset_example']  # list[str] | Datasets to filter. If empty, all datasets will be returned. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Physical data per BMU (PN, QPN, MILS, MELS)
-    api_response = api_instance.balancing_physical_get(bm_unit, _from, to, settlement_period_from=settlement_period_from, settlement_period_to=settlement_period_to, dataset=dataset, format=format)
+    api_response = api_instance.balancing_physical_get(bm_unit, _from, to,
+                                                       settlement_period_from=settlement_period_from,
+                                                       settlement_period_to=settlement_period_to, dataset=dataset,
+                                                       format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BalancingMechanismPhysicalApi->balancing_physical_get: %s\n" % e)

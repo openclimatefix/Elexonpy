@@ -14,15 +14,16 @@ Health check
 This endpoint provides a success status code (200) if the service is alive
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HealthCheckApi()
+api_instance = elexonpy.HealthCheckApi()
 
 try:
     # Health check

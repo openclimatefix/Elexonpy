@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_balancing_physical_dataset_rows_physical_notification_data import InsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotificationData  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_balancing_physical_dataset_rows_physical_notification_data import InsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotificationData  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotificationData(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotifica
     def testInsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotificationData(self):
         """Test InsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotificationData"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_balancing_physical_dataset_rows_physical_notification_data.InsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotificationData()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_balancing_physical_dataset_rows_physical_notification_data.InsightsApiModelsResponsesBalancingPhysicalDatasetRowsPhysicalNotificationData()  # noqa: E501
         pass
 
 

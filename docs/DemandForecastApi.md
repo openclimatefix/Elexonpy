@@ -30,17 +30,18 @@ Evolution of the fourteen-day demand forecast over time (NDFD, TSDFD)
 This endpoint provides the evolution of all daily demand forecasts over time for a given forecast date.                Date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-forecast_date = '2013-10-20' # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+forecast_date = '2013-10-20'  # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution of the fourteen-day demand forecast over time (NDFD, TSDFD)
@@ -80,16 +81,17 @@ Fourteen day demand forecast (NDFD, TSDFD)
 Retrieve latest 14-day forecast demand data
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Fourteen day demand forecast (NDFD, TSDFD)
@@ -128,17 +130,18 @@ History of the fourteen-day demand forecast (NDFD, TSDFD)
 Retrieve historical daily forecast demand data
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # History of the fourteen-day demand forecast (NDFD, TSDFD)
@@ -178,19 +181,20 @@ Historic view of the earliest forecasted demand (NDF, TSDF)
 This endpoint allows for retrieving earliest day-ahead demand forecast data from National Grid ESO.  Results are filtered by settlement time, and only the earliest published forecast for each settlement period is shown.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic view of the earliest forecasted demand (NDF, TSDF)
@@ -232,18 +236,19 @@ Historic view of the earliest forecasted demand (NDF, TSDF) stream
 This endpoint allows for retrieving a stream of earliest day-ahead demand forecast data from National Grid ESO.  Results are filtered by settlement time, and only the earliest published forecast for each settlement period is shown.  This endpoint has an optimised JSON payload and aimed at frequent request for the day-ahead demand forecast data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+api_instance = elexonpy.DemandForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
 
 try:
     # Historic view of the earliest forecasted demand (NDF, TSDF) stream
@@ -284,23 +289,25 @@ Evolution of the day-ahead demand forecast over time (NDF, TSDF)
 This endpoint provides the day and day ahead demand forecast and are categorized as National Demand Forecast (NDF) and Transmission System Demand Forecast (TSDF);  the forecast values are derived by NGESO and is based on historically metered generation output for Great Britain.  The data is updated every 30 minutes and within 15 minutes of the end of the effective Settlement Period.  NDF takes into account transmission losses but but does not include station transformer load, pumped storage demand or Interconnector demand;  the data is reported only at national level; and TSDF which takes into account transmission losses , station transformer load, pumped storage demand and interconnector demand.  The data is reported both at national and boundary (system zones) level. Boundary data only available for Transmission System Demand Forecast (TSDF).                Date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-settlement_period = [56] # list[int] | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+settlement_period = [56]  # list[int] | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution of the day-ahead demand forecast over time (NDF, TSDF)
-    api_response = api_instance.forecast_demand_day_ahead_evolution_get(settlement_date, settlement_period, boundary=boundary, format=format)
+    api_response = api_instance.forecast_demand_day_ahead_evolution_get(settlement_date, settlement_period,
+                                                                        boundary=boundary, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DemandForecastApi->forecast_demand_day_ahead_evolution_get: %s\n" % e)
@@ -338,17 +345,18 @@ Day-ahead demand forecast (NDF, TSDF)
 This endpoint provides the day and day ahead demand forecast and are categorized as National Demand Forecast (NDF) and Transmission System Demand Forecast (TSDF);  the forecast values are derived by NGESO and is based on historically metered generation output for Great Britain.  The data is updated every 30 minutes and within 15 minutes of the end of the effective Settlement Period.  NDF takes into account transmission losses but but does not include station transformer load, pumped storage demand or Interconnector demand;  the data is reported only at national level; and TSDF which takes into account transmission losses , station transformer load, pumped storage demand and interconnector demand.  The data is reported both at national and boundary (system zones) level. Boundary data only available for Transmission System Demand Forecast (TSDF).
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Day-ahead demand forecast (NDF, TSDF)
@@ -388,18 +396,19 @@ History of the day-ahead demand forecast (NDF, TSDF)
 This endpoint provides the day and day ahead demand forecast and are categorized as National Demand Forecast (NDF) and Transmission System Demand Forecast (TSDF);  the forecast values are derived by NGESO and is based on historically metered generation output for Great Britain.  The data is updated every 30 minutes and within 15 minutes of the end of the effective Settlement Period.  NDF takes into account transmission losses but but does not include station transformer load, pumped storage demand or Interconnector demand;  the data is reported only at national level; and TSDF which takes into account transmission losses , station transformer load, pumped storage demand and interconnector demand.  The data is reported both at national and boundary (system zones) level. Boundary data only available for Transmission System Demand Forecast (TSDF).
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # History of the day-ahead demand forecast (NDF, TSDF)
@@ -440,19 +449,20 @@ Historic view of the latest forecasted demand (NDF, TSDF)
 This endpoint allows for retrieving latest day-ahead demand forecast data from National Grid ESO.  Results are filtered by settlement time, and only the latest published forecast for each settlement period is shown.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic view of the latest forecasted demand (NDF, TSDF)
@@ -494,18 +504,19 @@ Historic view of the latest forecasted demand (NDF, TSDF) stream
 This endpoint allows for retrieving a stream of latest day-ahead demand forecast data from National Grid ESO.  Results are filtered by settlement time, and only the latest published forecast for each settlement period is shown.  This endpoint has an optimised JSON payload and aimed at frequent request for the day-ahead demand forecast data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+api_instance = elexonpy.DemandForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
 
 try:
     # Historic view of the latest forecasted demand (NDF, TSDF) stream
@@ -546,19 +557,20 @@ Peak forecasted demand per day (TSDF)
 This endpoint allows for retrieving the peak demand that is forecast for each day from National Grid ESO.  Results are filtered by a range of Date parameters.  Results default to yesterday, today and tomorrow if no parameters are supplied.                Date parameters must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-boundary = 'boundary_example' # str |  (optional)
-_from = '2013-10-20' # date | The start of the requested date range. (optional)
-to = '2013-10-20' # date | The end of the requested date range. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+boundary = 'boundary_example'  # str |  (optional)
+_from = '2013-10-20'  # date | The start of the requested date range. (optional)
+to = '2013-10-20'  # date | The end of the requested date range. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Peak forecasted demand per day (TSDF)
@@ -600,24 +612,28 @@ Day-ahead total load forecast (DATL/B0620)
 This endpoint provides day-ahead total load forecast per bidding zone data.  It can be filtered by settlement period dates.                This API endpoint has a maximum range of 7 days.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-settlement_period_from = 56 # int |  (optional)
-settlement_period_to = 56 # int |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+settlement_period_from = 56  # int |  (optional)
+settlement_period_to = 56  # int |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Day-ahead total load forecast (DATL/B0620)
-    api_response = api_instance.forecast_demand_total_day_ahead_get(_from, to, settlement_period_from=settlement_period_from, settlement_period_to=settlement_period_to, format=format)
+    api_response = api_instance.forecast_demand_total_day_ahead_get(_from, to,
+                                                                    settlement_period_from=settlement_period_from,
+                                                                    settlement_period_to=settlement_period_to,
+                                                                    format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DemandForecastApi->forecast_demand_total_day_ahead_get: %s\n" % e)
@@ -656,18 +672,19 @@ Week-ahead total load forecast (WATL/B0630)
 This endpoint returns week-ahead total load forecast per bidding zone data with the minimum possible  and maximum available total loads in MW values, filtered by forecast week.                For a given forecast date, if more than one forecast has been published, only the most recent forecast  is returned.                This API endpoint has a maximum range of 367 days.                Date parameters must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-_from = '2013-10-20' # date | The earliest forecast date to include.
-to = '2013-10-20' # date | The latest forecast date to include.
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+_from = '2013-10-20'  # date | The earliest forecast date to include.
+to = '2013-10-20'  # date | The latest forecast date to include.
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Week-ahead total load forecast (WATL/B0630)
@@ -708,16 +725,17 @@ Latest week-ahead total load forecast (WATL/B0630)
 This endpoint returns the most recently published WATL / B0630 forecast.                This forecast is the week-ahead total load forecast per bidding zone data,  with minimum possible and maximum available total loads in MW values.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Latest week-ahead total load forecast (WATL/B0630)
@@ -756,18 +774,19 @@ Evolution of the one-year demand forecast over time  (NDFW, TSDFW)
 This endpoint provides all weekly demand forecasts over time for a given forecast Year and Week
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-forecast_year = 56 # int | 
-forecast_week = 56 # int | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+forecast_year = 56  # int | 
+forecast_week = 56  # int | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution of the one-year demand forecast over time  (NDFW, TSDFW)
@@ -808,16 +827,17 @@ One-year demand forecast (NDFW, TSDFW)
 This endpoint provides the latest weekly forecast demand data
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # One-year demand forecast (NDFW, TSDFW)
@@ -856,17 +876,18 @@ History of the one-year demand forecast (NDFW, TSDFW)
 Retrieve historical weekly forecast demand data
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.DemandForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # History of the one-year demand forecast (NDFW, TSDFW)

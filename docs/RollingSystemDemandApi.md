@@ -14,18 +14,19 @@ Total generation outturn (FUELINST)
 This endpoint provides the total generation outturn across all fuel types, derived by summing generation  of all categories from the Generation by Fuel Type report.                This data can be used as a proxy for rolling system demand.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RollingSystemDemandApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.RollingSystemDemandApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+to = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Total generation outturn (FUELINST)

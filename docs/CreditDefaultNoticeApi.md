@@ -14,16 +14,17 @@ Method | HTTP request | Description
 This endpoint has been moved to balancing/settlement/default-notices.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditDefaultNoticeApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.CreditDefaultNoticeApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # [DEPRECATED] Credit default notices (CDN)
