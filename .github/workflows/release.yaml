@@ -1,8 +1,8 @@
 name: Bump version and auto-release
 on:
   push:
-#    branches:
-#      - main
+    branches:
+      - main
 jobs:
   call-run-python-release:
     uses: openclimatefix/.github/.github/workflows/python-release.yml@v1.7.2
