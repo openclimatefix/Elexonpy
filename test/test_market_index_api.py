@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.market_index_api import MarketIndexApi  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.api.market_index_api import MarketIndexApi  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestMarketIndexApi(unittest.TestCase):

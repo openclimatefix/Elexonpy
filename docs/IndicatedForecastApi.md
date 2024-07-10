@@ -16,23 +16,25 @@ Evolution indicated day-ahead forecast (INDDEM, INDGEN, IMBALNGC, MELNGC)
 This endpoint provides the forecast indicated day-ahead data over time for the specified settlement date and settlement period.    Date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicatedForecastApi()
-settlement_date = '2013-10-20' # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
-settlement_period = [56] # list[int] | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicatedForecastApi()
+settlement_date = '2013-10-20'  # date | The settlement date for the filter. This must be in the format yyyy-MM-dd.
+settlement_period = [56]  # list[int] | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution indicated day-ahead forecast (INDDEM, INDGEN, IMBALNGC, MELNGC)
-    api_response = api_instance.forecast_indicated_day_ahead_evolution_get(settlement_date, settlement_period, boundary=boundary, format=format)
+    api_response = api_instance.forecast_indicated_day_ahead_evolution_get(settlement_date, settlement_period,
+                                                                           boundary=boundary, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IndicatedForecastApi->forecast_indicated_day_ahead_evolution_get: %s\n" % e)
@@ -70,17 +72,18 @@ Latest indicated day-ahead forecast (INDDEM, INDGEN, IMBALNGC, MELNGC)
 This endpoint provides the latest forecast indicated day-ahead data
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicatedForecastApi()
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicatedForecastApi()
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Latest indicated day-ahead forecast (INDDEM, INDGEN, IMBALNGC, MELNGC)
@@ -118,18 +121,19 @@ No authorization required
 Historical indicated day-ahead forecast (INDDEM, INDGEN, IMBALNGC, MELNGC)
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicatedForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.IndicatedForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+boundary = 'boundary_example'  # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historical indicated day-ahead forecast (INDDEM, INDGEN, IMBALNGC, MELNGC)

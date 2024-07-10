@@ -23,8 +23,9 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 (you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
 Then import the package:
+
 ```python
-import swagger_client
+import elexonpy
 ```
 
 ### Setuptools
@@ -37,8 +38,9 @@ python setup.py install --user
 (or `sudo python setup.py install` to install the package for all users)
 
 Then import the package:
+
 ```python
-import swagger_client
+import elexonpy
 ```
 
 ## Getting Started
@@ -48,12 +50,12 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AvailabilityApi(swagger_client.ApiClient(configuration))
+api_instance = elexonpy.AvailabilityApi(elexonpy.ApiClient(configuration))
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -63,7 +65,7 @@ except ApiException as e:
     print("Exception when calling AvailabilityApi->generation_availability_summary14_d_get: %s\n" % e)
 
 # create an instance of the API class
-api_instance = swagger_client.AvailabilityApi(swagger_client.ApiClient(configuration))
+api_instance = elexonpy.AvailabilityApi(elexonpy.ApiClient(configuration))
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:

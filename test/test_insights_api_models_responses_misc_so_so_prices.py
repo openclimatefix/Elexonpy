@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_misc_so_so_prices import InsightsApiModelsResponsesMiscSoSoPrices  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_misc_so_so_prices import InsightsApiModelsResponsesMiscSoSoPrices  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesMiscSoSoPrices(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesMiscSoSoPrices(unittest.TestCase):
     def testInsightsApiModelsResponsesMiscSoSoPrices(self):
         """Test InsightsApiModelsResponsesMiscSoSoPrices"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_misc_so_so_prices.InsightsApiModelsResponsesMiscSoSoPrices()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_misc_so_so_prices.InsightsApiModelsResponsesMiscSoSoPrices()  # noqa: E501
         pass
 
 
