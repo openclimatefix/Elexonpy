@@ -12,8 +12,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
+version = "0.0.1"
 NAME = "elexonpy"
-VERSION = "1.0.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -25,7 +25,7 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 
 setup(
     name=NAME,
-    version=VERSION,
+    version=version,
     description="Elexon Python Client",
     author="Richa Sharma",
     author_email="onlinericha19@gmail.com",
