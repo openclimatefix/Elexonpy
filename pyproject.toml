@@ -1,6 +1,6 @@
 [project]
-name="pyelexon"
-description = "pyelexon"
+name="elexonpy"
+description = "elexonpy"
 authors = [{name="Peter Dudfield", email="info@openclimatefix.org"}]
 dynamic = ["version", "readme"]
 license={file="LICENCE"}
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [tool.setuptools.dynamic]
-#version = {attr = "pyelexon.__version__"}
+#version = {attr = "elexonpy.__version__"}
 readme = {file = "README.md", content-type = "text/markdown"}
 
 [tool.setuptools.package-dir]
@@ -29,7 +29,7 @@ dev=[
     "pytest-mock"
 ]
 
-all=["pyelexon[dev]"]
+all=["elexonpy[dev]"]
 
 [tool.mypy]
 exclude = [
