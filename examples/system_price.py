@@ -1,25 +1,24 @@
-# This script demonstrates the use of methods from the SoSoPricesApi
-# to retrieve system operator to system operator prices data from the Elexon API.
+# This script demonstrates the use of methods from the IndicativeImbalanceSettlementApi
+# to retrieve settlement system prices data from the Elexon API.
 
 
 from datetime import datetime
 import pandas as pd
 from elexonpy.api_client import ApiClient
-from elexonpy.api.so_so_prices_api import SOSOPricesApi
+from elexonpy.api.indicative_imbalance_settlement_api import IndicativeImbalanceSettlementApi
 
 # Initialize API client
 api_client = ApiClient()
-soso_prices_api = SOSOPricesApi(api_client)
+imbalance_settlement_api = IndicativeImbalanceSettlementApi(api_client)
 
-# Define date range
-from_date = datetime(2024, 7, 1)
-to_date = datetime(2024, 7, 2)
+
+# Define settlement date
+settlement_date = '2024-07-02'
 
 try:
-    # Fetch SO-SO prices data from API
-    response = soso_prices_api.soso_prices_get(
-        _from=from_date,
-        to=to_date,
+    # Fetch system prices data from API
+    response = imbalance_settlement_api.balancing_settlement_system_prices_settlement_date_get(
+        settlement_date=settlement_date,
         format='json'
     )
 
@@ -27,8 +26,8 @@ try:
     df = pd.DataFrame([data.to_dict() for data in response.data])
 
     # Print DataFrame
-    print("\n--- System Operator to System Operator Prices Data ---")
+    print("\n--- Settlement System Prices Data ---")
     print(df.head())
 
 except Exception as e:
-    print(f"Error fetching SO-SO prices data: {str(e)}")
+    print(f"Error fetching settlement system prices data: {str(e)}")
