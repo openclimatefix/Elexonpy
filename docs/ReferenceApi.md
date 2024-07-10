@@ -19,15 +19,16 @@ BM Units
 This endpoint provides a current list of BM units held by Elexon
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = elexonpy.ReferenceApi()
 
 try:
     # BM Units
@@ -63,15 +64,16 @@ Fuel types
 This endpoint provides a current list of fuel types
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = elexonpy.ReferenceApi()
 
 try:
     # Fuel types
@@ -107,15 +109,16 @@ Interconnectors
 This endpoint provides a current list of interconnectors
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = elexonpy.ReferenceApi()
 
 try:
     # Interconnectors
@@ -151,15 +154,16 @@ Assets
 This endpoint provides a current list of asset IDs received from REMIT messages
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = elexonpy.ReferenceApi()
 
 try:
     # Assets
@@ -195,15 +199,16 @@ REMIT fuel types
 This endpoint provides a current list of fuel types received from REMIT messages
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = elexonpy.ReferenceApi()
 
 try:
     # REMIT fuel types
@@ -239,15 +244,16 @@ Participants
 This endpoint provides a current list of participant IDs received from REMIT messages
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = elexonpy.ReferenceApi()
 
 try:
     # Participants

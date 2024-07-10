@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_transparency_dataset_rows_week_ahead_total_load_per_bidding_zone_dataset_row import InsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPerBiddingZoneDatasetRow  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_transparency_dataset_rows_week_ahead_total_load_per_bidding_zone_dataset_row import InsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPerBiddingZoneDatasetRow  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPerBiddingZoneDatasetRow(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPer
     def testInsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPerBiddingZoneDatasetRow(self):
         """Test InsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPerBiddingZoneDatasetRow"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_transparency_dataset_rows_week_ahead_total_load_per_bidding_zone_dataset_row.InsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPerBiddingZoneDatasetRow()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_transparency_dataset_rows_week_ahead_total_load_per_bidding_zone_dataset_row.InsightsApiModelsResponsesTransparencyDatasetRowsWeekAheadTotalLoadPerBiddingZoneDatasetRow()  # noqa: E501
         pass
 
 

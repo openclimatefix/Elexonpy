@@ -21,17 +21,18 @@ Bulk fetch message details by IDs
 This endpoint provides one or more REMIT messages based on the given message IDs.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-message_id = [56] # list[int] | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.REMITApi()
+message_id = [56]  # list[int] | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Bulk fetch message details by IDs
@@ -71,30 +72,35 @@ List messages by event time
 This endpoint provides a list of REMIT message identifiers based on the event start time, end time and other optional parameters.                - Filtering by LatestRevisionOnly (default = true):     if true, include only the latest revision of each message.                - Filtering by ProfileOnly (default = false):      if true, include only messages with an outage profile.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-participant_id = 'participant_id_example' # str |  (optional)
-asset_id = 'asset_id_example' # str |  (optional)
-message_type = 'message_type_example' # str |  (optional)
-unavailability_type = 'unavailability_type_example' # str |  (optional)
-event_type = ['event_type_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-latest_revision_only = true # bool |  (optional)
-profile_only = true # bool |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.REMITApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+participant_id = 'participant_id_example'  # str |  (optional)
+asset_id = 'asset_id_example'  # str |  (optional)
+message_type = 'message_type_example'  # str |  (optional)
+unavailability_type = 'unavailability_type_example'  # str |  (optional)
+event_type = ['event_type_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+latest_revision_only = true  # bool |  (optional)
+profile_only = true  # bool |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # List messages by event time
-    api_response = api_instance.remit_list_by_event_get(_from, to, participant_id=participant_id, asset_id=asset_id, message_type=message_type, unavailability_type=unavailability_type, event_type=event_type, fuel_type=fuel_type, latest_revision_only=latest_revision_only, profile_only=profile_only, format=format)
+    api_response = api_instance.remit_list_by_event_get(_from, to, participant_id=participant_id, asset_id=asset_id,
+                                                        message_type=message_type,
+                                                        unavailability_type=unavailability_type, event_type=event_type,
+                                                        fuel_type=fuel_type, latest_revision_only=latest_revision_only,
+                                                        profile_only=profile_only, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling REMITApi->remit_list_by_event_get: %s\n" % e)
@@ -139,29 +145,35 @@ List messages by event time (stream)
 This endpoint provides a list of REMIT message identifiers based on the event start, end time and other optional parameters.                - Filtering by LatestRevisionOnly (default = true):     if true, include only the latest revision of each message.                - Filtering by ProfileOnly (default = false):      if true, include only messages with an outage profile.                This endpoint has an optimised JSON payload and is aimed at frequent requests for this data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-participant_id = 'participant_id_example' # str |  (optional)
-asset_id = 'asset_id_example' # str |  (optional)
-message_type = 'message_type_example' # str |  (optional)
-unavailability_type = 'unavailability_type_example' # str |  (optional)
-event_type = ['event_type_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-latest_revision_only = true # bool |  (optional)
-profile_only = true # bool |  (optional)
+api_instance = elexonpy.REMITApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+participant_id = 'participant_id_example'  # str |  (optional)
+asset_id = 'asset_id_example'  # str |  (optional)
+message_type = 'message_type_example'  # str |  (optional)
+unavailability_type = 'unavailability_type_example'  # str |  (optional)
+event_type = ['event_type_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+latest_revision_only = true  # bool |  (optional)
+profile_only = true  # bool |  (optional)
 
 try:
     # List messages by event time (stream)
-    api_response = api_instance.remit_list_by_event_stream_get(_from, to, participant_id=participant_id, asset_id=asset_id, message_type=message_type, unavailability_type=unavailability_type, event_type=event_type, fuel_type=fuel_type, latest_revision_only=latest_revision_only, profile_only=profile_only)
+    api_response = api_instance.remit_list_by_event_stream_get(_from, to, participant_id=participant_id,
+                                                               asset_id=asset_id, message_type=message_type,
+                                                               unavailability_type=unavailability_type,
+                                                               event_type=event_type, fuel_type=fuel_type,
+                                                               latest_revision_only=latest_revision_only,
+                                                               profile_only=profile_only)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling REMITApi->remit_list_by_event_stream_get: %s\n" % e)
@@ -205,30 +217,36 @@ List messages by publish time
 This endpoint provides a list of REMIT message identifiers based on the publish time and other optional parameters.                - Filtering by LatestRevisionOnly (default = true):     if true, include only the latest revision of each message.                - Filtering by ProfileOnly (default = false):      if true, include only messages with an outage profile.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-participant_id = 'participant_id_example' # str |  (optional)
-asset_id = 'asset_id_example' # str |  (optional)
-message_type = 'message_type_example' # str |  (optional)
-unavailability_type = 'unavailability_type_example' # str |  (optional)
-event_type = ['event_type_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-latest_revision_only = true # bool |  (optional)
-profile_only = true # bool |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.REMITApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+participant_id = 'participant_id_example'  # str |  (optional)
+asset_id = 'asset_id_example'  # str |  (optional)
+message_type = 'message_type_example'  # str |  (optional)
+unavailability_type = 'unavailability_type_example'  # str |  (optional)
+event_type = ['event_type_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+latest_revision_only = true  # bool |  (optional)
+profile_only = true  # bool |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # List messages by publish time
-    api_response = api_instance.remit_list_by_publish_get(_from, to, participant_id=participant_id, asset_id=asset_id, message_type=message_type, unavailability_type=unavailability_type, event_type=event_type, fuel_type=fuel_type, latest_revision_only=latest_revision_only, profile_only=profile_only, format=format)
+    api_response = api_instance.remit_list_by_publish_get(_from, to, participant_id=participant_id, asset_id=asset_id,
+                                                          message_type=message_type,
+                                                          unavailability_type=unavailability_type,
+                                                          event_type=event_type, fuel_type=fuel_type,
+                                                          latest_revision_only=latest_revision_only,
+                                                          profile_only=profile_only, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling REMITApi->remit_list_by_publish_get: %s\n" % e)
@@ -273,29 +291,35 @@ List messages by publish time (stream)
 This endpoint provides a list of REMIT message identifiers based on the publish time and other optional parameters.                - Filtering by LatestRevisionOnly (default = true):     if true, include only the latest revision of each message.                - Filtering by ProfileOnly (default = false):      if true, include only messages with an outage profile.                This endpoint has an optimised JSON payload and is aimed at frequent requests for this data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-participant_id = 'participant_id_example' # str |  (optional)
-asset_id = 'asset_id_example' # str |  (optional)
-message_type = 'message_type_example' # str |  (optional)
-unavailability_type = 'unavailability_type_example' # str |  (optional)
-event_type = ['event_type_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-latest_revision_only = true # bool |  (optional)
-profile_only = true # bool |  (optional)
+api_instance = elexonpy.REMITApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+participant_id = 'participant_id_example'  # str |  (optional)
+asset_id = 'asset_id_example'  # str |  (optional)
+message_type = 'message_type_example'  # str |  (optional)
+unavailability_type = 'unavailability_type_example'  # str |  (optional)
+event_type = ['event_type_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+latest_revision_only = true  # bool |  (optional)
+profile_only = true  # bool |  (optional)
 
 try:
     # List messages by publish time (stream)
-    api_response = api_instance.remit_list_by_publish_stream_get(_from, to, participant_id=participant_id, asset_id=asset_id, message_type=message_type, unavailability_type=unavailability_type, event_type=event_type, fuel_type=fuel_type, latest_revision_only=latest_revision_only, profile_only=profile_only)
+    api_response = api_instance.remit_list_by_publish_stream_get(_from, to, participant_id=participant_id,
+                                                                 asset_id=asset_id, message_type=message_type,
+                                                                 unavailability_type=unavailability_type,
+                                                                 event_type=event_type, fuel_type=fuel_type,
+                                                                 latest_revision_only=latest_revision_only,
+                                                                 profile_only=profile_only)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling REMITApi->remit_list_by_publish_stream_get: %s\n" % e)
@@ -339,17 +363,18 @@ Fetch message details by ID
 This endpoint provides a REMIT message based on a given message ID.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-message_id = 56 # int | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.REMITApi()
+message_id = 56  # int | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Fetch message details by ID
@@ -389,18 +414,19 @@ List all message revisions
 This endpoint provides all revisions for a given REMIT message.  The message can be specified in two ways:  - the mRID  - the message ID of a specific revision, which will return the entire list of revisions for that message
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-mrid = 'mrid_example' # str |  (optional)
-message_id = 56 # int |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.REMITApi()
+mrid = 'mrid_example'  # str |  (optional)
+message_id = 56  # int |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # List all message revisions
@@ -441,18 +467,19 @@ Fetch message details by mRID
 This endpoint provides one or more REMIT messages based on the given mRID and revision number. If none is given  it returns the REMIT message revision with the latest revision number.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.REMITApi()
-mrid = 'mrid_example' # str | 
-revision_number = 56 # int |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.REMITApi()
+mrid = 'mrid_example'  # str | 
+revision_number = 56  # int |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Fetch message details by mRID

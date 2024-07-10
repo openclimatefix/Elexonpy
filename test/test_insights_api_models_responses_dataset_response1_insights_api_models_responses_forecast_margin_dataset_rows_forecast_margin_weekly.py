@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_forecast_margin_dataset_rows_forecast_margin_weekly import InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesForecastMarginDatasetRowsForecastMarginWeekly  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_forecast_margin_dataset_rows_forecast_margin_weekly import InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesForecastMarginDatasetRowsForecastMarginWeekly  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesForecastMarginDatasetRowsForecastMarginWeekly(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesFo
     def testInsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesForecastMarginDatasetRowsForecastMarginWeekly(self):
         """Test InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesForecastMarginDatasetRowsForecastMarginWeekly"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_forecast_margin_dataset_rows_forecast_margin_weekly.InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesForecastMarginDatasetRowsForecastMarginWeekly()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_forecast_margin_dataset_rows_forecast_margin_weekly.InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesForecastMarginDatasetRowsForecastMarginWeekly()  # noqa: E501
         pass
 
 

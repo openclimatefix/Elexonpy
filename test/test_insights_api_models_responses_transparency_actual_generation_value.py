@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_transparency_actual_generation_value import InsightsApiModelsResponsesTransparencyActualGenerationValue  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_transparency_actual_generation_value import InsightsApiModelsResponsesTransparencyActualGenerationValue  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesTransparencyActualGenerationValue(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesTransparencyActualGenerationValue(unittest.T
     def testInsightsApiModelsResponsesTransparencyActualGenerationValue(self):
         """Test InsightsApiModelsResponsesTransparencyActualGenerationValue"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_transparency_actual_generation_value.InsightsApiModelsResponsesTransparencyActualGenerationValue()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_transparency_actual_generation_value.InsightsApiModelsResponsesTransparencyActualGenerationValue()  # noqa: E501
         pass
 
 

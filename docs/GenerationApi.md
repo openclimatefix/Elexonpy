@@ -22,16 +22,17 @@ Current snapshot of actual generation by fuel type categories (AGPT/B1620)
 This endpoint provides aggregated AGPT (B1620) data. It returns totals and percentages  for the last half hour and 24 hours for each generation type.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Current snapshot of actual generation by fuel type categories (AGPT/B1620)
@@ -70,24 +71,26 @@ Historic actual generation automatically down-sampled (AGPT/B1620)
 ⚠ This endpoint provides a down-sampled data summary intended for visualisation purposes.  Depending on the quantity of data requested, data returned may be averaged hourly, daily,  weekly or monthly. Quantities are rounded to the nearest MWh.  Use /datasets/AGPT for full access.                This endpoint provides actual aggregated generation data per Power System Resource type   (Fuel Type categories as defined by Commission Regulation (EU) No 543/2013).    This endpoint filters by startTime, and groups results by settlement period.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-settlement_period_from = 56 # int |  (optional)
-settlement_period_to = 56 # int |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+settlement_period_from = 56  # int |  (optional)
+settlement_period_to = 56  # int |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic actual generation automatically down-sampled (AGPT/B1620)
-    api_response = api_instance.generation_actual_per_type_get(_from, to, settlement_period_from=settlement_period_from, settlement_period_to=settlement_period_to, format=format)
+    api_response = api_instance.generation_actual_per_type_get(_from, to, settlement_period_from=settlement_period_from,
+                                                               settlement_period_to=settlement_period_to, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationApi->generation_actual_per_type_get: %s\n" % e)
@@ -126,24 +129,28 @@ Historic actual or estimated wind and solar power generation (AGWS/B1630)
 This endpoint provides actual or estimated wind and solar power generation  per settlement period. It returns generation with Power System Resource type  Solar, Wind Onshore or Wind Offshore (Fuel Type categories as defined by  Commission Regulation (EU) No 543/2013).                This endpoint filters by startTime and provides a maximum data output range of 7 days.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-settlement_period_from = 56 # int |  (optional)
-settlement_period_to = 56 # int |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+settlement_period_from = 56  # int |  (optional)
+settlement_period_to = 56  # int |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic actual or estimated wind and solar power generation (AGWS/B1630)
-    api_response = api_instance.generation_actual_per_type_wind_and_solar_get(_from, to, settlement_period_from=settlement_period_from, settlement_period_to=settlement_period_to, format=format)
+    api_response = api_instance.generation_actual_per_type_wind_and_solar_get(_from, to,
+                                                                              settlement_period_from=settlement_period_from,
+                                                                              settlement_period_to=settlement_period_to,
+                                                                              format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationApi->generation_actual_per_type_wind_and_solar_get: %s\n" % e)
@@ -182,17 +189,18 @@ Current snapshot of generation by fuel type categories (FUELINST, FUELHH)
 This endpoint provides a snapshot view of the last 24 hours generation by individual fuel type categories including interconnector.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Current snapshot of generation by fuel type categories (FUELINST, FUELHH)
@@ -232,16 +240,17 @@ This endpoint is obsolete, and this location may be removed with no further noti
 This endpoint has been moved to generation/outturn/current.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # This endpoint is obsolete, and this location may be removed with no further notice. 
@@ -279,18 +288,19 @@ Total generation outturn (FUELINST)
 This endpoint provides the total generation outturn across all fuel types, derived by summing generation  of all categories from the Generation by Fuel Type report.                This data can be used as a proxy for rolling system demand.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+to = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Total generation outturn (FUELINST)
@@ -331,16 +341,17 @@ This endpoint is obsolete, and this location may be removed with no further noti
 This endpoint has been moved to generation/outturn/interconnectors.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # This endpoint is obsolete, and this location may be removed with no further notice. 
@@ -378,26 +389,33 @@ Historic half-hourly interconnector flows (FUELINST)
 This endpoint provides the interconnector flows report derived from the Generation by Fuel Type (FUELINST)  data and shows both interconnector imports and exports; the data is updated every five minutes.                Settlement date parameters must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-settlement_date_from = '2013-10-20' # date | The settlement date from filter. This must be in the format yyyy-MM-dd. (optional)
-settlement_date_to = '2013-10-20' # date | The settlement date to filter. This must be in the format yyyy-MM-dd. (optional)
-settlement_period = [56] # list[int] |  (optional)
-interconnector_name = ['interconnector_name_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+publish_date_time_from = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+publish_date_time_to = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+settlement_date_from = '2013-10-20'  # date | The settlement date from filter. This must be in the format yyyy-MM-dd. (optional)
+settlement_date_to = '2013-10-20'  # date | The settlement date to filter. This must be in the format yyyy-MM-dd. (optional)
+settlement_period = [56]  # list[int] |  (optional)
+interconnector_name = ['interconnector_name_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic half-hourly interconnector flows (FUELINST)
-    api_response = api_instance.generation_outturn_interconnectors_get(publish_date_time_from=publish_date_time_from, publish_date_time_to=publish_date_time_to, settlement_date_from=settlement_date_from, settlement_date_to=settlement_date_to, settlement_period=settlement_period, interconnector_name=interconnector_name, format=format)
+    api_response = api_instance.generation_outturn_interconnectors_get(publish_date_time_from=publish_date_time_from,
+                                                                       publish_date_time_to=publish_date_time_to,
+                                                                       settlement_date_from=settlement_date_from,
+                                                                       settlement_date_to=settlement_date_to,
+                                                                       settlement_period=settlement_period,
+                                                                       interconnector_name=interconnector_name,
+                                                                       format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationApi->generation_outturn_interconnectors_get: %s\n" % e)
@@ -438,23 +456,26 @@ Historic generation automatically down-sampled (FUELINST)
 ⚠ This endpoint provides a down-sampled data summary intended for visualisation purposes.  Use raw dataset endpoints under /datasets for full access.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationApi()
-start_time = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-end_time = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-include_negative_generation = true # bool |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationApi()
+start_time = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+end_time = '2013-10-20T19:20:30+01:00'  # datetime |  (optional)
+include_negative_generation = true  # bool |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic generation automatically down-sampled (FUELINST)
-    api_response = api_instance.generation_outturn_summary_get(start_time=start_time, end_time=end_time, include_negative_generation=include_negative_generation, format=format)
+    api_response = api_instance.generation_outturn_summary_get(start_time=start_time, end_time=end_time,
+                                                               include_negative_generation=include_negative_generation,
+                                                               format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationApi->generation_outturn_summary_get: %s\n" % e)

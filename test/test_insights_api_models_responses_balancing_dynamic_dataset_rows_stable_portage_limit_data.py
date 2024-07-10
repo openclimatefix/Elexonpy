@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_balancing_dynamic_dataset_rows_stable_portage_limit_data import InsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimitData  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_balancing_dynamic_dataset_rows_stable_portage_limit_data import InsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimitData  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimitData(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimi
     def testInsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimitData(self):
         """Test InsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimitData"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_balancing_dynamic_dataset_rows_stable_portage_limit_data.InsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimitData()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_balancing_dynamic_dataset_rows_stable_portage_limit_data.InsightsApiModelsResponsesBalancingDynamicDatasetRowsStablePortageLimitData()  # noqa: E501
         pass
 
 

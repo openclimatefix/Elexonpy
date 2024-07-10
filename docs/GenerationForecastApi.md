@@ -31,24 +31,26 @@ Evolution of the fourteen-day generation capacity forecast over time (FOU2T14D)
 This endpoint provides the evolution of all daily generation forecasts over time for a given Forecast Date.                Date parameter must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-forecast_date = '2013-10-20' # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
-level = 'level_example' # str |  (optional)
-bm_unit = ['bm_unit_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+forecast_date = '2013-10-20'  # date | The forecast date for the filter. This must be in the format yyyy-MM-dd.
+level = 'level_example'  # str |  (optional)
+bm_unit = ['bm_unit_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution of the fourteen-day generation capacity forecast over time (FOU2T14D)
-    api_response = api_instance.forecast_availability_daily_evolution_get(forecast_date, level=level, bm_unit=bm_unit, fuel_type=fuel_type, format=format)
+    api_response = api_instance.forecast_availability_daily_evolution_get(forecast_date, level=level, bm_unit=bm_unit,
+                                                                          fuel_type=fuel_type, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_availability_daily_evolution_get: %s\n" % e)
@@ -87,23 +89,25 @@ Fourteen-day generation capacity forecast (FOU2T14D)
 This endpoint provides the latest fourteen-day generation forecast
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-level = 'level_example' # str |  (optional)
-bm_unit = ['bm_unit_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+level = 'level_example'  # str |  (optional)
+bm_unit = ['bm_unit_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Fourteen-day generation capacity forecast (FOU2T14D)
-    api_response = api_instance.forecast_availability_daily_get(level=level, bm_unit=bm_unit, fuel_type=fuel_type, format=format)
+    api_response = api_instance.forecast_availability_daily_get(level=level, bm_unit=bm_unit, fuel_type=fuel_type,
+                                                                format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_availability_daily_get: %s\n" % e)
@@ -141,24 +145,26 @@ History of the fourteen-day generation capacity forecast (FOU2T14D)
 This endpoint provides the latest fourteen-day generation forecast from a given DateTime
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-level = 'level_example' # str |  (optional)
-bm_unit = ['bm_unit_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+level = 'level_example'  # str |  (optional)
+bm_unit = ['bm_unit_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # History of the fourteen-day generation capacity forecast (FOU2T14D)
-    api_response = api_instance.forecast_availability_daily_history_get(publish_time, level=level, bm_unit=bm_unit, fuel_type=fuel_type, format=format)
+    api_response = api_instance.forecast_availability_daily_history_get(publish_time, level=level, bm_unit=bm_unit,
+                                                                        fuel_type=fuel_type, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_availability_daily_history_get: %s\n" % e)
@@ -197,16 +203,17 @@ Down-sampled fourteen-day generation forecast (FOU2T14D)
 This endpoint provides a summary of generation forecast data aggregated by forecast date,  intended for visualisation purposes. Use other availability forecast endpoints for full dataset access.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Down-sampled fourteen-day generation forecast (FOU2T14D)
@@ -245,16 +252,17 @@ Down-sampled three-year generation forecast (FOU2T3YW)
 This endpoint provides a summary of generation forecast data aggregated by forecast date,  intended for visualisation purposes. Use other availability forecast endpoints for full dataset access.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Down-sampled three-year generation forecast (FOU2T3YW)
@@ -293,25 +301,27 @@ Evolution of the three-year generation capacity forecast over time (FOU2T3YW)
 This endpoint provides all weekly generation forecasts over time for a given Year and Week
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-year = 56 # int | 
-week = 56 # int | 
-level = 'level_example' # str |  (optional)
-bm_unit = ['bm_unit_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+year = 56  # int | 
+week = 56  # int | 
+level = 'level_example'  # str |  (optional)
+bm_unit = ['bm_unit_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution of the three-year generation capacity forecast over time (FOU2T3YW)
-    api_response = api_instance.forecast_availability_weekly_evolution_get(year, week, level=level, bm_unit=bm_unit, fuel_type=fuel_type, format=format)
+    api_response = api_instance.forecast_availability_weekly_evolution_get(year, week, level=level, bm_unit=bm_unit,
+                                                                           fuel_type=fuel_type, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_availability_weekly_evolution_get: %s\n" % e)
@@ -351,23 +361,25 @@ Three-year generation capacity forecast (FOU2T3YW)
 This endpoint provides the latest three-year generation forecast
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-level = 'level_example' # str |  (optional)
-bm_unit = ['bm_unit_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+level = 'level_example'  # str |  (optional)
+bm_unit = ['bm_unit_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Three-year generation capacity forecast (FOU2T3YW)
-    api_response = api_instance.forecast_availability_weekly_get(level=level, bm_unit=bm_unit, fuel_type=fuel_type, format=format)
+    api_response = api_instance.forecast_availability_weekly_get(level=level, bm_unit=bm_unit, fuel_type=fuel_type,
+                                                                 format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_availability_weekly_get: %s\n" % e)
@@ -405,24 +417,26 @@ History of the three-year generation capacity forecast (FOU2T3YW)
 This endpoint provides the latest three-year forecast from a given DateTime
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-level = 'level_example' # str |  (optional)
-bm_unit = ['bm_unit_example'] # list[str] |  (optional)
-fuel_type = ['fuel_type_example'] # list[str] |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+level = 'level_example'  # str |  (optional)
+bm_unit = ['bm_unit_example']  # list[str] |  (optional)
+fuel_type = ['fuel_type_example']  # list[str] |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # History of the three-year generation capacity forecast (FOU2T3YW)
-    api_response = api_instance.forecast_availability_weekly_history_get(publish_time, level=level, bm_unit=bm_unit, fuel_type=fuel_type, format=format)
+    api_response = api_instance.forecast_availability_weekly_history_get(publish_time, level=level, bm_unit=bm_unit,
+                                                                         fuel_type=fuel_type, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_availability_weekly_history_get: %s\n" % e)
@@ -461,24 +475,28 @@ Day-ahead aggregated generation (DAG/B1430)
 This endpoint provides day-ahead aggregated generation data filtered by settlement date.                This API endpoint has a maximum range of 7 days.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-settlement_period_from = 56 # int |  (optional)
-settlement_period_to = 56 # int |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+settlement_period_from = 56  # int |  (optional)
+settlement_period_to = 56  # int |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Day-ahead aggregated generation (DAG/B1430)
-    api_response = api_instance.forecast_generation_day_ahead_get(_from, to, settlement_period_from=settlement_period_from, settlement_period_to=settlement_period_to, format=format)
+    api_response = api_instance.forecast_generation_day_ahead_get(_from, to,
+                                                                  settlement_period_from=settlement_period_from,
+                                                                  settlement_period_to=settlement_period_to,
+                                                                  format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_generation_day_ahead_get: %s\n" % e)
@@ -517,25 +535,29 @@ Day-ahead generation forecast for wind and solar (DGWS/B1440)
 This endpoint provides day-ahead forecast generation data for wind and solar.                This endpoint filters by startTime and provides a maximum data output range of 7 days.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-process_type = 'process_type_example' # str | 
-settlement_period_from = 56 # int |  (optional)
-settlement_period_to = 56 # int |  (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+process_type = 'process_type_example'  # str | 
+settlement_period_from = 56  # int |  (optional)
+settlement_period_to = 56  # int |  (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Day-ahead generation forecast for wind and solar (DGWS/B1440)
-    api_response = api_instance.forecast_generation_wind_and_solar_day_ahead_get(_from, to, process_type, settlement_period_from=settlement_period_from, settlement_period_to=settlement_period_to, format=format)
+    api_response = api_instance.forecast_generation_wind_and_solar_day_ahead_get(_from, to, process_type,
+                                                                                 settlement_period_from=settlement_period_from,
+                                                                                 settlement_period_to=settlement_period_to,
+                                                                                 format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GenerationForecastApi->forecast_generation_wind_and_solar_day_ahead_get: %s\n" % e)
@@ -575,18 +597,19 @@ Historic view of the earliest forecasted wind generation (WINDFOR)
 This endpoint provides the eariest wind generation forecast data.  This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30.  Results are filtered by a range of DateTime parameters.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic view of the earliest forecasted wind generation (WINDFOR)
@@ -627,17 +650,18 @@ Historic view of the earliest forecasted wind generation (WINDFOR) stream
 This endpoint provides the earliest wind generation forecast data.  This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30.  Results are filtered by a range of DateTime parameters.  This endpoint has an optimised JSON payload and is aimed at frequent requests for the wind generation forecast data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
+api_instance = elexonpy.GenerationForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
 
 try:
     # Historic view of the earliest forecasted wind generation (WINDFOR) stream
@@ -677,17 +701,18 @@ Evolution of the wind generation forecast over time (WINDFOR)
 This endpoint provides the evolution wind generation forecast data.  This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30.  Results are filtered by a range of DateTime parameters.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-start_time = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+start_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Evolution of the wind generation forecast over time (WINDFOR)
@@ -727,16 +752,17 @@ Current wind generation forecast (WINDFOR)
 This endpoint provides the latest wind generation forecast data. This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30. Results are filtered by a range of DateTime parameters.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Current wind generation forecast (WINDFOR)
@@ -775,17 +801,18 @@ History of the wind generation forecast (WINDFOR)
 This endpoint provides the historical wind generation forecast data. This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30.  Results are filtered by a range of DateTime parameters.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-publish_time = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+publish_time = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # History of the wind generation forecast (WINDFOR)
@@ -825,18 +852,19 @@ Historic view of the latest forecasted wind generation (WINDFOR)
 This endpoint provides the latest wind generation forecast data.  This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30.  Results are filtered by a range of DateTime parameters.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Historic view of the latest forecasted wind generation (WINDFOR)
@@ -877,17 +905,18 @@ Historic view of the latest forecasted wind generation (WINDFOR) stream
 This endpoint provides the latest wind generation forecast data.  This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30.  Results are filtered by a range of DateTime parameters.  This endpoint has an optimised JSON payload and is aimed at frequent requests for the wind generation forecast data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-_from = '2013-10-20T19:20:30+01:00' # datetime | 
-to = '2013-10-20T19:20:30+01:00' # datetime | 
+api_instance = elexonpy.GenerationForecastApi()
+_from = '2013-10-20T19:20:30+01:00'  # datetime | 
+to = '2013-10-20T19:20:30+01:00'  # datetime | 
 
 try:
     # Historic view of the latest forecasted wind generation (WINDFOR) stream
@@ -927,18 +956,19 @@ Peak wind generation forecast for each day (WINDFOR)
 This endpoint provides the peak wind generation forecast data.  This provides wind generation forecast for wind farms which are visible to the ESO and have operational metering.  Updated data is published by NGESO up to 8 times a day at 03:30, 05:30, 08:30, 10:30, 12:30, 16:30, 19:30 and 23:30.  Results are filtered by a range of DateTime parameters.                Date parameters must be provided in the exact format yyyy-MM-dd.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
-_from = '2013-10-20' # date | The start of the requested date range. (optional)
-to = '2013-10-20' # date | The end of the requested date range. (optional)
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
+api_instance = elexonpy.GenerationForecastApi()
+_from = '2013-10-20'  # date | The start of the requested date range. (optional)
+to = '2013-10-20'  # date | The end of the requested date range. (optional)
+format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Peak wind generation forecast for each day (WINDFOR)
