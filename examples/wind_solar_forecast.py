@@ -22,13 +22,8 @@ response = forecast_api.forecast_generation_wind_and_solar_day_ahead_get(
     format='json'
 )
 
-# Handle response data as needed
-if hasattr(response, 'data'):
-    # Convert response data to DataFrame
-    df = pd.DataFrame([data.to_dict() for data in response.data])
+df = pd.DataFrame([data.to_dict() for data in response.data])
 
-    # Print DataFrame
-    print("\n--- Day-Ahead Wind and Solar Forecast Data ---")
-    print(df.head())
-else:
-    print("Response object does not contain 'data' attribute.")
+# Print DataFrame
+print("\n--- Day-Ahead Wind and Solar Forecast Data ---")
+print(df.head())
