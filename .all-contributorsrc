@@ -24,6 +24,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "mduffin95",
+      "name": "Matthew Duffin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6598483?v=4",
+      "profile": "https://github.com/mduffin95",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
