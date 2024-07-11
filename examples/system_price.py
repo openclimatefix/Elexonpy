@@ -20,13 +20,9 @@ response = imbalance_settlement_api.balancing_settlement_system_prices_settlemen
     format='json'
 )
 
-# Check if response has data attribute
-if hasattr(response, 'data'):
-    # Convert response data to DataFrame
-    df = pd.DataFrame([data.to_dict() for data in response.data])
+# Convert response data to DataFrame
+df = pd.DataFrame([data.to_dict() for data in response.data])
 
-    # Print DataFrame
-    print("\n--- Settlement System Prices Data ---")
-    print(df.head())
-else:
-    print("Response object does not contain 'data' attribute.")
+# Print DataFrame
+print("\n--- Settlement System Prices Data ---")
+print(df.head())
