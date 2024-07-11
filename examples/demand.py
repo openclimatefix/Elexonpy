@@ -41,13 +41,9 @@ response = demand_api.demand_outturn_daily_get(
     format='json'
 )
 
-# Check if response has data attribute
-if hasattr(response, 'data'):
-    # Convert response data to DataFrame
-    df = pd.DataFrame([data.to_dict() for data in response.data])
+df = pd.DataFrame([data.to_dict() for data in response.data])
 
-    # Print Demand Outturn Daily Data DataFrame
-    print("\n--- Demand Outturn Daily Data ---")
-    print(df.head())
-else:
-    print("Response object does not contain 'data' attribute.")
+# Print Demand Outturn Daily Data DataFrame
+print("\n--- Demand Outturn Daily Data ---")
+print(df.head())
+
