@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "14Richa",
+      "name": "Richa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41283476?v=4",
+      "profile": "https://richasharma.co.in/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "Elexonpy",
+  "projectOwner": "openclimatefix"
+}
