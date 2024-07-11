@@ -12,7 +12,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-version = "0.0.11"
+version = "0.0.12"
 NAME = "elexonpy"
 # To install the library, run the following
 #
