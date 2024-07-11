@@ -1,0 +1,53 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "14Richa",
+      "name": "Richa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41283476?v=4",
+      "profile": "https://richasharma.co.in/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "peterdudfield",
+      "name": "Peter Dudfield",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34686298?v=4",
+      "profile": "https://github.com/peterdudfield",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "mduffin95",
+      "name": "Matthew Duffin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6598483?v=4",
+      "profile": "https://github.com/mduffin95",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Jacqueline-J",
+      "name": "Jacqueline James",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108654780?v=4",
+      "profile": "https://github.com/Jacqueline-J",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "Elexonpy",
+  "projectOwner": "openclimatefix"
+}
