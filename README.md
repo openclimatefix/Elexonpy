@@ -121,7 +121,7 @@ print("\n--- Settlement System Prices Data ---")
 print(df.head())
 ```
 
-### Exaple 3 :
+### Example 3 :
 
 This example demonstrates how to use methods from the `GenerationForecastApi` to retrieve day-ahead forecast data for wind and solar generation from the Elexon API and format it into a DataFrame using pandas.
 
