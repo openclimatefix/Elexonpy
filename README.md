@@ -773,10 +773,6 @@ Class | Method | HTTP request | Description
  All endpoints do not require authorization.
 
 
-## Author
-
-
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
