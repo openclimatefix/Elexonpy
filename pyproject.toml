@@ -9,7 +9,6 @@ description = "Elexon Python Client"
 authors = [
     { name = "Richa Sharma", email = "onlinericha19@gmail.com" },
     { name = "Peter Dudfield", email = "info@openclimatefix.org" }
-
 ]
 readme = "README.md"
 requires-python = ">=3.6"
@@ -24,16 +23,18 @@ classifiers = [
 Homepage = "https://github.com/openclimatefix/Elexonpy"
 
 [project.dependencies]
-urllib3 = ">=1.15"
-six = ">=1.10"
-certifi = "*"
-python-dateutil = "*"
-pandas = "*"
-requests = "<2.32.0"
-requests-mock = "*"
+dependencies = [
+    "urllib3>=1.15",
+    "six>=1.10",
+    "certifi",
+    "python-dateutil",
+    "pandas",
+    "requests<2.32.0",
+    "requests-mock"
+]
 
 [project.optional-dependencies]
-dev=[
+dev = [
     "black",
     "flake8",
     "isort",
