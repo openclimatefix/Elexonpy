@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "elexonpy"
-version = "0.0.12"
+version = "0.0.13"
 description = "Elexon Python Client"
 authors = [
     { name = "Richa Sharma", email = "onlinericha19@gmail.com" },
