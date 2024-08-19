@@ -66,24 +66,6 @@ df = pd.DataFrame([data.to_dict() for data in response.data])
 # Print Actual Total Load Data DataFrame
 print("\n--- Actual Total Load Data ---")
 print(df.head())
-
-# Define date range for Demand Outturn Daily Data
-from_date = datetime(2024, 6, 1)
-to_date = datetime(2024, 6, 2)
-
-# Fetch Demand Outturn Daily Data from API
-response = demand_api.demand_outturn_daily_get(
-    settlement_date_from=from_date.date(),
-    settlement_date_to=to_date.date(),
-    format='json'
-)
-
-# Convert response to DataFrame
-df = pd.DataFrame([data.to_dict() for data in response.data])
-
-# Print Demand Outturn Daily Data DataFrame
-print("\n--- Demand Outturn Daily Data ---")
-print(df.head())
 ```
 
 ### Example 2:
