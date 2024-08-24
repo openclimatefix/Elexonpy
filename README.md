@@ -174,7 +174,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-Documentation for the API Endpoints can be found [here](./docs/ApiEndpointsList.md)
+Documentation for the API Endpoints can be found [here](./docs/DocApiEndpointsList.md)
 
 ## Documentation For Models
 Documentation for the Models can be found [here](./docs/DocModelsList.md)
