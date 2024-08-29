@@ -3,7 +3,11 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-**elexonpy** is a Python package that provides a convenient interface to the ELEXON API. This package is generated using Swagger Codegen, ensuring compatibility and ease of use with the ELEXON API services. The package is available on PyPI and can be easily installed via pip.
+**elexonpy** is a Python package that provides a convenient interface to the [ELEXON API](https://developer.data.elexon.co.uk/).
+
+
+This package is generated using Swagger Codegen, ensuring compatibility and ease of use with the ELEXON API services.
+The package is available on PyPI and can be easily installed via pip.
 
 ## Requirements.
 
