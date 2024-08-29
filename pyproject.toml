@@ -30,6 +30,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/openclimatefix/Elexonpy"
+"Source Code" = "https://github.com/openclimatefix/Elexonpy"
 
 [project.optional-dependencies]
 dev = [
