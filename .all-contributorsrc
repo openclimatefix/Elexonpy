@@ -42,6 +42,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "yousefsawy",
+      "name": "Yousef Elsawy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99139949?v=4",
+      "profile": "https://github.com/yousefsawy",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
