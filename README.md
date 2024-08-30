@@ -38,7 +38,7 @@ To install the package directly from the GitHub repository, use the following co
 This example demonstrates how to use methods from the `DemandApi` to retrieve various types of demand data from the Elexon API and format it into a DataFrame using pandas.
 
 
-```
+```python
 # This script demonstrates the use of methods from the DemandApi
 # to retrieve various types of demand data from the Elexon API.
 
@@ -76,7 +76,7 @@ print(df.head())
 
 This example demonstrates how to use methods from the `IndicativeImbalanceSettlementApi` to retrieve settlement system prices data from the Elexon API and format it into a DataFrame using pandas.
 
-```
+```python
 # This script demonstrates the use of methods from the IndicativeImbalanceSettlementApi
 # to retrieve settlement system prices data from the Elexon API.
 
@@ -111,7 +111,7 @@ print(df.head())
 
 This example demonstrates how to use methods from the `GenerationForecastApi` to retrieve day-ahead forecast data for wind and solar generation from the Elexon API and format it into a DataFrame using pandas.
 
-```
+```python
 # This script demonstrates the use of methods from the GenerationForecastApi
 # to retrieve day-ahead forecast data for wind and solar generation from the Elexon API.
 
