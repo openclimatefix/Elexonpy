@@ -33,7 +33,16 @@ class TestDatasetsApi(unittest.TestCase):
 
         Amount Of Balancing Reserves Under Contract (ABUC / B1720)  # noqa: E501
         """
-        pass
+        publish_date_time_from = '2022-08-22T07:43:04Z'  # datetime | 
+        publish_date_time_to = '2023-08-22T07:43:04Z'  # datetime | 
+
+        response = self.api.datasets_abuc_get(publish_date_time_from, publish_date_time_to)
+
+        # Check if the response object is not None
+        self.assertIsNotNone(response)
+
+        # Check if the response contains data
+        self.assertTrue(response.to_dict().get('data'))
 
     def test_datasets_abuc_stream_get(self):
         """Test case for datasets_abuc_stream_get
