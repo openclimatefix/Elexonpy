@@ -56,16 +56,13 @@ from_date = datetime(2024, 7, 1)
 to_date = datetime(2024, 7, 2)
 
 # Fetch Actual Total Load Data from API
-response = demand_api.demand_actual_total_get(
+df = demand_api.demand_actual_total_get(
     _from=from_date,
     to=to_date,
     settlement_period_from=1,
     settlement_period_to=48,
-    format='json'
+    format='dataframe'
 )
-
-# Convert response to DataFrame
-df = pd.DataFrame([data.to_dict() for data in response.data])
 
 # Print Actual Total Load Data DataFrame
 print("\n--- Actual Total Load Data ---")
@@ -94,13 +91,10 @@ imbalance_settlement_api = IndicativeImbalanceSettlementApi(api_client)
 settlement_date = '2024-07-02'
 
 # Fetch system prices data from API
-response = imbalance_settlement_api.balancing_settlement_system_prices_settlement_date_get(
+df = imbalance_settlement_api.balancing_settlement_system_prices_settlement_date_get(
     settlement_date=settlement_date,
-    format='json'
+    format='dataframe'
 )
-
-# Convert response data to DataFrame
-df = pd.DataFrame([data.to_dict() for data in response.data])
 
 # Print DataFrame
 print("\n--- Settlement System Prices Data ---")
@@ -129,14 +123,12 @@ from_date = datetime(2024, 7, 1)
 to_date = datetime(2024, 7, 7)  # Note: Maximum data output range is 7 days
 
 # Fetch day-ahead forecast data for wind and solar from API
-response = forecast_api.forecast_generation_wind_and_solar_day_ahead_get(
+df = forecast_api.forecast_generation_wind_and_solar_day_ahead_get(
     _from=from_date,
     to=to_date,
     process_type='day ahead',
-    format='json'
+    format='dataframe'
 )
-
-df = pd.DataFrame([data.to_dict() for data in response.data])
 
 # Print DataFrame
 print("\n--- Day-Ahead Wind and Solar Forecast Data ---")
