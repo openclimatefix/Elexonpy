@@ -180,11 +180,15 @@ class ApiClient(object):
             query_params: list of tuples. the query params
         """
         change_to_pandas = False
-        for k, v in query_params:
-            if k == 'format' and v == 'dataframe':
-                query_params = [x for x in query_params if x != ('format', 'dataframe')] + [('format', 'json')]
-                change_to_pandas = True
-                continue
+        try:
+            for k, v in query_params:
+                if k == 'format' and v == 'dataframe':
+                    query_params = [x for x in query_params if x != ('format', 'dataframe')] + [('format', 'json')]
+                    change_to_pandas = True
+                    continue
+        except Exception:
+            print('Try to change query params to not include `format=dataframe, '
+                  'but will run api call anyway`')
         return change_to_pandas, query_params
 
     def sanitize_for_serialization(self, obj):
