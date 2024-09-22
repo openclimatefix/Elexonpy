@@ -23,8 +23,9 @@ dependencies = [
     "six>=1.10",
     "certifi",
     "python-dateutil",
-    "pandas",
-    "requests<2.32.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "requests<2.32.0",  
     "requests-mock"
 ]
 
