@@ -1,6 +1,6 @@
 # elexonpy
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 **elexonpy** is a Python package that provides a convenient interface to the [ELEXON API](https://developer.data.elexon.co.uk/).
@@ -207,6 +207,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mduffin95"><img src="https://avatars.githubusercontent.com/u/6598483?v=4?s=100" width="100px;" alt="Matthew Duffin"/><br /><sub><b>Matthew Duffin</b></sub></a><br /><a href="#ideas-mduffin95" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Jacqueline-J"><img src="https://avatars.githubusercontent.com/u/108654780?v=4?s=100" width="100px;" alt="Jacqueline James"/><br /><sub><b>Jacqueline James</b></sub></a><br /><a href="https://github.com/openclimatefix/Elexonpy/commits?author=Jacqueline-J" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yousefsawy"><img src="https://avatars.githubusercontent.com/u/99139949?v=4?s=100" width="100px;" alt="Yousef Elsawy"/><br /><sub><b>Yousef Elsawy</b></sub></a><br /><a href="https://github.com/openclimatefix/Elexonpy/commits?author=yousefsawy" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sigma-Verma"><img src="https://avatars.githubusercontent.com/u/131307209?v=4?s=100" width="100px;" alt="Utkarsh Verma"/><br /><sub><b>Utkarsh Verma</b></sub></a><br /><a href="#maintenance-Sigma-Verma" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
