@@ -14,6 +14,8 @@ from __future__ import absolute_import
 
 import unittest
 
+import pandas as pd
+
 import elexonpy
 from elexonpy.api.datasets_api import DatasetsApi  # noqa: E501
 from elexonpy.rest import ApiException
@@ -43,6 +45,22 @@ class TestDatasetsApi(unittest.TestCase):
 
         # Check if the response contains data
         self.assertTrue(response.to_dict().get('data'))
+
+    def test_datasets_abuc_get_dataframe(self):
+        """Test case for datasets_abuc_get
+
+        Amount Of Balancing Reserves Under Contract (ABUC / B1720)  # noqa: E501
+        """
+        publish_date_time_from = '2022-08-22T07:43:04Z'  # datetime |
+        publish_date_time_to = '2023-08-22T07:43:04Z'  # datetime |
+
+        df = self.api.datasets_abuc_get(publish_date_time_from,
+                                              publish_date_time_to,
+                                              format='dataframe')
+
+        # Check if the response object is not None
+        self.assertIsNotNone(df)
+        assert isinstance(df, pd.DataFrame)
 
     def test_datasets_abuc_stream_get(self):
         """Test case for datasets_abuc_stream_get

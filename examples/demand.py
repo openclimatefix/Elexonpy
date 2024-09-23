@@ -15,16 +15,13 @@ from_date = datetime(2024, 7, 1)
 to_date = datetime(2024, 7, 2)
 
 # Fetch Actual Total Load Data from API
-response = demand_api.demand_actual_total_get(
+df = demand_api.demand_actual_total_get(
     _from=from_date,
     to=to_date,
     settlement_period_from=1,
     settlement_period_to=48,
-    format='json'
+    format='dataframe'
 )
-
-# Convert response to DataFrame
-df = pd.DataFrame([data.to_dict() for data in response.data])
 
 # Print Actual Total Load Data DataFrame
 print("\n--- Actual Total Load Data ---")

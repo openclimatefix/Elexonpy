@@ -15,14 +15,12 @@ from_date = datetime(2024, 7, 1)
 to_date = datetime(2024, 7, 7)  # Note: Maximum data output range is 7 days
 
 # Fetch day-ahead forecast data for wind and solar from API
-response = forecast_api.forecast_generation_wind_and_solar_day_ahead_get(
+df = forecast_api.forecast_generation_wind_and_solar_day_ahead_get(
     _from=from_date,
     to=to_date,
     process_type='day ahead',
-    format='json'
+    format='dataframe'
 )
-
-df = pd.DataFrame([data.to_dict() for data in response.data])
 
 # Print DataFrame
 print("\n--- Day-Ahead Wind and Solar Forecast Data ---")
