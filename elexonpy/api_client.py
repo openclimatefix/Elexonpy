@@ -188,7 +188,7 @@ class ApiClient(object):
                     continue
         except Exception:
             print('Try to change query params to not include `format=dataframe, '
-                  'but will run api call anyway`')
+                  'but will run api call anyway')
         return change_to_pandas, query_params
 
     def sanitize_for_serialization(self, obj):
