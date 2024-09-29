@@ -60,6 +60,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "anxkhn",
+      "name": "Anas Khan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83116240?v=4",
+      "profile": "http://anaskhan.me",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
