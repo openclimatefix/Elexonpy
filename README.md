@@ -3,39 +3,32 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+
+[![tags badge](https://img.shields.io/github/v/tag/openclimatefix/elexonpy?include_prereleases&sort=semver&color=FFAC5F)](https://github.com/openclimatefix/ocf-template/tags)
+[![pypi badge](https://img.shields.io/pypi/v/elexonpy?&color=07BCDF)](https://pypi.org/project/elexonpy)
+[![ease of contribution: easy](https://img.shields.io/badge/ease%20of%20contribution:%20easy-32bd50)](https://github.com/openclimatefix#how-easy-is-it-to-get-involved) 
+
 **elexonpy** is a Python package that provides a convenient interface to the [ELEXON API](https://developer.data.elexon.co.uk/).
 
-
 This package is generated using Swagger Codegen, ensuring compatibility and ease of use with the ELEXON API services.
-The package is available on PyPI and can be easily installed via pip.
 
-## Requirements.
-
-Python 2.7 and 3.4+
 
 ## Installation
 
-You can install the `elexonpy` package via pip from PyPI or directly from GitHub.
-
-### Install from PyPI
+You can install the `elexonpy` package via pip from PyPI.
 
 ```shell
 pip install elexonpy
 ```
 
-### Install from GitHub
+## Examples usage
 
-To install the package directly from the GitHub repository, use the following command:
+There are some examples in the `examples` directory that demonstrate how to use the package to retrieve data from the Elexon API.
 
-```shell
- pip install git+https://github.com/openclimatefix/Elexonpy.git
-```
+### Example 1: Demand
 
-## Examples from `examples` folder
-
-### Example 1 :
-
-This example demonstrates how to use methods from the `DemandApi` to retrieve various types of demand data from the Elexon API and format it into a DataFrame using pandas.
+This example demonstrates how to use methods from the `DemandApi` to retrieve various types of 
+demand data from the Elexon API and format it into a DataFrame.
 
 
 ```python
@@ -69,9 +62,13 @@ print("\n--- Actual Total Load Data ---")
 print(df.head())
 ```
 
-### Example 2:
+### Example 2: SIP price
 
-This example demonstrates how to use methods from the `IndicativeImbalanceSettlementApi` to retrieve settlement system prices data from the Elexon API and format it into a DataFrame using pandas.
+This example demonstrates how to use methods from the `IndicativeImbalanceSettlementApi` 
+to retrieve settlement system prices data from the Elexon API and format it into a DataFrame.
+
+
+<details><summary> Example 2 </summary>
 
 ```python
 # This script demonstrates the use of methods from the IndicativeImbalanceSettlementApi
@@ -101,9 +98,16 @@ print("\n--- Settlement System Prices Data ---")
 print(df.head())
 ```
 
-### Example 3 :
+</details>
 
-This example demonstrates how to use methods from the `GenerationForecastApi` to retrieve day-ahead forecast data for wind and solar generation from the Elexon API and format it into a DataFrame using pandas.
+
+
+### Example 3 : DA Solar and Wind Forecast
+
+This example demonstrates how to use methods from the `GenerationForecastApi` to retrieve 
+day-ahead forecast data for wind and solar generation from the Elexon API and format it into a DataFrame.
+
+<details><summary> Example 3 </summary>
 
 ```python
 # This script demonstrates the use of methods from the GenerationForecastApi
@@ -135,53 +139,60 @@ print("\n--- Day-Ahead Wind and Solar Forecast Data ---")
 print(df.head())
 ```
 
+</details>
 
-## Getting Started
 
-Please follow the [installation procedure](#installation--usage) and then run the following:
+## Documentation 
 
-```python
-from __future__ import print_function
-import time
-import elexonpy
-from elexonpy.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = elexonpy.AvailabilityApi(elexonpy.ApiClient(configuration))
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
-
-try:
-    # Fourteen-day generation forecast
-    api_instance.generation_availability_summary14_d_get(format=format)
-except ApiException as e:
-    print("Exception when calling AvailabilityApi->generation_availability_summary14_d_get: %s\n" % e)
-
-# create an instance of the API class
-api_instance = elexonpy.AvailabilityApi(elexonpy.ApiClient(configuration))
-format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
-
-try:
-    # Three-year generation forecast
-    api_instance.generation_availability_summary3_yw_get(format=format)
-except ApiException as e:
-    print("Exception when calling AvailabilityApi->generation_availability_summary3_yw_get: %s\n" % e)
-```
-
-## Documentation for API Endpoints
+### API Endpoints
 
 Documentation for the API Endpoints can be found [here](./docs/DocApiEndpointsList.md)
 
-## Documentation For Models
+### Models
 Documentation for the Models can be found [here](./docs/DocModelsList.md)
 
-## Documentation For Authorization
+### Authorization
 
  All endpoints do not require authorization.
 
 
-## Author
+##  FAQ
 
+### How do I get an API key?
+
+You dont need one. The Elexon API does not require an API key for access.
+
+### How do I get a year worth of data?
+
+You currently have to write a loop yourself. We hope to incorporate this into the package in the future.
+
+## Development
+
+To install the package directly from the GitHub repository, use the following command:
+
+```shell
+ pip install git+https://github.com/openclimatefix/Elexonpy.git
+```
+
+### Tests
+
+To run the tests, make sure you have `pytest` installed
+```bash
+pip install pytest
+```
+and then you can run
+```bash
+pytest
+```
+
+## Contributing and community
+
+[![issues badge](https://img.shields.io/github/issues/openclimatefix/elexonpy?color=FFAC5F)](https://github.com/openclimatefix/elexonpy/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+
+- PR's are welcome! See the [Organisation Profile](https://github.com/openclimatefix) for details on contributing
+- Find out about our other projects in the [OCF Meta Repo](https://github.com/openclimatefix/ocf-meta-repo)
+- Check out the [OCF blog](https://openclimatefix.org/blog) for updates
+- Follow OCF on [LinkedIn](https://uk.linkedin.com/company/open-climate-fix)
 
 
 ## Contributors ✨
@@ -211,3 +222,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
+*Part of the [Open Climate Fix](https://github.com/orgs/openclimatefix/people) community.*
+
+[![OCF Logo](https://cdn.prod.website-files.com/62d92550f6774db58d441cca/6324a2038936ecda71599a8b_OCF_Logo_black_trans.png)](https://openclimatefix.org)
