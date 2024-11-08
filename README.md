@@ -162,7 +162,7 @@ Documentation for the Models can be found [here](./docs/DocModelsList.md)
 
 You dont need one. The Elexon API does not require an API key for access.
 
-### How do I get a year wroth of data?
+### How do I get a year worth of data?
 
 You currently have to write a loop yourself. We hope to incorporate this into the package in the future.
 
@@ -176,7 +176,14 @@ To install the package directly from the GitHub repository, use the following co
 
 ### Tests
 
-To run the tests use `pytest`
+To run the tests, make sure you have `pytest` installed
+```bash
+pip install pytest
+```
+and then you can run
+```bash
+pytest
+```
 
 ## Contributing and community
 
@@ -215,3 +222,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
+*Part of the [Open Climate Fix](https://github.com/orgs/openclimatefix/people) community.*
+
+[![OCF Logo](https://cdn.prod.website-files.com/62d92550f6774db58d441cca/6324a2038936ecda71599a8b_OCF_Logo_black_trans.png)](https://openclimatefix.org)
