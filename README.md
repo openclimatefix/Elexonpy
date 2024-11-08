@@ -162,6 +162,9 @@ Documentation for the Models can be found [here](./docs/DocModelsList.md)
 
 You dont need one. The Elexon API does not require an API key for access.
 
+### How do I get a year wroth of data?
+
+You currently have to write a loop yourself. We hope to incorporate this into the package in the future.
 
 ## Development
 
