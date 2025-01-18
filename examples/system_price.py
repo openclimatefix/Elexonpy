@@ -22,4 +22,4 @@ df = imbalance_settlement_api.balancing_settlement_system_prices_settlement_date
 
 # Print DataFrame
 print("\n--- Settlement System Prices Data ---")
-print(df.head())
+print((df.head()))

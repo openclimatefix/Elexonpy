@@ -25,7 +25,7 @@ df = demand_api.demand_actual_total_get(
 
 # Print Actual Total Load Data DataFrame
 print("\n--- Actual Total Load Data ---")
-print(df.head())
+print((df.head()))
 
 # Define date range
 from_date = datetime(2024, 6, 1)
@@ -42,5 +42,5 @@ df = pd.DataFrame([data.to_dict() for data in response.data])
 
 # Print Demand Outturn Daily Data DataFrame
 print("\n--- Demand Outturn Daily Data ---")
-print(df.head())
+print((df.head()))
 

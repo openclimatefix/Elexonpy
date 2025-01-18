@@ -23,7 +23,7 @@ def json_to_dataframe_with_metadata(data):
         dicts = df[column].dropna()
 
         if not dicts.empty:
-            keys = set(k for d in dicts for k in (d.keys() if isinstance(d, dict) else []))
+            keys = set(k for d in dicts for k in (list(d.keys()) if isinstance(d, dict) else []))
             for key in keys:
                 df[key] = df[column].apply(lambda x: x.get(key) if isinstance(x, dict) else None)
 
