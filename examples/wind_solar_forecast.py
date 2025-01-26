@@ -24,4 +24,4 @@ df = forecast_api.forecast_generation_wind_and_solar_day_ahead_get(
 
 # Print DataFrame
 print("\n--- Day-Ahead Wind and Solar Forecast Data ---")
-print(df.head())
+print((df.head()))

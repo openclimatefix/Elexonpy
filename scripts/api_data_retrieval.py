@@ -19,9 +19,9 @@ def generate_function_from_openapi(openapi_json):
     path_items = openapi_json.get("paths", {})
 
     # Iterate over each path
-    for path, methods in path_items.items():
+    for path, methods in list(path_items.items()):
         # Iterate through each method and extract details
-        for method, details in methods.items():
+        for method, details in list(methods.items()):
             # Generate function name
             function_name = details.get("operationId", "retrieve_data_from_elexon_api").replace("-", "_")
             # Generate list of parameters to be used in the call function
