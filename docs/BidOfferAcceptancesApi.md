@@ -1,4 +1,4 @@
-# swagger_client.BidOfferAcceptancesApi
+# elexonpy.BidOfferAcceptancesApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -20,12 +20,12 @@ This endpoint returns bid-offer acceptances for a given acceptance id.  Acceptan
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BidOfferAcceptancesApi()
+api_instance = elexonpy.BidOfferAcceptancesApi()
 acceptance_number = 56 # int | Format - int32. The acceptance id to filter results by.
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -70,12 +70,12 @@ This endpoint provides the latest market-wide bid-offer acceptance data (BOALF).
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BidOfferAcceptancesApi()
+api_instance = elexonpy.BidOfferAcceptancesApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -118,12 +118,12 @@ This endpoint provides the bid-offer acceptance data (BOALF) for multiple reques
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BidOfferAcceptancesApi()
+api_instance = elexonpy.BidOfferAcceptancesApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date for the filter.
 settlement_period = 56 # int | Format - int32. The settlement period for the filter. This should be an integer from 1-50 inclusive.
 bm_unit = ['bm_unit_example'] # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
@@ -172,12 +172,12 @@ This endpoint provides the bid-offer acceptance data (BOALF) for a requested BMU
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BidOfferAcceptancesApi()
+api_instance = elexonpy.BidOfferAcceptancesApi()
 bm_unit = 'bm_unit_example' # str | The BM Unit to query.
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.

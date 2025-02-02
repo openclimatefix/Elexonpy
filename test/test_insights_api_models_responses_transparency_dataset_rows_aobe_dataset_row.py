@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_transparency_dataset_rows_aobe_dataset_row import InsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_transparency_dataset_rows_aobe_dataset_row import InsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow(unitte
     def testInsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow(self):
         """Test InsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_transparency_dataset_rows_aobe_dataset_row.InsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_transparency_dataset_rows_aobe_dataset_row.InsightsApiModelsResponsesTransparencyDatasetRowsAobeDatasetRow()  # noqa: E501
         pass
 
 

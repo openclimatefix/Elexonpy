@@ -1,4 +1,4 @@
-# swagger_client.LegacyApi
+# elexonpy.LegacyApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -18,12 +18,12 @@ This endpoint is obsolete, and this location may be removed with no further noti
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LegacyApi()
+api_instance = elexonpy.LegacyApi()
 message_id = 'message_id_example' # str | 
 
 try:
@@ -66,12 +66,12 @@ This endpoint is obsolete, and this location may be removed with no further noti
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.LegacyApi()
+api_instance = elexonpy.LegacyApi()
 event_start = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 event_end = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 

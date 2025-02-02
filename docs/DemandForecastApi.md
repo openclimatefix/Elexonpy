@@ -1,4 +1,4 @@
-# swagger_client.DemandForecastApi
+# elexonpy.DemandForecastApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -33,12 +33,12 @@ Retrieve latest 14-day forecast demand data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -81,12 +81,12 @@ This endpoint provides the evolution of all daily demand forecasts over time for
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 forecast_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The forecast date for the filter. This must be in the format yyyy-MM-dd.
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -131,12 +131,12 @@ Retrieve historical daily forecast demand data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -181,12 +181,12 @@ This endpoint provides the day and day ahead demand forecast and are categorized
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -231,12 +231,12 @@ This endpoint allows for retrieving earliest day-ahead demand forecast data from
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
@@ -285,12 +285,12 @@ This endpoint allows for retrieving a stream of earliest day-ahead demand foreca
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
@@ -337,12 +337,12 @@ This endpoint provides the day and day ahead demand forecast and are categorized
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date for the filter. This must be in the format yyyy-MM-dd.
 settlement_period = [56] # list[int] | 
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
@@ -391,12 +391,12 @@ This endpoint provides the day and day ahead demand forecast and are categorized
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -443,12 +443,12 @@ This endpoint allows for retrieving latest day-ahead demand forecast data from N
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
@@ -497,12 +497,12 @@ This endpoint allows for retrieving a stream of latest day-ahead demand forecast
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
@@ -549,12 +549,12 @@ This endpoint allows for retrieving the peak demand that is forecast for each da
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 boundary = 'boundary_example' # str |  (optional)
 _from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The start of the requested date range. (optional)
 to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The end of the requested date range. (optional)
@@ -603,12 +603,12 @@ This endpoint provides day-ahead total load forecast per bidding zone data.  It 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 settlement_period_from = 56 # int | Format - int32. (optional)
@@ -659,12 +659,12 @@ This endpoint returns week-ahead total load forecast per bidding zone data with 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 _from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The earliest forecast date to include.
 to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The latest forecast date to include.
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -711,12 +711,12 @@ This endpoint returns the most recently published WATL / B0630 forecast.        
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -759,12 +759,12 @@ This endpoint provides the latest weekly forecast demand data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -807,12 +807,12 @@ This endpoint provides all weekly demand forecasts over time for a given forecas
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 forecast_year = 56 # int | Format - int32.
 forecast_week = 56 # int | Format - int32.
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -859,12 +859,12 @@ Retrieve historical weekly forecast demand data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandForecastApi()
+api_instance = elexonpy.DemandForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 

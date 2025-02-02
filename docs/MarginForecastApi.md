@@ -1,4 +1,4 @@
-# swagger_client.MarginForecastApi
+# elexonpy.MarginForecastApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -22,12 +22,12 @@ This endpoint provides the Generating Plant Operating Margin covering 2 days ahe
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
+api_instance = elexonpy.MarginForecastApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -70,12 +70,12 @@ This endpoint provides the daily evolution Generating Plant Operating Margin cov
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
+api_instance = elexonpy.MarginForecastApi()
 forecast_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The forecast date for the filter. This must be in the format yyyy-MM-dd.
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -120,12 +120,12 @@ This endpoint provides the historic Generating Plant Operating Margin covering 2
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
+api_instance = elexonpy.MarginForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -170,12 +170,12 @@ This endpoint provides the Generating Plant Operating Margin covering 2 weeks ah
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
+api_instance = elexonpy.MarginForecastApi()
 range = 'range_example' # str |  (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -220,12 +220,12 @@ This endpoint provides the daily evolution Generating Plant Operating Margin cov
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
+api_instance = elexonpy.MarginForecastApi()
 year = 56 # int | Format - int32.
 week = 56 # int | Format - int32.
 range = 'range_example' # str |  (optional)
@@ -274,12 +274,12 @@ This endpoint provides the weekly historic  Generating Plant Operating Margin.  
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarginForecastApi()
+api_instance = elexonpy.MarginForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 range = 'range_example' # str |  (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_transparency_remit_remit_message_identifier_with_url import InsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithUrl  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_transparency_remit_remit_message_identifier_with_url import InsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithUrl  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithUrl(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithU
     def testInsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithUrl(self):
         """Test InsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithUrl"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_transparency_remit_remit_message_identifier_with_url.InsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithUrl()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_transparency_remit_remit_message_identifier_with_url.InsightsApiModelsResponsesTransparencyRemitRemitMessageIdentifierWithUrl()  # noqa: E501
         pass
 
 

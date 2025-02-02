@@ -1,4 +1,4 @@
-# swagger_client.DatasetsApi
+# elexonpy.DatasetsApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -170,12 +170,12 @@ This endpoint provides amount of balancing reserves under contract data.    This
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -222,12 +222,12 @@ This endpoint provides amount of balancing reserves under contract data.    This
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -272,12 +272,12 @@ This endpoint provides actual generation data per settlement period aggregated b
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -324,12 +324,12 @@ This endpoint provides actual generation data per settlement period aggregated b
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -374,12 +374,12 @@ This endpoint provides actual or estimated wind and solar power generation  per 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -426,12 +426,12 @@ This endpoint provides actual or estimated wind and solar power generation  per 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -476,12 +476,12 @@ This endpoint provides accepted offered balancing energy data.    This API endpo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -528,12 +528,12 @@ This endpoint provides accepted offered balancing energy data.    This endpoint 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -578,12 +578,12 @@ This endpoint provides actual total load per bidding zone data.    This API endp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -630,12 +630,12 @@ This endpoint provides actual total load per bidding zone data.                T
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -680,12 +680,12 @@ This endpoint provides the actual metered volume output (MWh) per Settlement Per
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339).
 settlement_period = 56 # int | Format - int32.
 bm_unit = ['bm_unit_example'] # list[str] |  (optional)
@@ -734,12 +734,12 @@ This endpoint provides the actual metered volume output (MWh) per Settlement Per
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -790,12 +790,12 @@ This endpoint provides information on all balancing energy bids, in accordance w
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -842,12 +842,12 @@ This endpoint provides information on all balancing energy bids, in accordance w
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -892,12 +892,12 @@ This endpoint provides bid offer acceptance data.                By default, the
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -950,12 +950,12 @@ This endpoint provides bid offer acceptance data.                By default, the
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -1006,12 +1006,12 @@ This endpoint provides bid-offer data.                By default, the from and t
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -1064,12 +1064,12 @@ This endpoint provides bid-offer data.                By default, the from and t
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -1120,12 +1120,12 @@ This endpoint provides information on the current system balance, in accordance 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -1172,12 +1172,12 @@ This endpoint provides information on the current system balance, in accordance 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -1222,12 +1222,12 @@ This endpoint provides cost of congestion management data.    This API endpoint 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -1274,12 +1274,12 @@ This endpoint provides cost of congestion management data.    This endpoint has 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -1324,12 +1324,12 @@ This endpoint provides CDN (Credit Default Notice) data received from ECVAA (Ene
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 bsc_party_id = 'bsc_party_id_example' # str |  (optional)
@@ -1378,12 +1378,12 @@ This endpoint provides CDN (Credit Default Notice) data received from ECVAA (Ene
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 bsc_party_id = 'bsc_party_id_example' # str |  (optional)
@@ -1430,12 +1430,12 @@ This endpoint provides day-ahead aggregated generation data.                It h
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -1482,12 +1482,12 @@ This endpoint provides day-ahead aggregated generation data.                This
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -1532,12 +1532,12 @@ This endpoint provides day-ahead total load forecast per bidding zone data.    T
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -1584,12 +1584,12 @@ This endpoint provides day-ahead total load forecast per bidding zone data.    T
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -1634,12 +1634,12 @@ This endpoint provides demand control instruction data, filtered by publish time
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -1686,12 +1686,12 @@ This endpoint provides demand control instruction data, filtered by publish time
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -1736,12 +1736,12 @@ This endpoint provides day-ahead generation data for wind and solar.    This API
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -1788,12 +1788,12 @@ This endpoint provides day-ahead generation data for wind and solar.            
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -1838,12 +1838,12 @@ This endpoint provides Disaggregated Balancing Services Adjustment data received
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -1894,12 +1894,12 @@ This endpoint provides Disaggregated Balancing Services Adjustment data received
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -1948,12 +1948,12 @@ This endpoint provides financial expenses and income for balancing data.    This
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -2000,12 +2000,12 @@ This endpoint provides financial expenses and income for balancing data.    This
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -2050,12 +2050,12 @@ This endpoint provides a forward view of availability (also referred to as Outpu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 fuel_type = ['fuel_type_example'] # list[str] |  (optional)
 publish_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The publish date for filtering. This must be in the format yyyy-MM-dd. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -2110,12 +2110,12 @@ This endpoint provides a forward view of availability (also referred to as Outpu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 fuel_type = ['fuel_type_example'] # list[str] |  (optional)
 publish_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The publish date for filtering. This must be in the format yyyy-MM-dd. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -2174,12 +2174,12 @@ The endpoint provides data that has been received every 2 minutes the transmissi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 measurement_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 measurement_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -2226,12 +2226,12 @@ The endpoint provides data that has been received every 2 minutes the transmissi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 measurement_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 measurement_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -2276,12 +2276,12 @@ This endpoint provides the half-hourly generation outturn (Generation By Fuel ty
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
@@ -2336,12 +2336,12 @@ This endpoint provides the half-hourly generation outturn (Generation By Fuel ty
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
@@ -2394,12 +2394,12 @@ This endpoint provides the instantaneous generation outturn (Generation By Fuel 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
@@ -2454,12 +2454,12 @@ This endpoint provides the instantaneous generation outturn (Generation By Fuel 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
@@ -2512,12 +2512,12 @@ This endpoint provides installed generation capacity aggregated data.    This AP
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -2564,12 +2564,12 @@ This endpoint provides installed generation capacity aggregated data.           
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -2614,12 +2614,12 @@ This endpoint provides information about production units (existing and planned)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -2666,12 +2666,12 @@ This endpoint provides information about production units (existing and planned)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -2716,12 +2716,12 @@ This endpoint provides the indicated imbalance. Data is received by daily by mid
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -2770,12 +2770,12 @@ This endpoint provides the indicated imbalance. Data is received by daily by mid
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -2822,12 +2822,12 @@ This endpoint provides the indicated demand forecast for the current day and day
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -2876,12 +2876,12 @@ This endpoint provides the indicated demand forecast for the current day and day
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -2928,12 +2928,12 @@ This endpoint provides the indicated generation received from NGESO. Data is rec
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -2982,12 +2982,12 @@ This endpoint provides the indicated generation received from NGESO. Data is rec
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -3034,12 +3034,12 @@ The endpoint provides data showing the initial National Demand outturn.  Data is
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -3086,12 +3086,12 @@ This endpoint provides initial National Demand outturn daily data. The total dai
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -3138,12 +3138,12 @@ This endpoint provides initial National Demand outturn daily data. The total dai
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -3188,12 +3188,12 @@ The endpoint provides data showing the initial Transmission System Demand outtur
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -3240,12 +3240,12 @@ The loss of load probability and de-rated margin data is received half-hourly fr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -3292,12 +3292,12 @@ The loss of load probability and de-rated margin data is received half-hourly fr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -3342,12 +3342,12 @@ This endpoint provides month-ahead total load per bidding zone forecast data wit
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -3394,12 +3394,12 @@ This endpoint provides month-ahead total load per bidding zone forecast data wit
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -3444,12 +3444,12 @@ Maximum Delivery Period (MDP) is the maximum period, expressed in minutes, over 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -3502,12 +3502,12 @@ This endpoint provides Maximum Delivery Period data received from NGESO.        
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -3558,12 +3558,12 @@ This endpoint provides Maximum Delivery Volume data received from NGESO.        
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -3616,12 +3616,12 @@ This endpoint provides Maximum Delivery Volume data received from NGESO.        
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -3672,12 +3672,12 @@ This endpoint provides the indicated margin. Data is received every half an hour
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -3726,12 +3726,12 @@ This endpoint provides the indicated margin. Data is received every half an hour
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -3778,12 +3778,12 @@ This endpoint provides Maximum Export Limit data received from NGESO.    The Max
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -3836,12 +3836,12 @@ This endpoint provides Maximum Export Limit data received from NGESO.    The Max
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -3892,12 +3892,12 @@ Depending on the dataset, this value may be taken from the timestamp on the sour
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -3940,12 +3940,12 @@ This endpoint provides Market Index Data received from NGESO.                Mar
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -3998,12 +3998,12 @@ This endpoint provides Market Index Data received from NGESO.                Mar
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4054,12 +4054,12 @@ This endpoint provides Maximum Import Limit data received from NGESO.    The max
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4112,12 +4112,12 @@ This endpoint provides Maximum Import Limit data received from NGESO.    The max
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4168,12 +4168,12 @@ This endpoint provides Minimum Non Zero Time data received from NGESO.    The Mi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4226,12 +4226,12 @@ This endpoint provides Minimum Non Zero Time data received from NGESO.    The Mi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4282,12 +4282,12 @@ This endpoint provides Minimum Zero Time data received from NGESO.    The Minimu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4340,12 +4340,12 @@ This endpoint provides Minimum Zero Time data received from NGESO.    The Minimu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4396,12 +4396,12 @@ This endpoint provides the National Demand forecast received from NGESO. Data is
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -4448,12 +4448,12 @@ This endpoint provides the National Demand forecast received from NGESO. Data is
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -4498,12 +4498,12 @@ This endpoint provides the National Demand forecast received from NGESO.  Data i
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -4550,12 +4550,12 @@ This endpoint provides the National Demand forecast received from NGESO.  Data i
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -4600,12 +4600,12 @@ This endpoint provides the National Demand forecast received from NGESO.  Data i
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -4652,12 +4652,12 @@ This endpoint provides the National Demand forecast received from NGESO.  Data i
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -4702,12 +4702,12 @@ This endpoint provides Notice to Deviate from Zero data received from NGESO.    
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4760,12 +4760,12 @@ This endpoint provides Notice to Deviate from Zero data received from NGESO.    
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4816,12 +4816,12 @@ This endpoint provides Net Balancing Services Adjustment data received from NGES
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4872,12 +4872,12 @@ This endpoint provides Net Balancing Services Adjustment data received from NGES
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -4926,12 +4926,12 @@ This endpoint provides data about the Short Term Operating Reserves (STOR) that 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The start of the data publish time window. (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The end of the data publish time window. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -4978,12 +4978,12 @@ This endpoint provides data about the Short Term Operating Reserves (STOR) that 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The start of the data publish time window. (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The end of the data publish time window. (optional)
 
@@ -5028,12 +5028,12 @@ This endpoint provides a forward view of availability (also referred to as Outpu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The publish date for filtering. This must be in the format yyyy-MM-dd. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -5082,12 +5082,12 @@ This endpoint provides a forward view of availability (also referred to as Outpu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The publish date for filtering. This must be in the format yyyy-MM-dd. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -5140,12 +5140,12 @@ This endpoint provides Notice to Deliver Bids data received from NGESO.         
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -5198,12 +5198,12 @@ This endpoint provides Notice to Deliver Bids data received from NGESO.         
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -5254,12 +5254,12 @@ This endpoint provides Notice to Deliver Offers data received from NGESO.       
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -5312,12 +5312,12 @@ This endpoint provides Notice to Deliver Offers data received from NGESO.       
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -5368,12 +5368,12 @@ The demand surplus forecast data is received hourly from NGESO.  It shows the we
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -5420,12 +5420,12 @@ The demand margin forecast is received hourly from NGESO.  It shows the weekly p
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -5472,12 +5472,12 @@ The demand margin forecast is received hourly from NGESO.  It shows the weekly p
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -5522,12 +5522,12 @@ The demand surplus forecast data is received hourly from NGESO.  It shows the we
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -5572,12 +5572,12 @@ The demand surplus forecast data is received hourly from NGESO.  It shows the da
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -5624,12 +5624,12 @@ The demand margin forecast is received hourly from NGESO.  It shows the daily pe
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -5676,12 +5676,12 @@ The demand margin forecast is received hourly from NGESO.  It shows the daily pe
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -5726,12 +5726,12 @@ The demand surplus forecast data is received hourly from NGESO.  It shows the da
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -5776,12 +5776,12 @@ This endpoint provides information on the procured balancing capacity, in accord
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -5828,12 +5828,12 @@ This endpoint provides information on the procured balancing capacity, in accord
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -5878,12 +5878,12 @@ This endpoint provides Physical Notification data received from NGESO. It return
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to query. This must be in the format yyyy-MM-dd.
 settlement_period = 56 # int | Format - int32. The settlement period to query. This should be an integer from 1-50 inclusive.
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. If no BM unit is selected all BM units will be displayed. (optional)
@@ -5932,12 +5932,12 @@ This endpoint provides Physical Notification data received from NGESO.  A Physic
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The settlement date to query from.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The settlement date to query up to.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -5988,12 +5988,12 @@ This endpoint provides prices of procured balancing reserves.    This API endpoi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -6040,12 +6040,12 @@ This endpoint provides prices of procured balancing reserves.    This endpoint h
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -6090,12 +6090,12 @@ This endpoint provides Balancing Services Volume data received from NGESO.      
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6148,12 +6148,12 @@ This endpoint provides Balancing Services Volume data received from NGESO.      
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6204,12 +6204,12 @@ This endpoint provides Quiescent Physical Notification data received from NGESO.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to query. This must be in the format yyyy-MM-dd.
 settlement_period = 56 # int | Format - int32. The settlement period to query. This should be an integer from 1-50 inclusive.
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. If no BM unit is selected all BM units will be displayed. (optional)
@@ -6258,12 +6258,12 @@ This endpoint provides Quiescent Physical Notification data received from NGESO.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The settlement date to query from.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The settlement date to query up to.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6314,12 +6314,12 @@ This endpoint provides Run Down Rate Export data received from NGESO.           
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6372,12 +6372,12 @@ This endpoint provides Run Down Rate Export data received from NGESO.           
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6428,12 +6428,12 @@ This endpoint provides Run Down Rate Import data received from NGESO.           
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6486,12 +6486,12 @@ This endpoint provides Run Down Rate Import data received from NGESO.           
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6542,12 +6542,12 @@ The Regulation on Wholesale Energy Markets Integrity and Transparency (REMIT) is
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -6594,12 +6594,12 @@ The Regulation on Wholesale Energy Markets Integrity and Transparency (REMIT) is
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -6644,12 +6644,12 @@ This endpoint provides Run Up Rate Export data received from NGESO.             
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6702,12 +6702,12 @@ This endpoint provides Run Up Rate Export data received from NGESO.             
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6758,12 +6758,12 @@ This endpoint provides Run Up Rate Import data received from NGESO.             
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6816,12 +6816,12 @@ This endpoint provides Run Up Rate Import data received from NGESO.             
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)
@@ -6872,12 +6872,12 @@ This endpoint provides Stable Export Limit data received from NGESO.  Stable Exp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The start of the data time window. (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The end of the data time window. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. If no BM unit is selected all BM units will be displayed. (optional)
@@ -6926,12 +6926,12 @@ This endpoint provides Stable Export Limit data received from NGESO.  Stable Exp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The start of the data time window. (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The end of the data time window. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. If no BM unit is selected all BM units will be displayed. (optional)
@@ -6978,12 +6978,12 @@ This endpoint provides Stable Import Limit data received from NGESO.  Stable Imp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The start of the data time window. (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The end of the data time window. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. If no BM unit is selected all BM units will be displayed. (optional)
@@ -7032,12 +7032,12 @@ This endpoint provides Stable Import Limit data received from NGESO.  Stable Imp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The start of the data time window. (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The end of the data time window. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. If no BM unit is selected all BM units will be displayed. (optional)
@@ -7084,12 +7084,12 @@ This endpoint provides system operator to system operator prices data, filtered 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -7136,12 +7136,12 @@ This endpoint provides system operator to system operator prices data, filtered 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -7186,12 +7186,12 @@ This endpoint provides system warnings data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -7238,12 +7238,12 @@ This endpoint provides system warnings data    This endpoint has an optimised JS
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -7288,12 +7288,12 @@ This endpoint provides the average degree celsius value measured at midday deeme
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -7340,12 +7340,12 @@ This endpoint provides the Transmission System Demand forecast.  Data is receive
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -7394,12 +7394,12 @@ This endpoint provides the Transmission System Demand forecast .  Data is receiv
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 boundary = 'boundary_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -7446,12 +7446,12 @@ This endpoint provides the Transmission System forecast. Data is available daily
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -7498,12 +7498,12 @@ This endpoint provides the Transmission System Demand forecast. Data is availabl
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -7548,12 +7548,12 @@ This endpoint provides the Transmission System Demand forecast received from NGE
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -7600,12 +7600,12 @@ This endpoint provides the Transmission System Demand forecast received from NGE
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -7650,12 +7650,12 @@ This endpoint provides trading unit data for a settlement period filtered by tra
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to filter. This must be in the format yyyy-MM-dd.
 settlement_period = 56 # int | Format - int32.
 trading_unit_name = ['trading_unit_name_example'] # list[str] |  (optional)
@@ -7706,12 +7706,12 @@ This endpoint provides trading unit data filtered by settlement period, trading 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to filter from. This must be in the format yyyy-MM-dd.
 settlement_period_from = 56 # int | Format - int32.
 settlement_date_to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to filter to. This must be in the format yyyy-MM-dd.
@@ -7764,12 +7764,12 @@ This endpoint provides a forward view of availability (also referred to as Outpu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 fuel_type = ['fuel_type_example'] # list[str] | The fuel type to query. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). Start of the Publish Time range to query. If specified, PublishDateTimeTo must also be specified.  If both are omitted, latest published data is returned. (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). End of the Publish Time range to query. If specified, PublishDateTimeFrom must also be specified.  If both are omitted, latest published data is returned. (optional)
@@ -7820,12 +7820,12 @@ This endpoint provides a forward view of availability (also referred to as Outpu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 fuel_type = ['fuel_type_example'] # list[str] | The fuel type to query. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). Start of the Publish Time range to query. If specified, PublishDateTimeTo must also be specified.  If both are omitted, latest published data is returned. (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). End of the Publish Time range to query. If specified, PublishDateTimeFrom must also be specified.  If both are omitted, latest published data is returned. (optional)
@@ -7874,12 +7874,12 @@ This endpoint forward view of availability (also referred to as Output Usable  d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 fuel_type = ['fuel_type_example'] # list[str] | The fuel type to query. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). Start of the Publish Time range to query. If specified, PublishDateTimeTo must also be specified.  If both are omitted, latest published data is returned. (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). End of the Publish Time range to query. If specified, PublishDateTimeFrom must also be specified.  If both are omitted, latest published data is returned. (optional)
@@ -7930,12 +7930,12 @@ This endpoint forward view of availability (also referred to as Output Usable  d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 fuel_type = ['fuel_type_example'] # list[str] | The fuel type to query. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned. (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). Start of the Publish Time range to query. If specified, PublishDateTimeTo must also be specified.  If both are omitted, latest published data is returned. (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). End of the Publish Time range to query. If specified, PublishDateTimeFrom must also be specified.  If both are omitted, latest published data is returned. (optional)
@@ -7984,12 +7984,12 @@ This endpoint provides week-ahead total load forecast per bidding zone data with
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -8036,12 +8036,12 @@ This endpoint provides week-ahead total load forecast per bidding zone data with
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -8086,12 +8086,12 @@ This endpoint provides wind generation forecast data.    Specific publish time f
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -8138,12 +8138,12 @@ This endpoint provides wind generation forecast data.    Specific publish time f
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -8188,12 +8188,12 @@ This endpoint provides year-ahead forecast margin data.                A year-ah
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -8240,12 +8240,12 @@ This endpoint provides year-ahead forecast margin data.    A year-ahead forecast
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -8290,12 +8290,12 @@ This endpoint provides year-ahead total load per bidding zone forecast data with
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -8342,12 +8342,12 @@ This endpoint provides year-ahead total load per bidding zone forecast data with
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DatasetsApi()
+api_instance = elexonpy.DatasetsApi()
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 

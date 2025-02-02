@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_balancing_disaggregated_balancing_services_adjustment_details_response import InsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjustmentDetailsResponse  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_balancing_disaggregated_balancing_services_adjustment_details_response import InsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjustmentDetailsResponse  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjustmentDetailsResponse(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjus
     def testInsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjustmentDetailsResponse(self):
         """Test InsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjustmentDetailsResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_balancing_disaggregated_balancing_services_adjustment_details_response.InsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjustmentDetailsResponse()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_balancing_disaggregated_balancing_services_adjustment_details_response.InsightsApiModelsResponsesBalancingDisaggregatedBalancingServicesAdjustmentDetailsResponse()  # noqa: E501
         pass
 
 

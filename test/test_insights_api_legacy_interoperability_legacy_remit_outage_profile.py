@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_legacy_interoperability_legacy_remit_outage_profile import InsightsApiLegacyInteroperabilityLegacyRemitOutageProfile  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_legacy_interoperability_legacy_remit_outage_profile import InsightsApiLegacyInteroperabilityLegacyRemitOutageProfile  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiLegacyInteroperabilityLegacyRemitOutageProfile(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiLegacyInteroperabilityLegacyRemitOutageProfile(unittest.Tes
     def testInsightsApiLegacyInteroperabilityLegacyRemitOutageProfile(self):
         """Test InsightsApiLegacyInteroperabilityLegacyRemitOutageProfile"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_legacy_interoperability_legacy_remit_outage_profile.InsightsApiLegacyInteroperabilityLegacyRemitOutageProfile()  # noqa: E501
+        # model = elexonpy.models.insights_api_legacy_interoperability_legacy_remit_outage_profile.InsightsApiLegacyInteroperabilityLegacyRemitOutageProfile()  # noqa: E501
         pass
 
 

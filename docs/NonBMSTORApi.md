@@ -1,4 +1,4 @@
-# swagger_client.NonBMSTORApi
+# elexonpy.NonBMSTORApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -18,12 +18,12 @@ This endpoint provides data about the start of NGESO Short Term Operating Reserv
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NonBMSTORApi()
+api_instance = elexonpy.NonBMSTORApi()
 count = 56 # int | Format - int32. The number of events to return.
 before = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). If specified, filters events to those with a start time before or at the date, or a settlement date before the date if  settlementPeriodBefore is also specified.  If omitted, latest events are returned. (optional)
 settlement_period_before = 56 # int | Format - int32. Filters events to those with a settlement period before or at the value.  Before parameter must be specified if this is specified. (optional)
@@ -72,12 +72,12 @@ This endpoint provides data about the Short Term Operating Reserves (STOR) that 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NonBMSTORApi()
+api_instance = elexonpy.NonBMSTORApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)

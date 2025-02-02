@@ -1,4 +1,4 @@
-# swagger_client.SystemForecastApi
+# elexonpy.SystemForecastApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -17,12 +17,12 @@ This endpoint provides the 1h, 2h, 4h, 8h and 12h+ Loss of Load Probability and 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemForecastApi()
+api_instance = elexonpy.SystemForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 settlement_period_from = 56 # int | Format - int32. The \"from\" settlement period for the filter. This should be an integer from 1-50 inclusive. (optional)

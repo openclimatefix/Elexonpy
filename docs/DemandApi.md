@@ -1,4 +1,4 @@
-# swagger_client.DemandApi
+# elexonpy.DemandApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -32,12 +32,12 @@ This endpoint has been moved to demand/outturn.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -79,12 +79,12 @@ This endpoint provides actual total load data per bidding zone.  It can be filte
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 settlement_period_from = 56 # int | Format - int32. (optional)
@@ -135,12 +135,12 @@ This endpoint provides data for Initial National Demand Outturn, which measures 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date from for the filter. This must be in the format yyyy-MM-dd. (optional)
 settlement_date_to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to for the filter. This must be in the format yyyy-MM-dd. (optional)
 settlement_period = [56] # list[int] |  (optional)
@@ -189,12 +189,12 @@ This endpoint provides initial National Demand outturn data per day. The total d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
 settlement_date_to = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -241,12 +241,12 @@ This endpoint provides initial National Demand outturn daily data. The total dai
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
 settlement_date_to = '2013-10-20' # date | Format - date (as full-date in RFC3339). (optional)
 
@@ -291,12 +291,12 @@ This endpoint provides data for initial National Demand outturn, which measures 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 settlement_date_from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date from for the filter. This must be in the format yyyy-MM-dd. (optional)
 settlement_date_to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to for the filter. This must be in the format yyyy-MM-dd. (optional)
 settlement_period = [56] # list[int] |  (optional)
@@ -343,12 +343,12 @@ System demand summary (FUELINST)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 resolution = 'resolution_example' # str |  (optional)
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
@@ -397,12 +397,12 @@ This endpoint allows for retrieving peak ITSDO demand for each day from National
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 _from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The start of the requested date range. (optional)
 to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The end of the requested date range. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -449,12 +449,12 @@ Indicative demand peaks using operational metering data are daily maxima values 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 data = 'data_example' # str | The type of data. Supports values of 'operational' or 'settlement'.
 triad_season_start_year = 56 # int | Format - int32. A year indicating the Triad season starting on 1 November of the given year, e.g. 2021. (optional)
 _from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The start of the requested date range. (optional)
@@ -505,12 +505,12 @@ Provides indicative demand peak data for a Triad season ITSDO and FUELHH files o
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 triad_season = 56 # int | Format - int32. A year indicating the Triad season starting on 1 November of the given year
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -555,12 +555,12 @@ Provides indicative demand peak data for a Triad season from S0142_bpi files tha
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 triad_season = 56 # int | Format - int32. A year indicating the Triad season starting on 1 November of the given year
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -605,12 +605,12 @@ Operational Triad peaks are calculated from the indicative demand peaks data.   
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 data = 'data_example' # str | The type of data. Supports values of 'operational' or 'settlement'.
 triad_season_start_year = 56 # int | Format - int32. A year indicating the Triad season starting on 1 November of the given year. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -657,12 +657,12 @@ This endpoint has been moved to generation/outturn.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -704,12 +704,12 @@ This endpoint has been moved to demand/outturn/stream.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -751,12 +751,12 @@ This endpoint has been moved to demand/outturn/summary.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -798,12 +798,12 @@ This endpoint has been moved to demand/actual/total.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DemandApi()
+api_instance = elexonpy.DemandApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:

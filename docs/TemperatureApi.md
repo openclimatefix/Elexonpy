@@ -1,4 +1,4 @@
-# swagger_client.TemperatureApi
+# elexonpy.TemperatureApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -17,12 +17,12 @@ This endpoint provides daily average GB temperature data (in Celsius) as well as
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TemperatureApi()
+api_instance = elexonpy.TemperatureApi()
 _from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The from date for the filter. This must be in the format yyyy-MM-dd. (optional)
 to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The to date for the filter. This must be in the format yyyy-MM-dd. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)

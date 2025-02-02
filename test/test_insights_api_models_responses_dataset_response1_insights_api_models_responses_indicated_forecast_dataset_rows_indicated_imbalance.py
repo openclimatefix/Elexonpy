@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_indicated_forecast_dataset_rows_indicated_imbalance import InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIndicatedForecastDatasetRowsIndicatedImbalance  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_indicated_forecast_dataset_rows_indicated_imbalance import InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIndicatedForecastDatasetRowsIndicatedImbalance  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIndicatedForecastDatasetRowsIndicatedImbalance(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIn
     def testInsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIndicatedForecastDatasetRowsIndicatedImbalance(self):
         """Test InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIndicatedForecastDatasetRowsIndicatedImbalance"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_indicated_forecast_dataset_rows_indicated_imbalance.InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIndicatedForecastDatasetRowsIndicatedImbalance()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_dataset_response1_insights_api_models_responses_indicated_forecast_dataset_rows_indicated_imbalance.InsightsApiModelsResponsesDatasetResponse1InsightsApiModelsResponsesIndicatedForecastDatasetRowsIndicatedImbalance()  # noqa: E501
         pass
 
 

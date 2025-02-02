@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.generation_forecast_api import GenerationForecastApi  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.api.generation_forecast_api import GenerationForecastApi  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestGenerationForecastApi(unittest.TestCase):

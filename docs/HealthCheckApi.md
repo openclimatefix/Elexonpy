@@ -1,4 +1,4 @@
-# swagger_client.HealthCheckApi
+# elexonpy.HealthCheckApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -17,12 +17,12 @@ This endpoint provides a success response code (200) with status code 2 if the s
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HealthCheckApi()
+api_instance = elexonpy.HealthCheckApi()
 
 try:
     # Health check

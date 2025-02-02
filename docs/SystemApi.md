@@ -1,4 +1,4 @@
-# swagger_client.SystemApi
+# elexonpy.SystemApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -20,12 +20,12 @@ This endpoint provides demand control instruction data, filtered by the time ran
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
+api_instance = elexonpy.SystemApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -72,12 +72,12 @@ This endpoint allows for retrieving a collection of recent system frequency data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
+api_instance = elexonpy.SystemApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -124,12 +124,12 @@ This endpoint allows for retrieving a stream of recent system frequency data fro
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
+api_instance = elexonpy.SystemApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 
@@ -174,12 +174,12 @@ This endpoint provides system warnings data. Results can be filtered by warning 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SystemApi()
+api_instance = elexonpy.SystemApi()
 warning_type = 'warning_type_example' # str |  (optional)
 publish_date_time_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)
 publish_date_time_to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). (optional)

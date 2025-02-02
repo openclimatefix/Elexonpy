@@ -1,4 +1,4 @@
-# swagger_client.SOSOPricesApi
+# elexonpy.SOSOPricesApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -17,12 +17,12 @@ This endpoint provides system operator to system operator prices data.  It can b
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SOSOPricesApi()
+api_instance = elexonpy.SOSOPricesApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)

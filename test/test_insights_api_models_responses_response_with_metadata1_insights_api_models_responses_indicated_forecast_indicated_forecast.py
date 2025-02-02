@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.insights_api_models_responses_response_with_metadata1_insights_api_models_responses_indicated_forecast_indicated_forecast import InsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesIndicatedForecastIndicatedForecast  # noqa: E501
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.models.insights_api_models_responses_response_with_metadata1_insights_api_models_responses_indicated_forecast_indicated_forecast import InsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesIndicatedForecastIndicatedForecast  # noqa: E501
+from elexonpy.rest import ApiException
 
 
 class TestInsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesIndicatedForecastIndicatedForecast(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsRespon
     def testInsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesIndicatedForecastIndicatedForecast(self):
         """Test InsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesIndicatedForecastIndicatedForecast"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.insights_api_models_responses_response_with_metadata1_insights_api_models_responses_indicated_forecast_indicated_forecast.InsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesIndicatedForecastIndicatedForecast()  # noqa: E501
+        # model = elexonpy.models.insights_api_models_responses_response_with_metadata1_insights_api_models_responses_indicated_forecast_indicated_forecast.InsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesIndicatedForecastIndicatedForecast()  # noqa: E501
         pass
 
 

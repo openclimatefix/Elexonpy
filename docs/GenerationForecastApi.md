@@ -1,4 +1,4 @@
-# swagger_client.GenerationForecastApi
+# elexonpy.GenerationForecastApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -34,12 +34,12 @@ This endpoint provides the latest fourteen-day generation forecast
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 level = 'level_example' # str | The filter level for the forecast. This can be one of the following:  - `total`: the total forecast for the given time period.  - `bmUnit`: the forecast for each specified BM unit.  - `fuelType`: the forecast aggregated, and optionally filtered by fuel type. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.  Between 1 and 10 units should be queried when using the `bmUnit` level. (optional)
 fuel_type = ['fuel_type_example'] # list[str] | The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned. (optional)
@@ -88,12 +88,12 @@ This endpoint provides the evolution of all daily generation forecasts over time
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 forecast_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The forecast date for the filter. This must be in the format yyyy-MM-dd.
 level = 'level_example' # str | The filter level for the forecast. This can be one of the following:  - `total`: the total forecast for the given time period.  - `bmUnit`: the forecast for each specified BM unit.  - `fuelType`: the forecast aggregated, and optionally filtered by fuel type. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.  Between 1 and 10 units should be queried when using the `bmUnit` level. (optional)
@@ -144,12 +144,12 @@ This endpoint provides the latest fourteen-day generation forecast from a given 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The UTC publish time to query. This should be in the format yyyy-MM-ddT:HH:mm:ssZ.
 level = 'level_example' # str | The filter level for the forecast. This can be one of the following:  - `total`: the total forecast for the given time period.  - `bmUnit`: the forecast for each specified BM unit.  - `fuelType`: the forecast aggregated, and optionally filtered by fuel type. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.  Between 1 and 10 units should be queried when using the `bmUnit` level. (optional)
@@ -200,12 +200,12 @@ This endpoint provides a summary of generation forecast data aggregated by forec
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -248,12 +248,12 @@ This endpoint provides a summary of generation forecast data aggregated by forec
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -296,12 +296,12 @@ This endpoint provides the latest three-year generation forecast
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 level = 'level_example' # str | The filter level for the forecast. This can be one of the following:  - `total`: the total forecast for the given time period.  - `bmUnit`: the forecast for each specified BM unit.  - `fuelType`: the forecast aggregated, and optionally filtered by fuel type. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.  Between 1 and 10 units should be queried when using the `bmUnit` level. (optional)
 fuel_type = ['fuel_type_example'] # list[str] | The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned. (optional)
@@ -350,12 +350,12 @@ This endpoint provides all weekly generation forecasts over time for a given Yea
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 year = 56 # int | Format - int32. The forecast year for the filter.
 week = 56 # int | Format - int32. The forecast week for the filter.
 level = 'level_example' # str | The filter level for the forecast. This can be one of the following:  - `total`: the total forecast for the given time period.  - `bmUnit`: the forecast for each specified BM unit.  - `fuelType`: the forecast aggregated, and optionally filtered by fuel type. (optional)
@@ -408,12 +408,12 @@ This endpoint provides the latest three-year forecast from a given DateTime
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The UTC publish time to query. This should be in the format yyyy-MM-ddT:HH:mm:ssZ.
 level = 'level_example' # str | The filter level for the forecast. This can be one of the following:  - `total`: the total forecast for the given time period.  - `bmUnit`: the forecast for each specified BM unit.  - `fuelType`: the forecast aggregated, and optionally filtered by fuel type. (optional)
 bm_unit = ['bm_unit_example'] # list[str] | The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.  Between 1 and 10 units should be queried when using the `bmUnit` level. (optional)
@@ -464,12 +464,12 @@ This endpoint provides day-ahead aggregated generation data filtered by settleme
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 settlement_period_from = 56 # int | Format - int32. (optional)
@@ -520,12 +520,12 @@ This endpoint provides the latest wind generation forecast data. This provides w
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
@@ -568,12 +568,12 @@ This endpoint provides day-ahead forecast generation data for wind and solar.   
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 process_type = 'process_type_example' # str | 
@@ -626,12 +626,12 @@ This endpoint provides the eariest wind generation forecast data.  This provides
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -678,12 +678,12 @@ This endpoint provides the earliest wind generation forecast data.  This provide
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -728,12 +728,12 @@ This endpoint provides the evolution wind generation forecast data.  This provid
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 start_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -778,12 +778,12 @@ This endpoint provides the historical wind generation forecast data. This provid
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -828,12 +828,12 @@ This endpoint provides the latest wind generation forecast data.  This provides 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -880,12 +880,12 @@ This endpoint provides the latest wind generation forecast data.  This provides 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 
@@ -930,12 +930,12 @@ This endpoint provides the peak wind generation forecast data.  This provides wi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenerationForecastApi()
+api_instance = elexonpy.GenerationForecastApi()
 _from = '2013-10-20' # date | Format - date (as full-date in RFC3339). The start of the requested date range. (optional)
 to = '2013-10-20' # date | Format - date (as full-date in RFC3339). The end of the requested date range. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)

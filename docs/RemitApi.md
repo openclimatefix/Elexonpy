@@ -1,4 +1,4 @@
-# swagger_client.RemitApi
+# elexonpy.RemitApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -24,12 +24,12 @@ This endpoint provides a list of REMIT message identifiers based on the event st
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 participant_id = 'participant_id_example' # str |  (optional)
@@ -92,12 +92,12 @@ This endpoint provides a list of REMIT message identifiers based on the event st
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 participant_id = 'participant_id_example' # str |  (optional)
@@ -158,12 +158,12 @@ This endpoint provides a list of REMIT message identifiers based on the publish 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 participant_id = 'participant_id_example' # str |  (optional)
@@ -226,12 +226,12 @@ This endpoint provides a list of REMIT message identifiers based on the publish 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 participant_id = 'participant_id_example' # str |  (optional)
@@ -292,12 +292,12 @@ This endpoint provides a REMIT message based on a given message ID.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 message_id = 56 # int | Format - int32.
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -342,12 +342,12 @@ This endpoint provides one or more REMIT messages based on the given message IDs
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 message_id = [56] # list[int] | 
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -392,12 +392,12 @@ This endpoint provides all revisions for a given REMIT message.  The message can
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 mrid = 'mrid_example' # str |  (optional)
 message_id = 56 # int | Format - int32. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
@@ -444,12 +444,12 @@ This endpoint provides one or more REMIT messages based on the given mRID and re
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemitApi()
+api_instance = elexonpy.RemitApi()
 mrid = 'mrid_example' # str | 
 revision_number = 56 # int | Format - int32. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)

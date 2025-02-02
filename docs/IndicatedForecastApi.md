@@ -1,4 +1,4 @@
-# swagger_client.IndicatedForecastApi
+# elexonpy.IndicatedForecastApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -19,12 +19,12 @@ This endpoint provides the latest forecast indicated day-ahead data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicatedForecastApi()
+api_instance = elexonpy.IndicatedForecastApi()
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
@@ -69,12 +69,12 @@ This endpoint provides the forecast indicated day-ahead data over time for the s
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicatedForecastApi()
+api_instance = elexonpy.IndicatedForecastApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date for the filter. This must be in the format yyyy-MM-dd.
 settlement_period = [56] # list[int] | 
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
@@ -121,12 +121,12 @@ Historical indicated day-ahead forecast (INDDEM, INDGEN, IMBALNGC, MELNGC)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IndicatedForecastApi()
+api_instance = elexonpy.IndicatedForecastApi()
 publish_time = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
 boundary = 'boundary_example' # str | Omitting this will return only national data. Specifying boundary=zonal will return only zonal data. (optional)
 format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)

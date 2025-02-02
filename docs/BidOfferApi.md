@@ -1,4 +1,4 @@
-# swagger_client.BidOfferApi
+# elexonpy.BidOfferApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -18,12 +18,12 @@ This endpoint provides market-wide bid-offer data, for all BMUs or a requested s
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BidOfferApi()
+api_instance = elexonpy.BidOfferApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to filter.
 settlement_period = 56 # int | Format - int32. The settlement period to filter. This should be an integer from 1-50 inclusive.
 bm_unit = ['bm_unit_example'] # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
@@ -72,12 +72,12 @@ This endpoint provides the bid-offer data for a requested BMU. It returns the da
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BidOfferApi()
+api_instance = elexonpy.BidOfferApi()
 bm_unit = 'bm_unit_example' # str | The BM Unit to query.
 _from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"from\" start time or settlement date for the filter.
 to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). The \"to\" start time or settlement date for the filter.

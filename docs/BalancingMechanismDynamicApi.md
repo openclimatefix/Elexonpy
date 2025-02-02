@@ -1,4 +1,4 @@
-# swagger_client.BalancingMechanismDynamicApi
+# elexonpy.BalancingMechanismDynamicApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
@@ -20,12 +20,12 @@ This endpoint provides the dynamic data for multiple requested BMUs or all BMUs,
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BalancingMechanismDynamicApi()
+api_instance = elexonpy.BalancingMechanismDynamicApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date or datetime to filter.
 settlement_period = 56 # int | Format - int32. The settlement period to filter. This should be an integer from 1-50 inclusive.
 bm_unit = ['bm_unit_example'] # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
@@ -76,12 +76,12 @@ This endpoint provides the dynamic data for a requested BMU, excluding physical 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BalancingMechanismDynamicApi()
+api_instance = elexonpy.BalancingMechanismDynamicApi()
 bm_unit = 'bm_unit_example' # str | The BM Unit to query.
 snapshot_at = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). When to retrieve a snapshot of data at.  That is, the latest datapoint before this time will be returned for each dataset.
 until = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). When to retrieve data until.  Data from the snapshot until this time will be returned. (optional)
@@ -136,12 +136,12 @@ This endpoint provides market-wide physical rate data, for all BMUs or a request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BalancingMechanismDynamicApi()
+api_instance = elexonpy.BalancingMechanismDynamicApi()
 settlement_date = '2013-10-20' # date | Format - date (as full-date in RFC3339). The settlement date to filter.
 settlement_period = 56 # int | Format - int32. The settlement period to filter. This should be an integer from 1-50 inclusive.
 bm_unit = ['bm_unit_example'] # list[str] | The BM Units to query. Elexon or NGC BMU IDs can be used. If omitted, results for all BM units will be returned. (optional)
@@ -192,12 +192,12 @@ This endpoint provides the physical rate data for a requested BMU.  It returns a
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import elexonpy
+from elexonpy.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BalancingMechanismDynamicApi()
+api_instance = elexonpy.BalancingMechanismDynamicApi()
 bm_unit = 'bm_unit_example' # str | The BM Unit to query.
 snapshot_at = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). When to retrieve a snapshot of data at.  That is, the latest datapoint before this time will be returned for each dataset.
 until = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339). When to retrieve data until.  Data from the snapshot until this time will be returned. (optional)
