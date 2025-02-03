@@ -17,6 +17,7 @@ from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
+import pandas as pd
 
 # python 2 and python 3 compatibility library
 import six
@@ -72,7 +73,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/1.0.0/python'
+        self.user_agent = 'elexonpy/1.0.0/python'
 
     def __del__(self):
         self.pool.close()
@@ -123,6 +124,7 @@ class ApiClient(object):
 
         # query parameters
         if query_params:
+            change_to_dataframe, query_params = self.format_to_dataframe(query_params)
             query_params = self.sanitize_for_serialization(query_params)
             query_params = self.parameters_to_tuples(query_params,
                                                      collection_formats)
@@ -162,10 +164,37 @@ class ApiClient(object):
                 return_data = None
 
         if _return_http_data_only:
+            if change_to_dataframe:
+                return_data = pd.DataFrame([data.to_dict() for data in return_data.data])
             return (return_data)
         else:
             return (return_data, response_data.status,
                     response_data.getheaders())
+
+
+    def format_to_dataframe(self, query_params):
+        # Adjust query params for pandas format.
+        #
+        # Check the tuple of params. If one of the tuples is ('format', 'dataframe'),
+        # then change it to ('format', 'json').
+        # 
+        # Returns:
+        #   change_to_pandas (bool): If True, convert to pandas later.
+        #   query_params (list of tuples): The adjusted query parameters.
+        change_to_pandas = False
+        try:
+            for k, v in query_params:
+                if k == 'format' and v == 'dataframe':
+                    # Remove ('format', 'dataframe') and add ('format', 'json')
+                    query_params = [x for x in query_params if x != ('format', 'dataframe')] + [('format', 'json')]
+                    change_to_pandas = True
+                    break  # Exit loop early since we modified the list
+        except Exception:
+            # If an error occurs, print a message and proceed with the API call.
+            print("Failed to change query params to exclude 'format=dataframe', but will proceed with API call.")
+
+        return change_to_pandas, query_params
+
 
     def sanitize_for_serialization(self, obj):
         """Builds a JSON POST object.
