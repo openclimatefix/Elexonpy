@@ -1,20 +1,19 @@
-# swagger_client.HealthCheckApi
+# elexonpy.HealthCheckApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**health_get**](HealthCheckApi.md#health_get) | **GET** /health | Health check
+[**get_health**](HealthCheckApi.md#get_health) | **GET** /health | Health check
 
-# **health_get**
-> health_get()
+# **get_health**
+> get_health()
 
 Health check
 
-This endpoint provides a success status code (200) if the service is alive
+This endpoint provides a success response code (200) with status code 2 if the service is alive
 
 ### Example
-
 ```python
 from __future__ import print_function
 import time
@@ -27,9 +26,9 @@ api_instance = elexonpy.HealthCheckApi()
 
 try:
     # Health check
-    api_instance.health_get()
+    api_instance.get_health()
 except ApiException as e:
-    print("Exception when calling HealthCheckApi->health_get: %s\n" % e)
+    print("Exception when calling HealthCheckApi->get_health: %s\n" % e)
 ```
 
 ### Parameters

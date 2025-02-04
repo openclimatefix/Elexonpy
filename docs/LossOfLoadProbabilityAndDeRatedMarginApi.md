@@ -1,20 +1,19 @@
-# swagger_client.LossOfLoadProbabilityAndDeRatedMarginApi
+# elexonpy.LossOfLoadProbabilityAndDeRatedMarginApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**lolpdrm_forecast_evolution_get**](LossOfLoadProbabilityAndDeRatedMarginApi.md#lolpdrm_forecast_evolution_get) | **GET** /lolpdrm/forecast/evolution | Loss of load probability and de-rated margin forecast (LOLPDRM)
+[**get_lolpdrm_forecast_evolution**](LossOfLoadProbabilityAndDeRatedMarginApi.md#get_lolpdrm_forecast_evolution) | **GET** /lolpdrm/forecast/evolution | Loss of load probability and de-rated margin forecast (LOLPDRM)
 
-# **lolpdrm_forecast_evolution_get**
-> lolpdrm_forecast_evolution_get(format=format)
+# **get_lolpdrm_forecast_evolution**
+> get_lolpdrm_forecast_evolution(format=format)
 
 Loss of load probability and de-rated margin forecast (LOLPDRM)
 
 This endpoint has been moved to forecast/system/loss-of-load.
 
 ### Example
-
 ```python
 from __future__ import print_function
 import time
@@ -24,13 +23,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = elexonpy.LossOfLoadProbabilityAndDeRatedMarginApi()
-format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
+format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # Loss of load probability and de-rated margin forecast (LOLPDRM)
-    api_instance.lolpdrm_forecast_evolution_get(format=format)
+    api_instance.get_lolpdrm_forecast_evolution(format=format)
 except ApiException as e:
-    print("Exception when calling LossOfLoadProbabilityAndDeRatedMarginApi->lolpdrm_forecast_evolution_get: %s\n" % e)
+    print("Exception when calling LossOfLoadProbabilityAndDeRatedMarginApi->get_lolpdrm_forecast_evolution: %s\n" % e)
 ```
 
 ### Parameters

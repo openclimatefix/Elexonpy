@@ -1,20 +1,19 @@
-# swagger_client.SOSOPricesApi
+# elexonpy.SOSOPricesApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**soso_prices_get**](SOSOPricesApi.md#soso_prices_get) | **GET** /soso/prices | SO-SO prices (SOSO)
+[**get_soso_prices_from_from_to_to**](SOSOPricesApi.md#get_soso_prices_from_from_to_to) | **GET** /soso/prices | SO-SO prices (SOSO)
 
-# **soso_prices_get**
-> InsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesMiscSoSoPrices soso_prices_get(_from, to, format=format)
+# **get_soso_prices_from_from_to_to**
+> InsightsApiModelsResponsesResponseWithMetadata1InsightsApiModelsResponsesMiscSoSoPrices get_soso_prices_from_from_to_to(_from, to, format=format)
 
 SO-SO prices (SOSO)
 
 This endpoint provides system operator to system operator prices data.  It can be filtered by start time.                This API endpoint has a maximum range of 24 hours.
 
 ### Example
-
 ```python
 from __future__ import print_function
 import time
@@ -24,24 +23,24 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = elexonpy.SOSOPricesApi()
-_from = '2013-10-20T19:20:30+01:00'  # datetime | 
-to = '2013-10-20T19:20:30+01:00'  # datetime | 
-format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
+_from = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
+to = '2013-10-20T19:20:30+01:00' # datetime | Format - date-time (as date-time in RFC3339).
+format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # SO-SO prices (SOSO)
-    api_response = api_instance.soso_prices_get(_from, to, format=format)
+    api_response = api_instance.get_soso_prices_from_from_to_to(_from, to, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling SOSOPricesApi->soso_prices_get: %s\n" % e)
+    print("Exception when calling SOSOPricesApi->get_soso_prices_from_from_to_to: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_from** | **datetime**|  | 
- **to** | **datetime**|  | 
+ **_from** | **datetime**| Format - date-time (as date-time in RFC3339). | 
+ **to** | **datetime**| Format - date-time (as date-time in RFC3339). | 
  **format** | **str**| Response data format. Use json/xml to include metadata. | [optional] 
 
 ### Return type
@@ -55,7 +54,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json, application/xml, text/xml, text/csv
+ - **Accept**: text/plain, application/json, text/json, text/csv
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

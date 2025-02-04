@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **publish_time** | **datetime** |  | [optional] 
 **fuel_type** | **str** |  | [optional] 
 **ngc_bm_unit** | **str** |  | [optional] 
+**bm_unit** | **str** |  | [optional] 
 **output_usable** | **int** |  | [optional] 
 **year** | **int** |  | [optional] 
 **calendar_week_number** | **int** |  | [optional] 

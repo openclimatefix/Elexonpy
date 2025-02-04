@@ -1,20 +1,19 @@
-# swagger_client.CreditDefaultNoticeApi
+# elexonpy.CreditDefaultNoticeApi
 
 All URIs are relative to *https://data.elexon.co.uk/bmrs/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**c_dn_get**](CreditDefaultNoticeApi.md#c_dn_get) | **GET** /CDN | [DEPRECATED] Credit default notices (CDN)
+[**get_cdn**](CreditDefaultNoticeApi.md#get_cdn) | **GET** /CDN | [DEPRECATED] Credit default notices (CDN)
 
-# **c_dn_get**
-> c_dn_get(format=format)
+# **get_cdn**
+> get_cdn(format=format)
 
 [DEPRECATED] Credit default notices (CDN)
 
 This endpoint has been moved to balancing/settlement/default-notices.
 
 ### Example
-
 ```python
 from __future__ import print_function
 import time
@@ -24,13 +23,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = elexonpy.CreditDefaultNoticeApi()
-format = 'format_example'  # str | Response data format. Use json/xml to include metadata. (optional)
+format = 'format_example' # str | Response data format. Use json/xml to include metadata. (optional)
 
 try:
     # [DEPRECATED] Credit default notices (CDN)
-    api_instance.c_dn_get(format=format)
+    api_instance.get_cdn(format=format)
 except ApiException as e:
-    print("Exception when calling CreditDefaultNoticeApi->c_dn_get: %s\n" % e)
+    print("Exception when calling CreditDefaultNoticeApi->get_cdn: %s\n" % e)
 ```
 
 ### Parameters
