@@ -10,6 +10,7 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
 jobs:
   openapi-spec-diff:
+    runs-on: ubuntu-24.04
     steps:
       - name: Running OpenAPI Spec diff action
         uses: oasdiff/oasdiff-action/breaking@main
