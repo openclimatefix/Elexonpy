@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Running OpenAPI Spec diff action
-        uses: oasdiff/oasdiff-action/breaking@main
+        uses: oasdiff/oasdiff-action/diff@main
         with:
           base: spec/openapi_old.json
           revision: https://data.elexon.co.uk/swagger/v1/swagger.json
