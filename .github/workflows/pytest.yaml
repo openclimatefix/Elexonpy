@@ -19,7 +19,7 @@ jobs:
         with:
           format: json
           fail-on-diff: 'true'
-          base: spec/openapi_old.json
+          base: spec/foobar.json
           revision: https://data.elexon.co.uk/swagger/v1/swagger.json
   call-run-python-tests:
     uses: openclimatefix/.github/.github/workflows/python-test.yml@main
