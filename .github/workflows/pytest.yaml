@@ -17,6 +17,8 @@ jobs:
       - name: Running OpenAPI Spec diff action
         uses: oasdiff/oasdiff-action/diff@main
         with:
+          format: json
+          fail-on-diff: 'true'
           base: spec/openapi_old.json
           revision: https://data.elexon.co.uk/swagger/v1/swagger.json
   call-run-python-tests:
