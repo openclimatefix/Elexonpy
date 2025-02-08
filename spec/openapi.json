@@ -15,8 +15,8 @@
         "tags": [
           "Availability"
         ],
-        "summary": "[DEPRECATED] Fourteen-day generation forecast",
-        "description": "This endpoint has been moved to forecast/availability/daily.",
+        "summary": "Fourteen-day generation forecast",
+        "description": "This endpoint has been moved to forecast/availability/summary/14D.",
         "parameters": [
           {
             "name": "format",
@@ -45,8 +45,8 @@
         "tags": [
           "Availability"
         ],
-        "summary": "[DEPRECATED] Three-year generation forecast",
-        "description": "This endpoint has been moved to forecast/availability/weekly.",
+        "summary": "Three-year generation forecast",
+        "description": "This endpoint has been moved to forecast/availability/summary/3YW.",
         "parameters": [
           {
             "name": "format",
@@ -205,9 +205,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -338,9 +335,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -486,9 +480,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -619,9 +610,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -762,9 +750,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -795,9 +780,9 @@
                 "MELS"
               ],
               "type": "string",
-              "example": "PN"
+              "example": "\"PN\""
             },
-            "example": "PN"
+            "example": "\"PN\""
           },
           {
             "name": "settlementDate",
@@ -891,9 +876,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -1004,9 +986,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -1097,9 +1076,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -1222,9 +1198,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -1322,9 +1295,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -1446,9 +1416,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -1558,9 +1525,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -1682,9 +1646,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -1795,9 +1756,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -1864,91 +1822,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
-          },
-          "400": {
-            "description": "Error with query parameters - see response for details"
-          },
-          "500": {
-            "description": "Server error - please try again later"
-          }
-        }
-      }
-    },
-    "/balancing/acceptances/{acceptanceNumber}": {
-      "get": {
-        "tags": [
-          "Bid-Offer Acceptances"
-        ],
-        "summary": "Bid-Offer acceptances by acceptance id",
-        "description": "This endpoint returns bid-offer acceptances for a given acceptance id.\r\nAcceptance ids must be integers.",
-        "parameters": [
-          {
-            "name": "acceptanceNumber",
-            "in": "path",
-            "description": "The acceptance id to filter results by.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "example": 4162
-            },
-            "example": 4162
-          },
-          {
-            "name": "format",
-            "in": "query",
-            "description": "Response data format. Use json/xml to include metadata.",
-            "schema": {
-              "enum": [
-                "json",
-                "xml",
-                "csv"
-              ],
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data retrieved",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Insights.Api.Models.Responses.ResponseWithMetadata-1_Insights.Api.Models.Responses.Balancing.BidOfferAcceptancesResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Insights.Api.Models.Responses.ResponseWithMetadata-1_Insights.Api.Models.Responses.Balancing.BidOfferAcceptancesResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Insights.Api.Models.Responses.ResponseWithMetadata-1_Insights.Api.Models.Responses.Balancing.BidOfferAcceptancesResponse"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Insights.Api.Models.Responses.ResponseWithMetadata-1_Insights.Api.Models.Responses.Balancing.BidOfferAcceptancesResponse"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Insights.Api.Models.Responses.ResponseWithMetadata-1_Insights.Api.Models.Responses.Balancing.BidOfferAcceptancesResponse"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Insights.Api.Models.Responses.ResponseWithMetadata-1_Insights.Api.Models.Responses.Balancing.BidOfferAcceptancesResponse"
-                }
-              }
-            }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -2069,9 +1942,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -2141,9 +2011,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -2252,9 +2119,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -2367,9 +2231,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -2477,9 +2338,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -2591,9 +2449,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -2721,9 +2576,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -2830,9 +2682,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -2960,9 +2809,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -3069,9 +2915,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -3199,9 +3042,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -3308,9 +3148,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -3421,9 +3258,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -3513,9 +3347,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -3626,9 +3457,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -3718,9 +3546,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -3848,9 +3673,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -3957,9 +3779,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -4087,9 +3906,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -4196,9 +4012,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -4326,9 +4139,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -4435,9 +4245,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -4584,9 +4391,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -4712,9 +4516,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -4861,9 +4662,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -4990,9 +4788,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -5112,9 +4907,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -5214,9 +5006,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -5337,9 +5126,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -5439,9 +5225,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -5563,9 +5346,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -5710,9 +5490,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -5806,9 +5583,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -5926,9 +5700,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -6011,9 +5782,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -6105,9 +5873,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -6178,9 +5943,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -6272,9 +6034,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -6345,9 +6104,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -6439,9 +6195,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -6512,9 +6265,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -6606,9 +6356,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -6679,9 +6426,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -6766,9 +6510,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -6832,9 +6573,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -6926,9 +6664,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -6999,9 +6734,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -7086,9 +6818,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -7152,9 +6881,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -7238,9 +6964,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -7331,9 +7054,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -7403,9 +7123,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -7490,9 +7207,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -7576,9 +7290,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -7642,9 +7353,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -7729,9 +7437,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -7795,9 +7500,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -7882,9 +7584,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -7948,9 +7647,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -8035,9 +7731,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -8101,9 +7794,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -8188,9 +7878,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -8254,9 +7941,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -8341,9 +8025,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -8407,9 +8088,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -8494,9 +8172,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -8560,9 +8235,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -8647,9 +8319,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -8713,9 +8382,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -8800,9 +8466,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -8866,9 +8529,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -8936,9 +8596,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -9029,9 +8686,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -9102,9 +8756,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -9120,7 +8771,7 @@
           "Datasets"
         ],
         "summary": "Credit default notices (CDN)",
-        "description": "This endpoint provides CDN (Credit Default Notice) data received from ECVAA (Energy Contract Volume Aggregation Agent).",
+        "description": "This endpoint provides CDN data received from EC.",
         "parameters": [
           {
             "name": "publishDateTimeFrom",
@@ -9203,9 +8854,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -9220,8 +8868,8 @@
         "tags": [
           "Datasets"
         ],
-        "summary": "Credit default notices (CDN) stream",
-        "description": "This endpoint provides CDN (Credit Default Notice) data received from ECVAA (Energy Contract Volume Aggregation Agent).\r\n            \r\nThis endpoint has an optimised JSON payload and is aimed at frequent requests for the data.",
+        "summary": "Credit default notices (CDN)",
+        "description": "This endpoint provides CDN data received from EC.\r\n            \r\nThis endpoint has an optimised JSON payload and is aimed at frequent requests for the data.",
         "parameters": [
           {
             "name": "publishDateTimeFrom",
@@ -9284,9 +8932,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -9375,9 +9020,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -9445,9 +9087,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -9536,9 +9175,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -9606,9 +9242,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -9699,9 +9332,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -9771,9 +9401,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -9894,9 +9521,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -10022,9 +9646,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -10131,9 +9752,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -10220,9 +9838,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -10330,9 +9945,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -10419,9 +10031,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -10549,9 +10158,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -10658,9 +10264,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -10788,9 +10391,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -10897,9 +10497,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -11027,9 +10624,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -11136,9 +10730,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -11266,9 +10857,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -11375,9 +10963,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -11505,9 +11090,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -11614,9 +11196,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -11744,9 +11323,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -11853,9 +11429,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -11983,9 +11556,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -12092,9 +11662,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -12222,9 +11789,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -12331,9 +11895,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -12461,9 +12022,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -12570,9 +12128,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -12700,9 +12255,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -12809,9 +12361,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -12939,9 +12488,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -13049,9 +12595,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -13119,9 +12662,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -13192,9 +12732,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -13285,9 +12822,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -13357,9 +12891,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -13450,9 +12981,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -13522,9 +13050,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -13615,9 +13140,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -13687,9 +13209,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -13795,9 +13314,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -13905,9 +13421,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -13997,9 +13510,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -14069,9 +13579,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -14162,9 +13669,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -14234,9 +13738,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -14327,9 +13828,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -14399,9 +13897,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -14492,9 +13987,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -14564,9 +14056,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -14657,9 +14146,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -14729,9 +14215,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -14822,9 +14305,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -14894,9 +14374,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -14987,9 +14464,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -15059,9 +14533,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -15152,9 +14623,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -15224,9 +14692,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -15317,9 +14782,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -15389,9 +14851,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -15482,9 +14941,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -15554,9 +15010,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -15647,9 +15100,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -15719,9 +15169,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -15812,9 +15259,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -15884,9 +15328,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -15977,9 +15418,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -16049,9 +15487,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -16142,9 +15577,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -16214,9 +15646,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -16307,9 +15736,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -16379,9 +15805,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -16472,9 +15895,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -16544,9 +15964,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -16637,9 +16054,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -16709,9 +16123,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -16816,9 +16227,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -16902,9 +16310,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -16993,9 +16398,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -17064,9 +16466,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -17084,19 +16483,6 @@
         "summary": "System demand summary (FUELINST)",
         "description": "⚠ This endpoint provides a down-sampled data summary intended for visualisation purposes.\r\nUse datasets endpoints for full dataset access.",
         "parameters": [
-          {
-            "name": "resolution",
-            "in": "query",
-            "schema": {
-              "enum": [
-                "minute",
-                "hourly",
-                "daily",
-                "weekly"
-              ],
-              "type": "string"
-            }
-          },
           {
             "name": "from",
             "in": "query",
@@ -17180,9 +16566,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -17272,9 +16655,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -17388,9 +16768,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -17630,9 +17007,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -17893,9 +17267,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -17971,9 +17342,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -18041,9 +17409,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "500": {
             "description": "Server error - please try again later"
           }
@@ -18107,9 +17472,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "500": {
             "description": "Server error - please try again later"
@@ -18192,9 +17554,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -18271,9 +17630,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -18349,9 +17705,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -18455,9 +17808,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -18536,9 +17886,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -18624,9 +17971,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -18721,9 +18065,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -18797,9 +18138,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -18894,9 +18232,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -18970,9 +18305,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -19069,9 +18401,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -19182,9 +18511,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -19276,9 +18602,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -19345,9 +18668,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -19516,9 +18836,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "500": {
             "description": "Server error - please try again later"
           }
@@ -19624,9 +18941,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -19987,22 +19301,18 @@
           {
             "name": "level",
             "in": "query",
-            "description": "The filter level for the forecast. This can be one of the following:\r\n- `total`: the total forecast for the given time period.\r\n- `bmUnit`: the forecast for each specified BM unit.\r\n- `fuelType`: the forecast aggregated, and optionally filtered by fuel type.",
             "schema": {
               "enum": [
                 "total",
                 "fuelType",
                 "bmUnit"
               ],
-              "type": "string",
-              "example": "fuelType"
-            },
-            "example": "fuelType"
+              "type": "string"
+            }
           },
           {
             "name": "bmUnit",
             "in": "query",
-            "description": "The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.\r\nBetween 1 and 10 units should be queried when using the `bmUnit` level.",
             "schema": {
               "type": "array",
               "items": {
@@ -20013,19 +19323,12 @@
           {
             "name": "fuelType",
             "in": "query",
-            "description": "The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned.",
             "schema": {
               "type": "array",
               "items": {
                 "type": "string"
-              },
-              "example": [
-                "CCGT"
-              ]
-            },
-            "example": [
-              "CCGT"
-            ]
+              }
+            }
           },
           {
             "name": "format",
@@ -20091,22 +19394,18 @@
           {
             "name": "level",
             "in": "query",
-            "description": "The filter level for the forecast. This can be one of the following:\r\n- `total`: the total forecast for the given time period.\r\n- `bmUnit`: the forecast for each specified BM unit.\r\n- `fuelType`: the forecast aggregated, and optionally filtered by fuel type.",
             "schema": {
               "enum": [
                 "total",
                 "fuelType",
                 "bmUnit"
               ],
-              "type": "string",
-              "example": "fuelType"
-            },
-            "example": "fuelType"
+              "type": "string"
+            }
           },
           {
             "name": "bmUnit",
             "in": "query",
-            "description": "The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.\r\nBetween 1 and 10 units should be queried when using the `bmUnit` level.",
             "schema": {
               "type": "array",
               "items": {
@@ -20117,19 +19416,12 @@
           {
             "name": "fuelType",
             "in": "query",
-            "description": "The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned.",
             "schema": {
               "type": "array",
               "items": {
                 "type": "string"
-              },
-              "example": [
-                "CCGT"
-              ]
-            },
-            "example": [
-              "CCGT"
-            ]
+              }
+            }
           },
           {
             "name": "format",
@@ -20195,34 +19487,27 @@
           {
             "name": "publishTime",
             "in": "query",
-            "description": "The UTC publish time to query. This should be in the format yyyy-MM-ddT:HH:mm:ssZ.",
             "required": true,
             "schema": {
               "type": "string",
-              "format": "date-time",
-              "example": "2024-06-07T15:00:00Z"
-            },
-            "example": "2024-06-07T15:00:00Z"
+              "format": "date-time"
+            }
           },
           {
             "name": "level",
             "in": "query",
-            "description": "The filter level for the forecast. This can be one of the following:\r\n- `total`: the total forecast for the given time period.\r\n- `bmUnit`: the forecast for each specified BM unit.\r\n- `fuelType`: the forecast aggregated, and optionally filtered by fuel type.",
             "schema": {
               "enum": [
                 "total",
                 "fuelType",
                 "bmUnit"
               ],
-              "type": "string",
-              "example": "fuelType"
-            },
-            "example": "fuelType"
+              "type": "string"
+            }
           },
           {
             "name": "bmUnit",
             "in": "query",
-            "description": "The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.\r\nBetween 1 and 10 units should be queried when using the `bmUnit` level.",
             "schema": {
               "type": "array",
               "items": {
@@ -20233,19 +19518,12 @@
           {
             "name": "fuelType",
             "in": "query",
-            "description": "The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned.",
             "schema": {
               "type": "array",
               "items": {
                 "type": "string"
-              },
-              "example": [
-                "CCGT"
-              ]
-            },
-            "example": [
-              "CCGT"
-            ]
+              }
+            }
           },
           {
             "name": "format",
@@ -20311,34 +19589,27 @@
           {
             "name": "publishTime",
             "in": "query",
-            "description": "The UTC publish time to query. This should be in the format yyyy-MM-ddT:HH:mm:ssZ.",
             "required": true,
             "schema": {
               "type": "string",
-              "format": "date-time",
-              "example": "2024-06-07T15:00:00Z"
-            },
-            "example": "2024-06-07T15:00:00Z"
+              "format": "date-time"
+            }
           },
           {
             "name": "level",
             "in": "query",
-            "description": "The filter level for the forecast. This can be one of the following:\r\n- `total`: the total forecast for the given time period.\r\n- `bmUnit`: the forecast for each specified BM unit.\r\n- `fuelType`: the forecast aggregated, and optionally filtered by fuel type.",
             "schema": {
               "enum": [
                 "total",
                 "fuelType",
                 "bmUnit"
               ],
-              "type": "string",
-              "example": "fuelType"
-            },
-            "example": "fuelType"
+              "type": "string"
+            }
           },
           {
             "name": "bmUnit",
             "in": "query",
-            "description": "The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.\r\nBetween 1 and 10 units should be queried when using the `bmUnit` level.",
             "schema": {
               "type": "array",
               "items": {
@@ -20349,19 +19620,12 @@
           {
             "name": "fuelType",
             "in": "query",
-            "description": "The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned.",
             "schema": {
               "type": "array",
               "items": {
                 "type": "string"
-              },
-              "example": [
-                "CCGT"
-              ]
-            },
-            "example": [
-              "CCGT"
-            ]
+              }
+            }
           },
           {
             "name": "format",
@@ -20439,22 +19703,18 @@
           {
             "name": "level",
             "in": "query",
-            "description": "The filter level for the forecast. This can be one of the following:\r\n- `total`: the total forecast for the given time period.\r\n- `bmUnit`: the forecast for each specified BM unit.\r\n- `fuelType`: the forecast aggregated, and optionally filtered by fuel type.",
             "schema": {
               "enum": [
                 "total",
                 "fuelType",
                 "bmUnit"
               ],
-              "type": "string",
-              "example": "fuelType"
-            },
-            "example": "fuelType"
+              "type": "string"
+            }
           },
           {
             "name": "bmUnit",
             "in": "query",
-            "description": "The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.\r\nBetween 1 and 10 units should be queried when using the `bmUnit` level.",
             "schema": {
               "type": "array",
               "items": {
@@ -20465,19 +19725,12 @@
           {
             "name": "fuelType",
             "in": "query",
-            "description": "The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned.",
             "schema": {
               "type": "array",
               "items": {
                 "type": "string"
-              },
-              "example": [
-                "CCGT"
-              ]
-            },
-            "example": [
-              "CCGT"
-            ]
+              }
+            }
           },
           {
             "name": "format",
@@ -20543,46 +19796,36 @@
           {
             "name": "year",
             "in": "query",
-            "description": "The forecast year for the filter.",
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32",
-              "example": 2024
-            },
-            "example": 2024
+              "format": "int32"
+            }
           },
           {
             "name": "week",
             "in": "query",
-            "description": "The forecast week for the filter.",
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32",
-              "example": 17
-            },
-            "example": 17
+              "format": "int32"
+            }
           },
           {
             "name": "level",
             "in": "query",
-            "description": "The filter level for the forecast. This can be one of the following:\r\n- `total`: the total forecast for the given time period.\r\n- `bmUnit`: the forecast for each specified BM unit.\r\n- `fuelType`: the forecast aggregated, and optionally filtered by fuel type.",
             "schema": {
               "enum": [
                 "total",
                 "fuelType",
                 "bmUnit"
               ],
-              "type": "string",
-              "example": "fuelType"
-            },
-            "example": "fuelType"
+              "type": "string"
+            }
           },
           {
             "name": "bmUnit",
             "in": "query",
-            "description": "The BM units to query. Add each unit separately. Either the Elexon ID (Eg: `T_CARR-1`) or National Grid ID (Eg: `CARR-1`) can be used.\r\nBetween 1 and 10 units should be queried when using the `bmUnit` level.",
             "schema": {
               "type": "array",
               "items": {
@@ -20593,19 +19836,12 @@
           {
             "name": "fuelType",
             "in": "query",
-            "description": "The fuel type to query when using the `fuelType` level. Add each fuel type separately. If no fuel types are supplied, all fuel types will be returned.",
             "schema": {
               "type": "array",
               "items": {
                 "type": "string"
-              },
-              "example": [
-                "CCGT"
-              ]
-            },
-            "example": [
-              "CCGT"
-            ]
+              }
+            }
           },
           {
             "name": "format",
@@ -20665,7 +19901,7 @@
         "tags": [
           "Generation Forecast"
         ],
-        "summary": "This endpoint is obsolete, and this location may be removed with no further notice. Use forecast/availability/daily instead",
+        "summary": "Down-sampled fourteen-day generation forecast (FOU2T14D)",
         "description": "This endpoint provides a summary of generation forecast data aggregated by forecast date,\r\nintended for visualisation purposes. Use other availability forecast endpoints for full dataset access.",
         "parameters": [
           {
@@ -20736,8 +19972,7 @@
               }
             }
           }
-        },
-        "deprecated": true
+        }
       }
     },
     "/forecast/availability/summary/3YW": {
@@ -20745,7 +19980,7 @@
         "tags": [
           "Generation Forecast"
         ],
-        "summary": "This endpoint is obsolete, and this location may be removed with no further notice. Use forecast/availability/weekly instead",
+        "summary": "Down-sampled three-year generation forecast (FOU2T3YW)",
         "description": "This endpoint provides a summary of generation forecast data aggregated by forecast date,\r\nintended for visualisation purposes. Use other availability forecast endpoints for full dataset access.",
         "parameters": [
           {
@@ -20816,8 +20051,7 @@
               }
             }
           }
-        },
-        "deprecated": true
+        }
       }
     },
     "/forecast/generation/day-ahead": {
@@ -20919,9 +20153,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -21617,13 +20848,10 @@
           "Health Check"
         ],
         "summary": "Health check",
-        "description": "This endpoint provides a success response code (200) with status code 2 if the service is alive",
+        "description": "This endpoint provides a success status code (200) if the service is alive",
         "responses": {
           "200": {
             "description": "API is healthy"
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "503": {
             "description": "API is unhealthy or in degraded state"
@@ -21944,9 +21172,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -22038,9 +21263,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -22069,9 +21291,9 @@
                 "offer"
               ],
               "type": "string",
-              "example": "bid"
+              "example": "\"bid\""
             },
-            "example": "bid"
+            "example": "\"bid\""
           },
           {
             "name": "settlementDate",
@@ -22147,9 +21369,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -22220,9 +21439,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -22241,7 +21457,7 @@
           "Indicative Imbalance Settlement"
         ],
         "summary": "Default notices (CDN)",
-        "description": "This endpoint provides a subset of CDN (Credit Default Notice) data received from ECVAA (Energy Contract Volume Aggregation Agent). It returns the defaults that are in force and defaults that have closed within the last 7 days.",
+        "description": "This endpoint provides a subset of CDN data received from EC. It returns the defaults that are in force and defaults that have closed within the last 7 days.",
         "parameters": [
           {
             "name": "format",
@@ -22292,9 +21508,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -22374,9 +21587,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -22469,9 +21679,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -22511,9 +21718,9 @@
                 "offer"
               ],
               "type": "string",
-              "example": "bid"
+              "example": "\"bid\""
             },
-            "example": "bid"
+            "example": "\"bid\""
           },
           {
             "name": "bmUnit",
@@ -22560,9 +21767,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -22615,9 +21819,9 @@
                 "offer"
               ],
               "type": "string",
-              "example": "bid"
+              "example": "\"bid\""
             },
-            "example": "bid"
+            "example": "\"bid\""
           },
           {
             "name": "bmUnit",
@@ -22665,9 +21869,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -22707,9 +21908,9 @@
                 "offer"
               ],
               "type": "string",
-              "example": "bid"
+              "example": "\"bid\""
             },
-            "example": "bid"
+            "example": "\"bid\""
           },
           {
             "name": "bmUnit",
@@ -22756,9 +21957,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -22811,9 +22009,9 @@
                 "offer"
               ],
               "type": "string",
-              "example": "bid"
+              "example": "\"bid\""
             },
-            "example": "bid"
+            "example": "\"bid\""
           },
           {
             "name": "bmUnit",
@@ -22861,9 +22059,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -22892,9 +22087,9 @@
                 "offer"
               ],
               "type": "string",
-              "example": "bid"
+              "example": "\"bid\""
             },
-            "example": "bid"
+            "example": "\"bid\""
           },
           {
             "name": "settlementDate",
@@ -22953,9 +22148,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -22997,9 +22189,9 @@
                 "offer"
               ],
               "type": "string",
-              "example": "bid"
+              "example": "\"bid\""
             },
-            "example": "bid"
+            "example": "\"bid\""
           },
           {
             "name": "settlementDate",
@@ -23058,9 +22250,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -23153,9 +22342,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -23234,9 +22420,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -23328,9 +22511,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -24013,9 +23193,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -24137,9 +23314,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -24237,9 +23411,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -24366,9 +23537,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -24824,9 +23992,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -24884,9 +24049,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -24955,9 +24117,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -25025,9 +24184,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -25190,9 +24346,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -25353,9 +24506,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -25513,9 +24663,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -25677,9 +24824,6 @@
               }
             }
           },
-          "429": {
-            "description": "Too many requests"
-          },
           "400": {
             "description": "Error with query parameters - see response for details"
           },
@@ -25763,9 +24907,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -25855,9 +24996,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "500": {
             "description": "Server error - please try again later"
@@ -26719,9 +25857,6 @@
                 }
               }
             }
-          },
-          "429": {
-            "description": "Too many requests"
           },
           "400": {
             "description": "Error with query parameters - see response for details"
@@ -31031,34 +30166,24 @@
           "publishTime": {
             "type": "string",
             "format": "date-time",
-            "nullable": true,
-            "example": "2024-06-07T15:00:00Z"
+            "nullable": true
           },
           "fuelType": {
             "type": "string",
-            "nullable": true,
-            "example": "CCGT"
+            "nullable": true
           },
           "ngcBmUnit": {
             "type": "string",
-            "nullable": true,
-            "example": "CARR-1"
-          },
-          "bmUnit": {
-            "type": "string",
-            "nullable": true,
-            "example": "T_CARR-1"
+            "nullable": true
           },
           "outputUsable": {
             "type": "integer",
             "format": "int64",
-            "nullable": true,
-            "example": 418
+            "nullable": true
           },
           "forecastDate": {
             "type": "string",
-            "format": "date",
-            "example": "2024-06-07"
+            "format": "date"
           }
         },
         "additionalProperties": false
@@ -31073,39 +30198,28 @@
           "publishTime": {
             "type": "string",
             "format": "date-time",
-            "nullable": true,
-            "example": "2024-06-07T15:00:00Z"
+            "nullable": true
           },
           "fuelType": {
             "type": "string",
-            "nullable": true,
-            "example": "CCGT"
+            "nullable": true
           },
           "ngcBmUnit": {
             "type": "string",
-            "nullable": true,
-            "example": "CARR-1"
-          },
-          "bmUnit": {
-            "type": "string",
-            "nullable": true,
-            "example": "T_CARR-1"
+            "nullable": true
           },
           "outputUsable": {
             "type": "integer",
             "format": "int64",
-            "nullable": true,
-            "example": 418
+            "nullable": true
           },
           "year": {
             "type": "integer",
-            "format": "int32",
-            "example": 2024
+            "format": "int32"
           },
           "calendarWeekNumber": {
             "type": "integer",
-            "format": "int32",
-            "example": 23
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -32413,64 +31527,6 @@
           },
           "fpnFlag": {
             "type": "boolean",
-            "nullable": true
-          },
-          "bmUnitName": {
-            "type": "string",
-            "nullable": true
-          },
-          "leadPartyId": {
-            "type": "string",
-            "nullable": true
-          },
-          "demandCapacity": {
-            "type": "string",
-            "nullable": true
-          },
-          "generationCapacity": {
-            "type": "string",
-            "nullable": true
-          },
-          "productionOrConsumptionFlag": {
-            "type": "string",
-            "nullable": true
-          },
-          "transmissionLossFactor": {
-            "type": "string",
-            "nullable": true
-          },
-          "workingDayCreditAssessmentImportCapability": {
-            "type": "string",
-            "nullable": true
-          },
-          "nonWorkingDayCreditAssessmentImportCapability": {
-            "type": "string",
-            "nullable": true
-          },
-          "workingDayCreditAssessmentExportCapability": {
-            "type": "string",
-            "nullable": true
-          },
-          "nonWorkingDayCreditAssessmentExportCapability": {
-            "type": "string",
-            "nullable": true
-          },
-          "creditQualifyingStatus": {
-            "type": "boolean"
-          },
-          "demandInProductionFlag": {
-            "type": "boolean"
-          },
-          "gspGroupId": {
-            "type": "string",
-            "nullable": true
-          },
-          "gspGroupName": {
-            "type": "string",
-            "nullable": true
-          },
-          "interconnectorId": {
-            "type": "string",
             "nullable": true
           }
         },
@@ -34259,7 +33315,7 @@
           "bmUnit": {
             "type": "string",
             "nullable": true,
-            "example": "T_DBAWO-1"
+            "example": "\"T_DBAWO-1"
           },
           "voltageLimit": {
             "type": "number",
