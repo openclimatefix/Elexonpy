@@ -10,11 +10,12 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
 jobs:
   openapi-spec-diff:
-    name: Running OpenAPI Spec diff action
-    uses: oasdiff/oasdiff-action/breaking@main
-    with:
-      base: openapi.json
-      revision: https://data.elexon.co.uk/swagger/v1/swagger.json
+    steps:
+      - name: Running OpenAPI Spec diff action
+        uses: oasdiff/oasdiff-action/breaking@main
+        with:
+          base: openapi.json
+          revision: https://data.elexon.co.uk/swagger/v1/swagger.json
   call-run-python-tests:
     uses: openclimatefix/.github/.github/workflows/python-test.yml@main
     with:
