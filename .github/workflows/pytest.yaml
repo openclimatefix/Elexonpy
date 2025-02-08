@@ -12,10 +12,11 @@ jobs:
   openapi-spec-diff:
     runs-on: ubuntu-24.04
     steps:
+      - uses: actions/checkout@v4
       - name: Running OpenAPI Spec diff action
         uses: oasdiff/oasdiff-action/breaking@main
         with:
-          base: openapi.json
+          base: spec/openapi.json
           revision: https://data.elexon.co.uk/swagger/v1/swagger.json
   call-run-python-tests:
     uses: openclimatefix/.github/.github/workflows/python-test.yml@main
