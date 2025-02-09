@@ -1,9 +1,8 @@
 name: Integration tests
 
 on:
-  push: # while testing
   schedule:
-    - cron: "0 12 * * 1"
+    - cron: "0 12 * * *" # at 12:00 every day
 jobs:
   openapi-spec-diff:
     runs-on: ubuntu-24.04
