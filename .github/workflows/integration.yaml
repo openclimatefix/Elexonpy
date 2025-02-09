@@ -1,4 +1,4 @@
-name: Python package tests
+name: Integration tests
 
 on:
   schedule:
