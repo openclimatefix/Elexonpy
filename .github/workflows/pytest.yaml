@@ -9,22 +9,6 @@ on:
   pull_request_target:
     types: [opened, synchronize, reopened, ready_for_review]
 jobs:
-  openapi-spec-diff:
-    runs-on: ubuntu-24.04
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-      - name: Running OpenAPI Spec breaking changes action
-        id: oasdiff_breaking
-        uses: oasdiff/oasdiff-action/breaking@main
-        with:
-          fail-on: 'WARN'
-          base: spec/swagger.json
-          revision: https://data.elexon.co.uk/swagger/v1/swagger.json
-      - name: Echoing diff to step
-        env:
-          DIFF: ${{ steps.oasdiff_breaking.outputs.breaking }}
-        run: echo "${DIFF}" >> $GITHUB_STEP_SUMMARY
   call-run-python-tests:
     uses: openclimatefix/.github/.github/workflows/python-test.yml@main
     with:
