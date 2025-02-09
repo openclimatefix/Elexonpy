@@ -17,6 +17,7 @@ import unittest
 import pandas as pd
 
 import elexonpy
+from elexonpy import ApiClient
 from elexonpy.api.datasets_api import DatasetsApi  # noqa: E501
 from elexonpy.rest import ApiException
 
