@@ -1,6 +1,7 @@
 name: Integration tests
 
 on:
+  push: # while testing
   schedule:
     - cron: "0 12 * * 1"
 jobs:
