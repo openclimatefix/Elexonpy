@@ -79,7 +79,7 @@
         "description": "This endpoint provides the dynamic data for a requested BMU, excluding physical rate data.\r\nIt returns a \"snapshot\" of data valid at a given time, and optionally a time series of changes over a requested interval.\r\n            \r\nBy default, all of the relevant datasets are returned: SIL, SEL, NDZ, NTB, NTO, MZT, MNZT, MDV, MDP.\r\nThe results from each dataset are transformed to a common response model, with the common integer field *Value*\r\nmapped from the fields *Level*, *Period*, *Volume* or *Notice* in the original dataset, as relevant.",
         "parameters": [
           {
-            "name": "bmUnit",
+            "name": "bmUnit1",
             "in": "query",
             "description": "The BM Unit to query.",
             "required": true,
