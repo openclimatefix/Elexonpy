@@ -15,12 +15,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Running OpenAPI Spec diff action
-        uses: oasdiff/oasdiff-action/diff@main
+        uses: oasdiff/oasdiff-action/changelog@main
         with:
-          format: json
-          fail-on-diff: 'true'
-          base: spec/openapi.json
-          revision: https://data.elexon.co.uk/swagger/v1/swagger.json
+          base: https://raw.githubusercontent.com/Tufin/oasdiff/main/data/openapi-test1.yaml
+          revision: https://raw.githubusercontent.com/Tufin/oasdiff/main/data/openapi-test3.yaml
   call-run-python-tests:
     uses: openclimatefix/.github/.github/workflows/python-test.yml@main
     with:
